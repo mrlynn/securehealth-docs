@@ -548,4 +548,4 @@ case 'ROLE_LAB_TECH':
 - **[Audit Logging](/docs/concepts/audit-logging)** - Learn about compliance logging
 - **[Security Architecture](/docs/concepts/security-architecture)** - Overall security design
 - **[User Guides](/docs/user-guides/doctor-guide)** - Role-specific documentation
-- **[Tutorials](/docs/tutorials/implementing-rbac)** - Step-by-step implementation guides
+- **[Tutorials](/docs/tutorials/adding-roles)** - Step-by-step implementation guides

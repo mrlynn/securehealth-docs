@@ -369,5 +369,5 @@ The receptionist dashboard provides access to:
 
 - **[Patient Portal](/docs/user-guides/patient-portal)** - Patient self-service
 - **[Developer Guides](/docs/developer-guides/architecture)** - Technical implementation details
-- **[Tutorials](/docs/tutorials/implementing-rbac)** - Step-by-step implementation guides
+- **[Tutorials](/docs/tutorials/adding-roles)** - Step-by-step implementation guides
 - **[Reference](/docs/reference/troubleshooting)** - Common issues and solutions
