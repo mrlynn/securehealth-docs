@@ -5,7 +5,7 @@
   "source": "@site/docs/developer-guides/security-implementation.md",
   "sourceDirName": "developer-guides",
   "slug": "/developer-guides/security-implementation",
-  "permalink": "/securehealth-docs/docs/developer-guides/security-implementation",
+  "permalink": "/es/docs/developer-guides/security-implementation",
   "draft": false,
   "unlisted": false,
   "tags": [],
@@ -14,10 +14,10 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Database Schema",
-    "permalink": "/securehealth-docs/docs/developer-guides/database-schema"
+    "permalink": "/es/docs/developer-guides/database-schema"
   },
   "next": {
     "title": "Testing Strategies",
-    "permalink": "/securehealth-docs/docs/developer-guides/testing"
+    "permalink": "/es/docs/developer-guides/testing"
   }
 }

@@ -5,7 +5,7 @@
   "source": "@site/docs/concepts/queryable-encryption.md",
   "sourceDirName": "concepts",
   "slug": "/concepts/queryable-encryption",
-  "permalink": "/securehealth-docs/docs/concepts/queryable-encryption",
+  "permalink": "/es/docs/concepts/queryable-encryption",
   "draft": false,
   "unlisted": false,
   "tags": [],
@@ -14,10 +14,10 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "HIPAA Compliance",
-    "permalink": "/securehealth-docs/docs/concepts/hipaa-compliance"
+    "permalink": "/es/docs/concepts/hipaa-compliance"
   },
   "next": {
     "title": "Role-Based Access Control",
-    "permalink": "/securehealth-docs/docs/concepts/role-based-access"
+    "permalink": "/es/docs/concepts/role-based-access"
   }
 }

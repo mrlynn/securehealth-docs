@@ -5,7 +5,7 @@
   "source": "@site/docs/reference/glossary.md",
   "sourceDirName": "reference",
   "slug": "/reference/glossary",
-  "permalink": "/securehealth-docs/docs/reference/glossary",
+  "permalink": "/es/docs/reference/glossary",
   "draft": false,
   "unlisted": false,
   "tags": [],
@@ -14,10 +14,10 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Troubleshooting Guide",
-    "permalink": "/securehealth-docs/docs/reference/troubleshooting"
+    "permalink": "/es/docs/reference/troubleshooting"
   },
   "next": {
     "title": "Contributing to SecureHealth",
-    "permalink": "/securehealth-docs/docs/community/contributing"
+    "permalink": "/es/docs/community/contributing"
   }
 }

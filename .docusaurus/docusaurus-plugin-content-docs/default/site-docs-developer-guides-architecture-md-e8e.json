@@ -5,7 +5,7 @@
   "source": "@site/docs/developer-guides/architecture.md",
   "sourceDirName": "developer-guides",
   "slug": "/developer-guides/architecture",
-  "permalink": "/securehealth-docs/docs/developer-guides/architecture",
+  "permalink": "/es/docs/developer-guides/architecture",
   "draft": false,
   "unlisted": false,
   "tags": [],
@@ -14,10 +14,10 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Patient Portal",
-    "permalink": "/securehealth-docs/docs/user-guides/patient-portal"
+    "permalink": "/es/docs/user-guides/patient-portal"
   },
   "next": {
     "title": "API Reference",
-    "permalink": "/securehealth-docs/docs/developer-guides/api-reference"
+    "permalink": "/es/docs/developer-guides/api-reference"
   }
 }

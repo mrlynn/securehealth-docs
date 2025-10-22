@@ -5,7 +5,7 @@
   "source": "@site/docs/developer-guides/api-reference.md",
   "sourceDirName": "developer-guides",
   "slug": "/developer-guides/api-reference",
-  "permalink": "/securehealth-docs/docs/developer-guides/api-reference",
+  "permalink": "/es/docs/developer-guides/api-reference",
   "draft": false,
   "unlisted": false,
   "tags": [],
@@ -14,10 +14,10 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "System Architecture",
-    "permalink": "/securehealth-docs/docs/developer-guides/architecture"
+    "permalink": "/es/docs/developer-guides/architecture"
   },
   "next": {
     "title": "Database Schema",
-    "permalink": "/securehealth-docs/docs/developer-guides/database-schema"
+    "permalink": "/es/docs/developer-guides/database-schema"
   }
 }

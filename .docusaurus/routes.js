@@ -3,264 +3,229 @@ import ComponentCreator from '@docusaurus/ComponentCreator';
 
 export default [
   {
-    path: '/securehealth-docs/__docusaurus/debug',
-    component: ComponentCreator('/securehealth-docs/__docusaurus/debug', '9d2'),
+    path: '/es/helloWorld',
+    component: ComponentCreator('/es/helloWorld', 'b11'),
     exact: true
   },
   {
-    path: '/securehealth-docs/__docusaurus/debug/config',
-    component: ComponentCreator('/securehealth-docs/__docusaurus/debug/config', '9bd'),
-    exact: true
-  },
-  {
-    path: '/securehealth-docs/__docusaurus/debug/content',
-    component: ComponentCreator('/securehealth-docs/__docusaurus/debug/content', 'ea7'),
-    exact: true
-  },
-  {
-    path: '/securehealth-docs/__docusaurus/debug/globalData',
-    component: ComponentCreator('/securehealth-docs/__docusaurus/debug/globalData', '2fb'),
-    exact: true
-  },
-  {
-    path: '/securehealth-docs/__docusaurus/debug/metadata',
-    component: ComponentCreator('/securehealth-docs/__docusaurus/debug/metadata', 'd5e'),
-    exact: true
-  },
-  {
-    path: '/securehealth-docs/__docusaurus/debug/registry',
-    component: ComponentCreator('/securehealth-docs/__docusaurus/debug/registry', '102'),
-    exact: true
-  },
-  {
-    path: '/securehealth-docs/__docusaurus/debug/routes',
-    component: ComponentCreator('/securehealth-docs/__docusaurus/debug/routes', 'e59'),
-    exact: true
-  },
-  {
-    path: '/securehealth-docs/helloWorld',
-    component: ComponentCreator('/securehealth-docs/helloWorld', '75e'),
-    exact: true
-  },
-  {
-    path: '/securehealth-docs/docs',
-    component: ComponentCreator('/securehealth-docs/docs', '50d'),
+    path: '/es/docs',
+    component: ComponentCreator('/es/docs', 'e90'),
     routes: [
       {
-        path: '/securehealth-docs/docs',
-        component: ComponentCreator('/securehealth-docs/docs', '35e'),
+        path: '/es/docs',
+        component: ComponentCreator('/es/docs', '202'),
         routes: [
           {
-            path: '/securehealth-docs/docs',
-            component: ComponentCreator('/securehealth-docs/docs', '327'),
+            path: '/es/docs',
+            component: ComponentCreator('/es/docs', '7fc'),
             routes: [
               {
-                path: '/securehealth-docs/docs/community/contributing',
-                component: ComponentCreator('/securehealth-docs/docs/community/contributing', '7a0'),
+                path: '/es/docs/community/contributing',
+                component: ComponentCreator('/es/docs/community/contributing', 'cb5'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/securehealth-docs/docs/community/github-integration',
-                component: ComponentCreator('/securehealth-docs/docs/community/github-integration', 'f24'),
+                path: '/es/docs/community/github-integration',
+                component: ComponentCreator('/es/docs/community/github-integration', '646'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/securehealth-docs/docs/community/roadmap',
-                component: ComponentCreator('/securehealth-docs/docs/community/roadmap', '81d'),
+                path: '/es/docs/community/roadmap',
+                component: ComponentCreator('/es/docs/community/roadmap', 'ac0'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/securehealth-docs/docs/community/support',
-                component: ComponentCreator('/securehealth-docs/docs/community/support', 'b52'),
+                path: '/es/docs/community/support',
+                component: ComponentCreator('/es/docs/community/support', '773'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/securehealth-docs/docs/concepts/audit-logging',
-                component: ComponentCreator('/securehealth-docs/docs/concepts/audit-logging', 'b22'),
+                path: '/es/docs/concepts/audit-logging',
+                component: ComponentCreator('/es/docs/concepts/audit-logging', '6b0'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/securehealth-docs/docs/concepts/hipaa-compliance',
-                component: ComponentCreator('/securehealth-docs/docs/concepts/hipaa-compliance', '243'),
+                path: '/es/docs/concepts/hipaa-compliance',
+                component: ComponentCreator('/es/docs/concepts/hipaa-compliance', '67c'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/securehealth-docs/docs/concepts/queryable-encryption',
-                component: ComponentCreator('/securehealth-docs/docs/concepts/queryable-encryption', '5ed'),
+                path: '/es/docs/concepts/queryable-encryption',
+                component: ComponentCreator('/es/docs/concepts/queryable-encryption', '1cb'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/securehealth-docs/docs/concepts/role-based-access',
-                component: ComponentCreator('/securehealth-docs/docs/concepts/role-based-access', '1a8'),
+                path: '/es/docs/concepts/role-based-access',
+                component: ComponentCreator('/es/docs/concepts/role-based-access', '05a'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/securehealth-docs/docs/concepts/security-architecture',
-                component: ComponentCreator('/securehealth-docs/docs/concepts/security-architecture', 'dce'),
+                path: '/es/docs/concepts/security-architecture',
+                component: ComponentCreator('/es/docs/concepts/security-architecture', 'c15'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/securehealth-docs/docs/developer-guides/api-reference',
-                component: ComponentCreator('/securehealth-docs/docs/developer-guides/api-reference', '772'),
+                path: '/es/docs/developer-guides/api-reference',
+                component: ComponentCreator('/es/docs/developer-guides/api-reference', '2c1'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/securehealth-docs/docs/developer-guides/architecture',
-                component: ComponentCreator('/securehealth-docs/docs/developer-guides/architecture', 'a94'),
+                path: '/es/docs/developer-guides/architecture',
+                component: ComponentCreator('/es/docs/developer-guides/architecture', 'ec0'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/securehealth-docs/docs/developer-guides/database-schema',
-                component: ComponentCreator('/securehealth-docs/docs/developer-guides/database-schema', '203'),
+                path: '/es/docs/developer-guides/database-schema',
+                component: ComponentCreator('/es/docs/developer-guides/database-schema', '935'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/securehealth-docs/docs/developer-guides/deployment',
-                component: ComponentCreator('/securehealth-docs/docs/developer-guides/deployment', '4dd'),
+                path: '/es/docs/developer-guides/deployment',
+                component: ComponentCreator('/es/docs/developer-guides/deployment', '00e'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/securehealth-docs/docs/developer-guides/security-implementation',
-                component: ComponentCreator('/securehealth-docs/docs/developer-guides/security-implementation', '601'),
+                path: '/es/docs/developer-guides/security-implementation',
+                component: ComponentCreator('/es/docs/developer-guides/security-implementation', '6bb'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/securehealth-docs/docs/developer-guides/testing',
-                component: ComponentCreator('/securehealth-docs/docs/developer-guides/testing', 'fdd'),
+                path: '/es/docs/developer-guides/testing',
+                component: ComponentCreator('/es/docs/developer-guides/testing', 'b3b'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/securehealth-docs/docs/getting-started/first-steps',
-                component: ComponentCreator('/securehealth-docs/docs/getting-started/first-steps', '864'),
+                path: '/es/docs/getting-started/first-steps',
+                component: ComponentCreator('/es/docs/getting-started/first-steps', 'f3d'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/securehealth-docs/docs/getting-started/installation',
-                component: ComponentCreator('/securehealth-docs/docs/getting-started/installation', '1b4'),
+                path: '/es/docs/getting-started/installation',
+                component: ComponentCreator('/es/docs/getting-started/installation', '316'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/securehealth-docs/docs/getting-started/introduction',
-                component: ComponentCreator('/securehealth-docs/docs/getting-started/introduction', '613'),
+                path: '/es/docs/getting-started/introduction',
+                component: ComponentCreator('/es/docs/getting-started/introduction', '024'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/securehealth-docs/docs/getting-started/quick-start',
-                component: ComponentCreator('/securehealth-docs/docs/getting-started/quick-start', '781'),
+                path: '/es/docs/getting-started/quick-start',
+                component: ComponentCreator('/es/docs/getting-started/quick-start', 'a6f'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/securehealth-docs/docs/intro',
-                component: ComponentCreator('/securehealth-docs/docs/intro', '556'),
+                path: '/es/docs/intro',
+                component: ComponentCreator('/es/docs/intro', '55c'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/securehealth-docs/docs/reference/api-endpoints',
-                component: ComponentCreator('/securehealth-docs/docs/reference/api-endpoints', '95b'),
+                path: '/es/docs/reference/api-endpoints',
+                component: ComponentCreator('/es/docs/reference/api-endpoints', '836'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/securehealth-docs/docs/reference/configuration',
-                component: ComponentCreator('/securehealth-docs/docs/reference/configuration', '033'),
+                path: '/es/docs/reference/configuration',
+                component: ComponentCreator('/es/docs/reference/configuration', '065'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/securehealth-docs/docs/reference/environment-variables',
-                component: ComponentCreator('/securehealth-docs/docs/reference/environment-variables', 'c98'),
+                path: '/es/docs/reference/environment-variables',
+                component: ComponentCreator('/es/docs/reference/environment-variables', '4c8'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/securehealth-docs/docs/reference/glossary',
-                component: ComponentCreator('/securehealth-docs/docs/reference/glossary', '357'),
+                path: '/es/docs/reference/glossary',
+                component: ComponentCreator('/es/docs/reference/glossary', 'ee7'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/securehealth-docs/docs/reference/troubleshooting',
-                component: ComponentCreator('/securehealth-docs/docs/reference/troubleshooting', '339'),
+                path: '/es/docs/reference/troubleshooting',
+                component: ComponentCreator('/es/docs/reference/troubleshooting', 'a7c'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/securehealth-docs/docs/tutorials/adding-roles',
-                component: ComponentCreator('/securehealth-docs/docs/tutorials/adding-roles', 'f09'),
+                path: '/es/docs/tutorials/adding-roles',
+                component: ComponentCreator('/es/docs/tutorials/adding-roles', '801'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/securehealth-docs/docs/tutorials/audit-customization',
-                component: ComponentCreator('/securehealth-docs/docs/tutorials/audit-customization', '640'),
+                path: '/es/docs/tutorials/audit-customization',
+                component: ComponentCreator('/es/docs/tutorials/audit-customization', 'd2d'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/securehealth-docs/docs/tutorials/custom-fields',
-                component: ComponentCreator('/securehealth-docs/docs/tutorials/custom-fields', '115'),
+                path: '/es/docs/tutorials/custom-fields',
+                component: ComponentCreator('/es/docs/tutorials/custom-fields', 'b68'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/securehealth-docs/docs/tutorials/encryption-setup',
-                component: ComponentCreator('/securehealth-docs/docs/tutorials/encryption-setup', 'b70'),
+                path: '/es/docs/tutorials/encryption-setup',
+                component: ComponentCreator('/es/docs/tutorials/encryption-setup', '8f0'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/securehealth-docs/docs/tutorials/integration-examples',
-                component: ComponentCreator('/securehealth-docs/docs/tutorials/integration-examples', '71f'),
+                path: '/es/docs/tutorials/integration-examples',
+                component: ComponentCreator('/es/docs/tutorials/integration-examples', 'ba7'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/securehealth-docs/docs/user-guides/admin-guide',
-                component: ComponentCreator('/securehealth-docs/docs/user-guides/admin-guide', '9aa'),
+                path: '/es/docs/user-guides/admin-guide',
+                component: ComponentCreator('/es/docs/user-guides/admin-guide', '2a6'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/securehealth-docs/docs/user-guides/doctor-guide',
-                component: ComponentCreator('/securehealth-docs/docs/user-guides/doctor-guide', 'f2f'),
+                path: '/es/docs/user-guides/doctor-guide',
+                component: ComponentCreator('/es/docs/user-guides/doctor-guide', '3f7'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/securehealth-docs/docs/user-guides/nurse-guide',
-                component: ComponentCreator('/securehealth-docs/docs/user-guides/nurse-guide', 'd56'),
+                path: '/es/docs/user-guides/nurse-guide',
+                component: ComponentCreator('/es/docs/user-guides/nurse-guide', '3e0'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/securehealth-docs/docs/user-guides/patient-portal',
-                component: ComponentCreator('/securehealth-docs/docs/user-guides/patient-portal', '420'),
+                path: '/es/docs/user-guides/patient-portal',
+                component: ComponentCreator('/es/docs/user-guides/patient-portal', '040'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/securehealth-docs/docs/user-guides/receptionist-guide',
-                component: ComponentCreator('/securehealth-docs/docs/user-guides/receptionist-guide', '709'),
+                path: '/es/docs/user-guides/receptionist-guide',
+                component: ComponentCreator('/es/docs/user-guides/receptionist-guide', '093'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               }
@@ -271,8 +236,8 @@ export default [
     ]
   },
   {
-    path: '/securehealth-docs/',
-    component: ComponentCreator('/securehealth-docs/', 'b79'),
+    path: '/es/',
+    component: ComponentCreator('/es/', '124'),
     exact: true
   },
   {

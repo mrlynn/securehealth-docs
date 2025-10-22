@@ -5,7 +5,7 @@
   "source": "@site/docs/reference/api-endpoints.md",
   "sourceDirName": "reference",
   "slug": "/reference/api-endpoints",
-  "permalink": "/securehealth-docs/docs/reference/api-endpoints",
+  "permalink": "/es/docs/reference/api-endpoints",
   "draft": false,
   "unlisted": false,
   "tags": [],
@@ -14,10 +14,10 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Integration Examples Tutorial",
-    "permalink": "/securehealth-docs/docs/tutorials/integration-examples"
+    "permalink": "/es/docs/tutorials/integration-examples"
   },
   "next": {
     "title": "Configuration Reference",
-    "permalink": "/securehealth-docs/docs/reference/configuration"
+    "permalink": "/es/docs/reference/configuration"
   }
 }

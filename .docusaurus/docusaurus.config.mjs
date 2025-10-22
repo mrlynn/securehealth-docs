@@ -4,17 +4,16 @@
  * Modify the docusaurus.config.js file at your site's root instead.
  */
 export default {
-  "title": "SecureHealth Documentation",
+  "title": "Home",
   "tagline": "Secure, HIPAA-compliant healthcare information management with MongoDB Queryable Encryption",
-  "url": "https://securehealth-docs.github.io",
-  "baseUrl": "/securehealth-docs/",
+  "url": "https://docs.securehealth.dev",
+  "baseUrl": "/es/",
   "projectName": "mrlynn.github.io",
   "organizationName": "mrlynn",
   "trailingSlash": false,
   "onBrokenLinks": "throw",
   "onBrokenMarkdownLinks": "warn",
   "favicon": "img/favicon.svg",
-  "deploymentBranch": "gh-pages",
   "staticDirectories": [
     "static"
   ],
@@ -137,15 +136,15 @@ export default {
       "links": [
         {
           "label": "Documentation",
-          "href": "https://mrlynn.github.io/securehealth-docs/"
+          "href": "https://docs.securehealth.dev/"
         },
         {
           "label": "Features",
-          "href": "https://mrlynn.github.io/securehealth-docs/docs/concepts/hipaa-compliance"
+          "href": "https://docs.securehealth.dev/docs/concepts/hipaa-compliance"
         },
         {
           "label": "Security",
-          "href": "https://mrlynn.github.io/securehealth-docs/docs/concepts/security-architecture"
+          "href": "https://docs.securehealth.dev/docs/concepts/security-architecture"
         },
         {
           "label": "Encryption Demo",

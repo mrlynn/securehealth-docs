@@ -5,7 +5,7 @@
   "source": "@site/docs/concepts/audit-logging.md",
   "sourceDirName": "concepts",
   "slug": "/concepts/audit-logging",
-  "permalink": "/securehealth-docs/docs/concepts/audit-logging",
+  "permalink": "/es/docs/concepts/audit-logging",
   "draft": false,
   "unlisted": false,
   "tags": [],
@@ -14,10 +14,10 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Role-Based Access Control",
-    "permalink": "/securehealth-docs/docs/concepts/role-based-access"
+    "permalink": "/es/docs/concepts/role-based-access"
   },
   "next": {
     "title": "Security Architecture",
-    "permalink": "/securehealth-docs/docs/concepts/security-architecture"
+    "permalink": "/es/docs/concepts/security-architecture"
   }
 }

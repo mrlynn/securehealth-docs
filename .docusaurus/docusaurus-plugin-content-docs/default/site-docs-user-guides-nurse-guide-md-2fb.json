@@ -5,7 +5,7 @@
   "source": "@site/docs/user-guides/nurse-guide.md",
   "sourceDirName": "user-guides",
   "slug": "/user-guides/nurse-guide",
-  "permalink": "/securehealth-docs/docs/user-guides/nurse-guide",
+  "permalink": "/es/docs/user-guides/nurse-guide",
   "draft": false,
   "unlisted": false,
   "tags": [],
@@ -14,10 +14,10 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Doctor Guide",
-    "permalink": "/securehealth-docs/docs/user-guides/doctor-guide"
+    "permalink": "/es/docs/user-guides/doctor-guide"
   },
   "next": {
     "title": "Receptionist Guide",
-    "permalink": "/securehealth-docs/docs/user-guides/receptionist-guide"
+    "permalink": "/es/docs/user-guides/receptionist-guide"
   }
 }

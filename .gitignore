@@ -1,0 +1,5 @@
+.docusaurus/
+build
+.next
+CLAUDE.md
+node_modules

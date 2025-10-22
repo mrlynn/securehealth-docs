@@ -5,7 +5,7 @@
   "source": "@site/docs/concepts/role-based-access.md",
   "sourceDirName": "concepts",
   "slug": "/concepts/role-based-access",
-  "permalink": "/securehealth-docs/docs/concepts/role-based-access",
+  "permalink": "/es/docs/concepts/role-based-access",
   "draft": false,
   "unlisted": false,
   "tags": [],
@@ -14,10 +14,10 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "MongoDB Queryable Encryption",
-    "permalink": "/securehealth-docs/docs/concepts/queryable-encryption"
+    "permalink": "/es/docs/concepts/queryable-encryption"
   },
   "next": {
     "title": "Audit Logging",
-    "permalink": "/securehealth-docs/docs/concepts/audit-logging"
+    "permalink": "/es/docs/concepts/audit-logging"
   }
 }

@@ -5,7 +5,7 @@
   "source": "@site/docs/community/support.md",
   "sourceDirName": "community",
   "slug": "/community/support",
-  "permalink": "/securehealth-docs/docs/community/support",
+  "permalink": "/es/docs/community/support",
   "draft": false,
   "unlisted": false,
   "tags": [],
@@ -14,10 +14,10 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "GitHub Integration",
-    "permalink": "/securehealth-docs/docs/community/github-integration"
+    "permalink": "/es/docs/community/github-integration"
   },
   "next": {
     "title": "Roadmap",
-    "permalink": "/securehealth-docs/docs/community/roadmap"
+    "permalink": "/es/docs/community/roadmap"
   }
 }

@@ -5,7 +5,7 @@
   "source": "@site/docs/concepts/security-architecture.md",
   "sourceDirName": "concepts",
   "slug": "/concepts/security-architecture",
-  "permalink": "/securehealth-docs/docs/concepts/security-architecture",
+  "permalink": "/es/docs/concepts/security-architecture",
   "draft": false,
   "unlisted": false,
   "tags": [],
@@ -14,10 +14,10 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Audit Logging",
-    "permalink": "/securehealth-docs/docs/concepts/audit-logging"
+    "permalink": "/es/docs/concepts/audit-logging"
   },
   "next": {
     "title": "Admin Guide",
-    "permalink": "/securehealth-docs/docs/user-guides/admin-guide"
+    "permalink": "/es/docs/user-guides/admin-guide"
   }
 }
