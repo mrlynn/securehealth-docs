@@ -5,7 +5,7 @@
   "source": "@site/docs/user-guides/patient-portal.md",
   "sourceDirName": "user-guides",
   "slug": "/user-guides/patient-portal",
-  "permalink": "/es/docs/user-guides/patient-portal",
+  "permalink": "/docs/user-guides/patient-portal",
   "draft": false,
   "unlisted": false,
   "tags": [],
@@ -14,10 +14,10 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Receptionist Guide",
-    "permalink": "/es/docs/user-guides/receptionist-guide"
+    "permalink": "/docs/user-guides/receptionist-guide"
   },
   "next": {
     "title": "System Architecture",
-    "permalink": "/es/docs/developer-guides/architecture"
+    "permalink": "/docs/developer-guides/architecture"
   }
 }

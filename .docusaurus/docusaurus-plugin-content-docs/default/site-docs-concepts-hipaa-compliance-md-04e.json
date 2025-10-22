@@ -5,7 +5,7 @@
   "source": "@site/docs/concepts/hipaa-compliance.md",
   "sourceDirName": "concepts",
   "slug": "/concepts/hipaa-compliance",
-  "permalink": "/es/docs/concepts/hipaa-compliance",
+  "permalink": "/docs/concepts/hipaa-compliance",
   "draft": false,
   "unlisted": false,
   "tags": [],
@@ -14,10 +14,10 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "First Steps After Installation",
-    "permalink": "/es/docs/getting-started/first-steps"
+    "permalink": "/docs/getting-started/first-steps"
   },
   "next": {
     "title": "MongoDB Queryable Encryption",
-    "permalink": "/es/docs/concepts/queryable-encryption"
+    "permalink": "/docs/concepts/queryable-encryption"
   }
 }

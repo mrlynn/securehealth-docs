@@ -5,7 +5,7 @@
   "source": "@site/docs/developer-guides/security-implementation.md",
   "sourceDirName": "developer-guides",
   "slug": "/developer-guides/security-implementation",
-  "permalink": "/es/docs/developer-guides/security-implementation",
+  "permalink": "/docs/developer-guides/security-implementation",
   "draft": false,
   "unlisted": false,
   "tags": [],
@@ -14,10 +14,10 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Database Schema",
-    "permalink": "/es/docs/developer-guides/database-schema"
+    "permalink": "/docs/developer-guides/database-schema"
   },
   "next": {
     "title": "Testing Strategies",
-    "permalink": "/es/docs/developer-guides/testing"
+    "permalink": "/docs/developer-guides/testing"
   }
 }

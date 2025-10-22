@@ -6,73 +6,40 @@ As a SecureHealth administrator, you have full system access and are responsible
 
 The admin dashboard provides comprehensive system management capabilities:
 
-- **User Management**: Create, modify, and delete user accounts
 - **System Configuration**: Configure encryption, audit settings, and security policies
 - **Audit Logs**: View all system activity and compliance reports
 - **Security Monitoring**: Monitor for security incidents and unusual activity
-- **Backup Management**: Manage data backups and recovery procedures
-- **System Health**: Monitor system performance and health metrics
+- **Demo Data Management**: Manage demo data for testing and demonstrations
+- **Medical Knowledge**: Configure and manage medical knowledge base
+- **Encryption Testing**: Test and demonstrate encryption capabilities
 
 ## User Management
 
-### Creating New Users
+> **Note**: User management interface is planned for future release. Currently, users are managed through database commands and configuration files.
 
-1. **Navigate to User Management**
-   - Go to Admin → User Management
-   - Click "Add New User"
+### Planned User Management Features
 
-2. **Fill User Information**
-   - **Email**: User's email address (used as username)
-   - **First Name**: User's first name
-   - **Last Name**: User's last name
-   - **Role**: Select appropriate role (Doctor, Nurse, Receptionist)
-   - **Department**: User's department (optional)
+**Future Capabilities:**
+- **User Creation**: Create new user accounts through admin interface
+- **Role Assignment**: Assign roles through UI
+- **Password Management**: Reset passwords and manage password policies
+- **User Deactivation**: Temporarily disable user access
+- **Bulk Operations**: Manage multiple users at once
 
-3. **Set Initial Password**
-   - Generate secure password or set custom password
-   - Require password change on first login
-   - Set password expiration policy
+### Current User Management
 
-4. **Configure Permissions**
-   - Review role-based permissions
-   - Add any additional permissions if needed
-   - Set access restrictions if required
-
-### Managing Existing Users
-
-**View User List**
-- See all users with their roles and status
-- Filter by role, department, or status
-- Search for specific users
-
-**Edit User Information**
-- Update user details
-- Change user role
-- Modify permissions
-- Reset password
-
-**Deactivate Users**
-- Temporarily disable user access
-- Preserve user data and audit history
-- Reactivate when needed
-
-**Delete Users**
-- Permanent removal of user account
-- Archive user data for compliance
-- Update audit logs
-
-### Role Management
+**Database Management**
+- Users are stored in MongoDB `users` collection
+- Roles are managed through Symfony Security configuration
+- Password resets require database access
+- User creation requires command-line tools
 
 **Available Roles**
-- **Admin**: Full system access
-- **Doctor**: Complete patient data access
-- **Nurse**: Medical data access only
-- **Receptionist**: Basic information access
-
-**Role Permissions**
-- Review role permission matrix
-- Understand data access levels
-- Ensure proper role assignment
+- **ROLE_ADMIN**: Full system access
+- **ROLE_DOCTOR**: Complete patient data access
+- **ROLE_NURSE**: Medical data access only
+- **ROLE_RECEPTIONIST**: Basic information access
+- **ROLE_PATIENT**: Patient portal access
 
 ## System Configuration
 
@@ -164,63 +131,55 @@ The admin dashboard provides comprehensive system management capabilities:
 
 ## Backup and Recovery
 
-### Backup Management
+> **Note**: Backup and recovery features are managed through MongoDB Atlas and Railway deployment platform.
 
-**Create Backups**
-- Schedule automatic backups
-- Create manual backups
-- Verify backup integrity
-- Test backup restoration
+### Current Backup Management
 
-**Backup Storage**
-- Configure backup locations
-- Set backup retention policies
-- Encrypt backup data
-- Monitor backup status
+**MongoDB Atlas Backups**
+- Automated daily backups enabled
+- Point-in-time recovery available
+- Backup retention configured per Atlas settings
+- Backup encryption handled by Atlas
 
-### Recovery Procedures
+**Railway Deployment**
+- Application state managed by Railway
+- Environment variables backed up
+- Deployment history maintained
+- Rollback capabilities available
 
-**Data Recovery**
-- Restore from backups
-- Recover specific data
-- Test recovery procedures
-- Document recovery processes
+### Planned Backup Features
 
-**Disaster Recovery**
-- Implement disaster recovery plan
-- Test recovery procedures
-- Maintain recovery documentation
-- Train staff on recovery procedures
+**Future Capabilities:**
+- **Manual Backup Creation**: Create on-demand backups
+- **Backup Verification**: Test backup integrity
+- **Custom Retention Policies**: Configure backup retention
+- **Backup Monitoring**: Monitor backup status and alerts
 
 ## System Health Monitoring
 
-### Performance Monitoring
+> **Note**: System monitoring is primarily handled through Railway and MongoDB Atlas platforms.
 
-**System Metrics**
-- Monitor system performance
-- Track resource usage
-- Monitor database performance
-- View application metrics
+### Current Monitoring
 
-**Health Checks**
-- Run system health checks
-- Monitor service status
-- Check encryption status
-- Verify audit logging
+**Railway Monitoring**
+- Application performance metrics
+- Deployment status monitoring
+- Resource usage tracking
+- Error logging and alerts
 
-### Maintenance Tasks
+**MongoDB Atlas Monitoring**
+- Database performance metrics
+- Query performance analysis
+- Connection monitoring
+- Storage usage tracking
 
-**Regular Maintenance**
-- Update system software
-- Apply security patches
-- Clean up old data
-- Optimize database performance
+### Planned Monitoring Features
 
-**Scheduled Tasks**
-- Configure maintenance schedules
-- Set up automated tasks
-- Monitor task execution
-- Review task logs
+**Future Capabilities:**
+- **Custom Dashboards**: Create custom monitoring dashboards
+- **Advanced Metrics**: Detailed application metrics
+- **Health Checks**: Automated system health checks
+- **Alert Configuration**: Custom alert rules and notifications
 
 ## Security Best Practices
 
@@ -305,26 +264,26 @@ The admin dashboard provides comprehensive system management capabilities:
 ## Admin Checklist
 
 ### Daily Tasks
-- [ ] Review security alerts
-- [ ] Check system health
-- [ ] Monitor user activity
 - [ ] Review audit logs
+- [ ] Check system status on Railway
+- [ ] Monitor MongoDB Atlas metrics
+- [ ] Review security alerts
 
 ### Weekly Tasks
-- [ ] Review user access
-- [ ] Check backup status
+- [ ] Review audit log patterns
+- [ ] Check backup status in Atlas
 - [ ] Monitor system performance
-- [ ] Review security reports
+- [ ] Review demo data integrity
 
 ### Monthly Tasks
 - [ ] Conduct security assessment
 - [ ] Review compliance status
-- [ ] Update security policies
-- [ ] Train staff on security
+- [ ] Update medical knowledge base
+- [ ] Test encryption functionality
 
 ### Quarterly Tasks
-- [ ] Rotate encryption keys
-- [ ] Test disaster recovery
+- [ ] Review encryption key status
+- [ ] Test disaster recovery procedures
 - [ ] Review user permissions
 - [ ] Update system documentation
 

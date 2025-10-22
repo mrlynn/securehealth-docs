@@ -5,7 +5,7 @@
   "source": "@site/docs/community/github-integration.md",
   "sourceDirName": "community",
   "slug": "/community/github-integration",
-  "permalink": "/es/docs/community/github-integration",
+  "permalink": "/docs/community/github-integration",
   "draft": false,
   "unlisted": false,
   "tags": [],
@@ -14,10 +14,10 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Contributing to SecureHealth",
-    "permalink": "/es/docs/community/contributing"
+    "permalink": "/docs/community/contributing"
   },
   "next": {
     "title": "Support",
-    "permalink": "/es/docs/community/support"
+    "permalink": "/docs/community/support"
   }
 }

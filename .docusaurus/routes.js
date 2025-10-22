@@ -3,229 +3,264 @@ import ComponentCreator from '@docusaurus/ComponentCreator';
 
 export default [
   {
-    path: '/es/helloWorld',
-    component: ComponentCreator('/es/helloWorld', 'b11'),
+    path: '/__docusaurus/debug',
+    component: ComponentCreator('/__docusaurus/debug', '5ff'),
     exact: true
   },
   {
-    path: '/es/docs',
-    component: ComponentCreator('/es/docs', 'e90'),
+    path: '/__docusaurus/debug/config',
+    component: ComponentCreator('/__docusaurus/debug/config', '5ba'),
+    exact: true
+  },
+  {
+    path: '/__docusaurus/debug/content',
+    component: ComponentCreator('/__docusaurus/debug/content', 'a2b'),
+    exact: true
+  },
+  {
+    path: '/__docusaurus/debug/globalData',
+    component: ComponentCreator('/__docusaurus/debug/globalData', 'c3c'),
+    exact: true
+  },
+  {
+    path: '/__docusaurus/debug/metadata',
+    component: ComponentCreator('/__docusaurus/debug/metadata', '156'),
+    exact: true
+  },
+  {
+    path: '/__docusaurus/debug/registry',
+    component: ComponentCreator('/__docusaurus/debug/registry', '88c'),
+    exact: true
+  },
+  {
+    path: '/__docusaurus/debug/routes',
+    component: ComponentCreator('/__docusaurus/debug/routes', '000'),
+    exact: true
+  },
+  {
+    path: '/helloWorld',
+    component: ComponentCreator('/helloWorld', '3a9'),
+    exact: true
+  },
+  {
+    path: '/docs',
+    component: ComponentCreator('/docs', '999'),
     routes: [
       {
-        path: '/es/docs',
-        component: ComponentCreator('/es/docs', '202'),
+        path: '/docs',
+        component: ComponentCreator('/docs', 'd00'),
         routes: [
           {
-            path: '/es/docs',
-            component: ComponentCreator('/es/docs', '7fc'),
+            path: '/docs',
+            component: ComponentCreator('/docs', '913'),
             routes: [
               {
-                path: '/es/docs/community/contributing',
-                component: ComponentCreator('/es/docs/community/contributing', 'cb5'),
+                path: '/docs/community/contributing',
+                component: ComponentCreator('/docs/community/contributing', '5c8'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/es/docs/community/github-integration',
-                component: ComponentCreator('/es/docs/community/github-integration', '646'),
+                path: '/docs/community/github-integration',
+                component: ComponentCreator('/docs/community/github-integration', 'bda'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/es/docs/community/roadmap',
-                component: ComponentCreator('/es/docs/community/roadmap', 'ac0'),
+                path: '/docs/community/roadmap',
+                component: ComponentCreator('/docs/community/roadmap', 'f1e'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/es/docs/community/support',
-                component: ComponentCreator('/es/docs/community/support', '773'),
+                path: '/docs/community/support',
+                component: ComponentCreator('/docs/community/support', 'a0e'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/es/docs/concepts/audit-logging',
-                component: ComponentCreator('/es/docs/concepts/audit-logging', '6b0'),
+                path: '/docs/concepts/audit-logging',
+                component: ComponentCreator('/docs/concepts/audit-logging', 'd74'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/es/docs/concepts/hipaa-compliance',
-                component: ComponentCreator('/es/docs/concepts/hipaa-compliance', '67c'),
+                path: '/docs/concepts/hipaa-compliance',
+                component: ComponentCreator('/docs/concepts/hipaa-compliance', '6c7'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/es/docs/concepts/queryable-encryption',
-                component: ComponentCreator('/es/docs/concepts/queryable-encryption', '1cb'),
+                path: '/docs/concepts/queryable-encryption',
+                component: ComponentCreator('/docs/concepts/queryable-encryption', 'b37'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/es/docs/concepts/role-based-access',
-                component: ComponentCreator('/es/docs/concepts/role-based-access', '05a'),
+                path: '/docs/concepts/role-based-access',
+                component: ComponentCreator('/docs/concepts/role-based-access', '4ca'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/es/docs/concepts/security-architecture',
-                component: ComponentCreator('/es/docs/concepts/security-architecture', 'c15'),
+                path: '/docs/concepts/security-architecture',
+                component: ComponentCreator('/docs/concepts/security-architecture', 'c87'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/es/docs/developer-guides/api-reference',
-                component: ComponentCreator('/es/docs/developer-guides/api-reference', '2c1'),
+                path: '/docs/developer-guides/api-reference',
+                component: ComponentCreator('/docs/developer-guides/api-reference', '13e'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/es/docs/developer-guides/architecture',
-                component: ComponentCreator('/es/docs/developer-guides/architecture', 'ec0'),
+                path: '/docs/developer-guides/architecture',
+                component: ComponentCreator('/docs/developer-guides/architecture', 'e4a'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/es/docs/developer-guides/database-schema',
-                component: ComponentCreator('/es/docs/developer-guides/database-schema', '935'),
+                path: '/docs/developer-guides/database-schema',
+                component: ComponentCreator('/docs/developer-guides/database-schema', '6dc'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/es/docs/developer-guides/deployment',
-                component: ComponentCreator('/es/docs/developer-guides/deployment', '00e'),
+                path: '/docs/developer-guides/deployment',
+                component: ComponentCreator('/docs/developer-guides/deployment', 'ca2'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/es/docs/developer-guides/security-implementation',
-                component: ComponentCreator('/es/docs/developer-guides/security-implementation', '6bb'),
+                path: '/docs/developer-guides/security-implementation',
+                component: ComponentCreator('/docs/developer-guides/security-implementation', '4fc'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/es/docs/developer-guides/testing',
-                component: ComponentCreator('/es/docs/developer-guides/testing', 'b3b'),
+                path: '/docs/developer-guides/testing',
+                component: ComponentCreator('/docs/developer-guides/testing', 'cb2'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/es/docs/getting-started/first-steps',
-                component: ComponentCreator('/es/docs/getting-started/first-steps', 'f3d'),
+                path: '/docs/getting-started/first-steps',
+                component: ComponentCreator('/docs/getting-started/first-steps', '730'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/es/docs/getting-started/installation',
-                component: ComponentCreator('/es/docs/getting-started/installation', '316'),
+                path: '/docs/getting-started/installation',
+                component: ComponentCreator('/docs/getting-started/installation', '267'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/es/docs/getting-started/introduction',
-                component: ComponentCreator('/es/docs/getting-started/introduction', '024'),
+                path: '/docs/getting-started/introduction',
+                component: ComponentCreator('/docs/getting-started/introduction', '314'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/es/docs/getting-started/quick-start',
-                component: ComponentCreator('/es/docs/getting-started/quick-start', 'a6f'),
+                path: '/docs/getting-started/quick-start',
+                component: ComponentCreator('/docs/getting-started/quick-start', '09c'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/es/docs/intro',
-                component: ComponentCreator('/es/docs/intro', '55c'),
+                path: '/docs/intro',
+                component: ComponentCreator('/docs/intro', '61d'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/es/docs/reference/api-endpoints',
-                component: ComponentCreator('/es/docs/reference/api-endpoints', '836'),
+                path: '/docs/reference/api-endpoints',
+                component: ComponentCreator('/docs/reference/api-endpoints', '915'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/es/docs/reference/configuration',
-                component: ComponentCreator('/es/docs/reference/configuration', '065'),
+                path: '/docs/reference/configuration',
+                component: ComponentCreator('/docs/reference/configuration', 'bea'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/es/docs/reference/environment-variables',
-                component: ComponentCreator('/es/docs/reference/environment-variables', '4c8'),
+                path: '/docs/reference/environment-variables',
+                component: ComponentCreator('/docs/reference/environment-variables', '57e'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/es/docs/reference/glossary',
-                component: ComponentCreator('/es/docs/reference/glossary', 'ee7'),
+                path: '/docs/reference/glossary',
+                component: ComponentCreator('/docs/reference/glossary', '65f'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/es/docs/reference/troubleshooting',
-                component: ComponentCreator('/es/docs/reference/troubleshooting', 'a7c'),
+                path: '/docs/reference/troubleshooting',
+                component: ComponentCreator('/docs/reference/troubleshooting', '729'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/es/docs/tutorials/adding-roles',
-                component: ComponentCreator('/es/docs/tutorials/adding-roles', '801'),
+                path: '/docs/tutorials/adding-roles',
+                component: ComponentCreator('/docs/tutorials/adding-roles', 'ee8'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/es/docs/tutorials/audit-customization',
-                component: ComponentCreator('/es/docs/tutorials/audit-customization', 'd2d'),
+                path: '/docs/tutorials/audit-customization',
+                component: ComponentCreator('/docs/tutorials/audit-customization', '94c'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/es/docs/tutorials/custom-fields',
-                component: ComponentCreator('/es/docs/tutorials/custom-fields', 'b68'),
+                path: '/docs/tutorials/custom-fields',
+                component: ComponentCreator('/docs/tutorials/custom-fields', '1fb'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/es/docs/tutorials/encryption-setup',
-                component: ComponentCreator('/es/docs/tutorials/encryption-setup', '8f0'),
+                path: '/docs/tutorials/encryption-setup',
+                component: ComponentCreator('/docs/tutorials/encryption-setup', 'f5d'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/es/docs/tutorials/integration-examples',
-                component: ComponentCreator('/es/docs/tutorials/integration-examples', 'ba7'),
+                path: '/docs/tutorials/integration-examples',
+                component: ComponentCreator('/docs/tutorials/integration-examples', 'a7b'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/es/docs/user-guides/admin-guide',
-                component: ComponentCreator('/es/docs/user-guides/admin-guide', '2a6'),
+                path: '/docs/user-guides/admin-guide',
+                component: ComponentCreator('/docs/user-guides/admin-guide', '316'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/es/docs/user-guides/doctor-guide',
-                component: ComponentCreator('/es/docs/user-guides/doctor-guide', '3f7'),
+                path: '/docs/user-guides/doctor-guide',
+                component: ComponentCreator('/docs/user-guides/doctor-guide', 'd31'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/es/docs/user-guides/nurse-guide',
-                component: ComponentCreator('/es/docs/user-guides/nurse-guide', '3e0'),
+                path: '/docs/user-guides/nurse-guide',
+                component: ComponentCreator('/docs/user-guides/nurse-guide', 'ce9'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/es/docs/user-guides/patient-portal',
-                component: ComponentCreator('/es/docs/user-guides/patient-portal', '040'),
+                path: '/docs/user-guides/patient-portal',
+                component: ComponentCreator('/docs/user-guides/patient-portal', 'afc'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/es/docs/user-guides/receptionist-guide',
-                component: ComponentCreator('/es/docs/user-guides/receptionist-guide', '093'),
+                path: '/docs/user-guides/receptionist-guide',
+                component: ComponentCreator('/docs/user-guides/receptionist-guide', '58a'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               }
@@ -236,8 +271,8 @@ export default [
     ]
   },
   {
-    path: '/es/',
-    component: ComponentCreator('/es/', '124'),
+    path: '/',
+    component: ComponentCreator('/', '2e1'),
     exact: true
   },
   {

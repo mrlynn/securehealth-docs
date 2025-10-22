@@ -4,10 +4,10 @@
  * Modify the docusaurus.config.js file at your site's root instead.
  */
 export default {
-  "title": "Home",
+  "title": "SecureHealth Documentation",
   "tagline": "Secure, HIPAA-compliant healthcare information management with MongoDB Queryable Encryption",
   "url": "https://docs.securehealth.dev",
-  "baseUrl": "/es/",
+  "baseUrl": "/",
   "projectName": "mrlynn.github.io",
   "organizationName": "mrlynn",
   "trailingSlash": false,

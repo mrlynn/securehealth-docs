@@ -5,7 +5,7 @@
   "source": "@site/docs/user-guides/doctor-guide.md",
   "sourceDirName": "user-guides",
   "slug": "/user-guides/doctor-guide",
-  "permalink": "/es/docs/user-guides/doctor-guide",
+  "permalink": "/docs/user-guides/doctor-guide",
   "draft": false,
   "unlisted": false,
   "tags": [],
@@ -14,10 +14,10 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Admin Guide",
-    "permalink": "/es/docs/user-guides/admin-guide"
+    "permalink": "/docs/user-guides/admin-guide"
   },
   "next": {
     "title": "Nurse Guide",
-    "permalink": "/es/docs/user-guides/nurse-guide"
+    "permalink": "/docs/user-guides/nurse-guide"
   }
 }

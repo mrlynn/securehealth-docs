@@ -40,7 +40,6 @@ The doctor dashboard provides comprehensive access to:
 - **Medical History**: Past diagnoses, treatments, surgeries
 - **Current Medications**: Active prescriptions and dosages
 - **Allergies**: Known allergies and adverse reactions
-- **Insurance**: Insurance provider and coverage details
 
 **Medical Records**
 - **Lab Results**: Blood tests, imaging, pathology reports

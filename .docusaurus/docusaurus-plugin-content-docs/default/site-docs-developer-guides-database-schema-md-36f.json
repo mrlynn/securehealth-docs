@@ -5,7 +5,7 @@
   "source": "@site/docs/developer-guides/database-schema.md",
   "sourceDirName": "developer-guides",
   "slug": "/developer-guides/database-schema",
-  "permalink": "/es/docs/developer-guides/database-schema",
+  "permalink": "/docs/developer-guides/database-schema",
   "draft": false,
   "unlisted": false,
   "tags": [],
@@ -14,10 +14,10 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "API Reference",
-    "permalink": "/es/docs/developer-guides/api-reference"
+    "permalink": "/docs/developer-guides/api-reference"
   },
   "next": {
     "title": "Security Implementation",
-    "permalink": "/es/docs/developer-guides/security-implementation"
+    "permalink": "/docs/developer-guides/security-implementation"
   }
 }

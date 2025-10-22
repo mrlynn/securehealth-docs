@@ -5,7 +5,7 @@
   "source": "@site/docs/tutorials/audit-customization.md",
   "sourceDirName": "tutorials",
   "slug": "/tutorials/audit-customization",
-  "permalink": "/es/docs/tutorials/audit-customization",
+  "permalink": "/docs/tutorials/audit-customization",
   "draft": false,
   "unlisted": false,
   "tags": [],
@@ -14,10 +14,10 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Custom Fields Tutorial",
-    "permalink": "/es/docs/tutorials/custom-fields"
+    "permalink": "/docs/tutorials/custom-fields"
   },
   "next": {
     "title": "Integration Examples Tutorial",
-    "permalink": "/es/docs/tutorials/integration-examples"
+    "permalink": "/docs/tutorials/integration-examples"
   }
 }

@@ -1,169 +1,212 @@
 {
-  "/es/helloWorld-b11": {
-    "__comp": "72d756b8",
+  "/__docusaurus/debug-5ff": {
+    "__comp": "__comp---theme-debug-config-23-a-2ff",
     "__context": {
-      "plugin": "a7456010"
-    },
-    "config": "5e9f5e1a"
-  },
-  "/es/docs-e90": {
-    "__comp": "5e95c892",
-    "__context": {
-      "plugin": "aba21aa0"
+      "plugin": "plugin---docusaurus-debugb-38-ad3"
     }
   },
-  "/es/docs-202": {
-    "__comp": "a7bd4aaa",
-    "__props": "9d39d3e7"
-  },
-  "/es/docs-7fc": {
-    "__comp": "a94703ab"
-  },
-  "/es/docs/community/contributing-cb5": {
-    "__comp": "17896441",
-    "content": "61cc1a3d"
-  },
-  "/es/docs/community/github-integration-646": {
-    "__comp": "17896441",
-    "content": "81172238"
-  },
-  "/es/docs/community/roadmap-ac0": {
-    "__comp": "17896441",
-    "content": "5cdc7c43"
-  },
-  "/es/docs/community/support-773": {
-    "__comp": "17896441",
-    "content": "58da3ed9"
-  },
-  "/es/docs/concepts/audit-logging-6b0": {
-    "__comp": "17896441",
-    "content": "c31cf23a"
-  },
-  "/es/docs/concepts/hipaa-compliance-67c": {
-    "__comp": "17896441",
-    "content": "04e3b5ac"
-  },
-  "/es/docs/concepts/queryable-encryption-1cb": {
-    "__comp": "17896441",
-    "content": "2ab34cf0"
-  },
-  "/es/docs/concepts/role-based-access-05a": {
-    "__comp": "17896441",
-    "content": "61c4578d"
-  },
-  "/es/docs/concepts/security-architecture-c15": {
-    "__comp": "17896441",
-    "content": "d041264b"
-  },
-  "/es/docs/developer-guides/api-reference-2c1": {
-    "__comp": "17896441",
-    "content": "5ce4f56f"
-  },
-  "/es/docs/developer-guides/architecture-ec0": {
-    "__comp": "17896441",
-    "content": "e8e31b88"
-  },
-  "/es/docs/developer-guides/database-schema-935": {
-    "__comp": "17896441",
-    "content": "36f2e7bd"
-  },
-  "/es/docs/developer-guides/deployment-00e": {
-    "__comp": "17896441",
-    "content": "ccba49c6"
-  },
-  "/es/docs/developer-guides/security-implementation-6bb": {
-    "__comp": "17896441",
-    "content": "cf0305f0"
-  },
-  "/es/docs/developer-guides/testing-b3b": {
-    "__comp": "17896441",
-    "content": "ab9fb412"
-  },
-  "/es/docs/getting-started/first-steps-f3d": {
-    "__comp": "17896441",
-    "content": "a39aaf1d"
-  },
-  "/es/docs/getting-started/installation-316": {
-    "__comp": "17896441",
-    "content": "54f44165"
-  },
-  "/es/docs/getting-started/introduction-024": {
-    "__comp": "17896441",
-    "content": "9ff4038f"
-  },
-  "/es/docs/getting-started/quick-start-a6f": {
-    "__comp": "17896441",
-    "content": "588bd741"
-  },
-  "/es/docs/intro-55c": {
-    "__comp": "17896441",
-    "content": "0e384e19"
-  },
-  "/es/docs/reference/api-endpoints-836": {
-    "__comp": "17896441",
-    "content": "5ec456c7"
-  },
-  "/es/docs/reference/configuration-065": {
-    "__comp": "17896441",
-    "content": "306919cb"
-  },
-  "/es/docs/reference/environment-variables-4c8": {
-    "__comp": "17896441",
-    "content": "7e8d16e1"
-  },
-  "/es/docs/reference/glossary-ee7": {
-    "__comp": "17896441",
-    "content": "846656e5"
-  },
-  "/es/docs/reference/troubleshooting-a7c": {
-    "__comp": "17896441",
-    "content": "111eee19"
-  },
-  "/es/docs/tutorials/adding-roles-801": {
-    "__comp": "17896441",
-    "content": "6d3440e5"
-  },
-  "/es/docs/tutorials/audit-customization-d2d": {
-    "__comp": "17896441",
-    "content": "77d8caff"
-  },
-  "/es/docs/tutorials/custom-fields-b68": {
-    "__comp": "17896441",
-    "content": "a9798794"
-  },
-  "/es/docs/tutorials/encryption-setup-8f0": {
-    "__comp": "17896441",
-    "content": "596ad2a5"
-  },
-  "/es/docs/tutorials/integration-examples-ba7": {
-    "__comp": "17896441",
-    "content": "001187e0"
-  },
-  "/es/docs/user-guides/admin-guide-2a6": {
-    "__comp": "17896441",
-    "content": "56b1cd17"
-  },
-  "/es/docs/user-guides/doctor-guide-3f7": {
-    "__comp": "17896441",
-    "content": "c5856fb9"
-  },
-  "/es/docs/user-guides/nurse-guide-3e0": {
-    "__comp": "17896441",
-    "content": "2fb6ed55"
-  },
-  "/es/docs/user-guides/patient-portal-040": {
-    "__comp": "17896441",
-    "content": "421d8e1c"
-  },
-  "/es/docs/user-guides/receptionist-guide-093": {
-    "__comp": "17896441",
-    "content": "2583cf63"
-  },
-  "/es/-124": {
-    "__comp": "c4f5d8e4",
+  "/__docusaurus/debug/config-5ba": {
+    "__comp": "__comp---theme-debug-config-23-a-2ff",
     "__context": {
-      "plugin": "a7456010"
+      "plugin": "plugin---docusaurus-debugb-38-ad3"
+    }
+  },
+  "/__docusaurus/debug/content-a2b": {
+    "__comp": "__comp---theme-debug-contentba-8-ce7",
+    "__context": {
+      "plugin": "plugin---docusaurus-debugb-38-ad3"
     },
-    "config": "5e9f5e1a"
+    "__props": "__props---docusaurus-debug-content-3-c-0-be2"
+  },
+  "/__docusaurus/debug/globalData-c3c": {
+    "__comp": "__comp---theme-debug-global-dataede-0fa",
+    "__context": {
+      "plugin": "plugin---docusaurus-debugb-38-ad3"
+    }
+  },
+  "/__docusaurus/debug/metadata-156": {
+    "__comp": "__comp---theme-debug-site-metadata-68-e-3d4",
+    "__context": {
+      "plugin": "plugin---docusaurus-debugb-38-ad3"
+    }
+  },
+  "/__docusaurus/debug/registry-88c": {
+    "__comp": "__comp---theme-debug-registry-679-501",
+    "__context": {
+      "plugin": "plugin---docusaurus-debugb-38-ad3"
+    }
+  },
+  "/__docusaurus/debug/routes-000": {
+    "__comp": "__comp---theme-debug-routes-946-699",
+    "__context": {
+      "plugin": "plugin---docusaurus-debugb-38-ad3"
+    }
+  },
+  "/helloWorld-3a9": {
+    "__comp": "__comp---site-src-pages-hello-world-js-72-d-375",
+    "__context": {
+      "plugin": "plugin---hello-worlda-74-487"
+    },
+    "config": "config---hello-world-5-e-9-c42"
+  },
+  "/docs-999": {
+    "__comp": "__comp---theme-docs-root-5-e-9-0b6",
+    "__context": {
+      "plugin": "plugin---docsaba-d7c"
+    }
+  },
+  "/docs-d00": {
+    "__comp": "__comp---theme-doc-version-roota-7-b-5de",
+    "__props": "__props---docs-005-788"
+  },
+  "/docs-913": {
+    "__comp": "__comp---theme-doc-roota-94-67a"
+  },
+  "/docs/community/contributing-5c8": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-community-contributing-61-c-6c6"
+  },
+  "/docs/community/github-integration-bda": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-community-github-integration-811-0b8"
+  },
+  "/docs/community/roadmap-f1e": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-community-roadmap-5-cd-3b8"
+  },
+  "/docs/community/support-a0e": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-community-support-58-d-32e"
+  },
+  "/docs/concepts/audit-logging-d74": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-concepts-audit-loggingc-31-8f7"
+  },
+  "/docs/concepts/hipaa-compliance-6c7": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-concepts-hipaa-compliance-04-e-521"
+  },
+  "/docs/concepts/queryable-encryption-b37": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-concepts-queryable-encryption-2-ab-57a"
+  },
+  "/docs/concepts/role-based-access-4ca": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-concepts-role-based-access-61-c-9cd"
+  },
+  "/docs/concepts/security-architecture-c87": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-concepts-security-architectured-04-a67"
+  },
+  "/docs/developer-guides/api-reference-13e": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-developer-guides-api-reference-5-ce-817"
+  },
+  "/docs/developer-guides/architecture-e4a": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-developer-guides-architecturee-8-e-593"
+  },
+  "/docs/developer-guides/database-schema-6dc": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-developer-guides-database-schema-36-f-d9b"
+  },
+  "/docs/developer-guides/deployment-ca2": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-developer-guides-deploymentccb-623"
+  },
+  "/docs/developer-guides/security-implementation-4fc": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-developer-guides-security-implementationcf-0-930"
+  },
+  "/docs/developer-guides/testing-cb2": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-developer-guides-testingab-9-d95"
+  },
+  "/docs/getting-started/first-steps-730": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-getting-started-first-stepsa-39-e75"
+  },
+  "/docs/getting-started/installation-267": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-getting-started-installation-54-f-18d"
+  },
+  "/docs/getting-started/introduction-314": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-getting-started-introduction-9-ff-6b9"
+  },
+  "/docs/getting-started/quick-start-09c": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-getting-started-quick-start-588-94b"
+  },
+  "/docs/intro-61d": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-intro-0-e-3-be1"
+  },
+  "/docs/reference/api-endpoints-915": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-reference-api-endpoints-5-ec-c23"
+  },
+  "/docs/reference/configuration-bea": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-reference-configuration-306-196"
+  },
+  "/docs/reference/environment-variables-57e": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-reference-environment-variables-7-e-8-e61"
+  },
+  "/docs/reference/glossary-65f": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-reference-glossary-846-d57"
+  },
+  "/docs/reference/troubleshooting-729": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-reference-troubleshooting-111-5b7"
+  },
+  "/docs/tutorials/adding-roles-ee8": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-tutorials-adding-roles-6-d-3-d2a"
+  },
+  "/docs/tutorials/audit-customization-94c": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-tutorials-audit-customization-77-d-7b6"
+  },
+  "/docs/tutorials/custom-fields-1fb": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-tutorials-custom-fieldsa-97-473"
+  },
+  "/docs/tutorials/encryption-setup-f5d": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-tutorials-encryption-setup-596-49b"
+  },
+  "/docs/tutorials/integration-examples-a7b": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-tutorials-integration-examples-001-6d4"
+  },
+  "/docs/user-guides/admin-guide-316": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-user-guides-admin-guide-56-b-33e"
+  },
+  "/docs/user-guides/doctor-guide-d31": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-user-guides-doctor-guidec-58-944"
+  },
+  "/docs/user-guides/nurse-guide-ce9": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-user-guides-nurse-guide-2-fb-6f7"
+  },
+  "/docs/user-guides/patient-portal-afc": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-user-guides-patient-portal-421-cd9"
+  },
+  "/docs/user-guides/receptionist-guide-58a": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-user-guides-receptionist-guide-258-6d7"
+  },
+  "/-2e1": {
+    "__comp": "__comp---site-src-pages-index-jsc-4-f-f99",
+    "__context": {
+      "plugin": "plugin---hello-worlda-74-487"
+    },
+    "config": "config---hello-world-5-e-9-c42"
   }
 }

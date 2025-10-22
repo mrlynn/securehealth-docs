@@ -5,7 +5,7 @@
   "source": "@site/docs/reference/configuration.md",
   "sourceDirName": "reference",
   "slug": "/reference/configuration",
-  "permalink": "/es/docs/reference/configuration",
+  "permalink": "/docs/reference/configuration",
   "draft": false,
   "unlisted": false,
   "tags": [],
@@ -14,10 +14,10 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "API Endpoints Reference",
-    "permalink": "/es/docs/reference/api-endpoints"
+    "permalink": "/docs/reference/api-endpoints"
   },
   "next": {
     "title": "Environment Variables Reference",
-    "permalink": "/es/docs/reference/environment-variables"
+    "permalink": "/docs/reference/environment-variables"
   }
 }

@@ -120,14 +120,13 @@ The receptionist dashboard provides access to:
 2. Confirm appointment details
 3. Update patient information if needed
 4. Collect insurance information
-5. Process payment if required
+5. Complete check-in process
 6. Notify clinical staff of arrival
 
 **Check-in Information**
 - **Patient ID**: Verify patient identification
 - **Appointment**: Confirm appointment details
 - **Insurance**: Verify insurance information
-- **Payment**: Process copayments or payments
 - **Forms**: Complete necessary forms
 
 ### Patient Check-out
@@ -135,13 +134,11 @@ The receptionist dashboard provides access to:
 **Check-out Process**
 1. Confirm appointment completion
 2. Schedule follow-up appointments if needed
-3. Process payments
-4. Provide appointment summary
-5. Update patient information
-6. Schedule next appointment
+3. Provide appointment summary
+4. Update patient information
+5. Schedule next appointment
 
 **Check-out Tasks**
-- **Payment Processing**: Handle copayments and payments
 - **Follow-up Scheduling**: Schedule next appointments
 - **Prescription Pickup**: Coordinate prescription pickup
 - **Referrals**: Process specialist referrals
@@ -176,7 +173,6 @@ The receptionist dashboard provides access to:
 **Coverage Details**
 - **Effective Date**: Coverage start date
 - **Expiration Date**: Coverage end date
-- **Copayments**: Required copayment amounts
 - **Deductibles**: Deductible amounts
 - **Coverage Limits**: Coverage limitations
 
@@ -348,7 +344,6 @@ The receptionist dashboard provides access to:
 - [ ] Check daily schedule
 - [ ] Process patient check-ins
 - [ ] Manage appointment changes
-- [ ] Process payments
 - [ ] Update patient information
 
 ### Weekly Tasks

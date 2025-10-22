@@ -40,7 +40,6 @@ The nurse dashboard provides access to:
 - **Treatment Plans**: Current and past treatment plans
 
 **Restricted Information**
-- **Insurance Details**: Not accessible to nurses
 - **Personal Financial Information**: Not accessible to nurses
 - **Administrative Data**: Not accessible to nurses
 

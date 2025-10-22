@@ -342,12 +342,6 @@ db.audit_logs.createIndex({ "timestamp": 1 }, { expireAfterSeconds: 220752000 })
     "date": ISODate("2024-04-15T00:00:00Z"),
     "reason": "3-month follow-up"
   },
-  "billing": {
-    "insuranceClaimed": true,
-    "copay": 25.00,
-    "totalCost": 150.00,
-    "insuranceCoverage": 125.00
-  },
   "createdAt": ISODate("2024-01-01T00:00:00Z"),
   "updatedAt": ISODate("2024-01-15T10:30:00Z"),
   "createdBy": "user_123",

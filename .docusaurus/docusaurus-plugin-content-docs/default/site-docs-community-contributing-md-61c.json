@@ -5,7 +5,7 @@
   "source": "@site/docs/community/contributing.md",
   "sourceDirName": "community",
   "slug": "/community/contributing",
-  "permalink": "/es/docs/community/contributing",
+  "permalink": "/docs/community/contributing",
   "draft": false,
   "unlisted": false,
   "tags": [],
@@ -14,10 +14,10 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Glossary",
-    "permalink": "/es/docs/reference/glossary"
+    "permalink": "/docs/reference/glossary"
   },
   "next": {
     "title": "GitHub Integration",
-    "permalink": "/es/docs/community/github-integration"
+    "permalink": "/docs/community/github-integration"
   }
 }

@@ -11,7 +11,6 @@ The patient portal allows patients to:
 - **Communicate with Providers**: Send secure messages to healthcare providers
 - **Access Prescriptions**: View current medications and request refills
 - **Update Information**: Update personal information and insurance details
-- **View Billing**: Access billing information and make payments
 
 ## Getting Started
 
@@ -242,40 +241,6 @@ The patient portal allows patients to:
 - **Policy Numbers**: Insurance policy numbers
 - **Coverage Dates**: Coverage start and end dates
 
-## Billing and Payments
-
-### View Billing
-
-**Billing Information**
-1. Go to Billing → View Bills
-2. Select billing period
-3. View charges and payments
-4. Check insurance payments
-5. Download billing statements
-
-**Billing Details**
-- **Charges**: Services and procedures
-- **Insurance Payments**: Insurance payments
-- **Patient Responsibility**: Amount owed by patient
-- **Payment History**: Past payments
-- **Outstanding Balance**: Current balance
-
-### Make Payments
-
-**Online Payments**
-1. Go to Billing → Make Payment
-2. Enter payment amount
-3. Choose payment method
-4. Enter payment information
-5. Submit payment
-6. Receive confirmation
-
-**Payment Methods**
-- **Credit Card**: Visa, MasterCard, American Express
-- **Debit Card**: Bank debit card
-- **Bank Transfer**: Direct bank transfer
-- **Payment Plan**: Set up payment plan
-
 ## Security and Privacy
 
 ### Account Security
@@ -352,7 +317,6 @@ The patient portal allows patients to:
 
 ### Weekly Tasks
 - [ ] Review health summary
-- [ ] Check billing information
 - [ ] Update personal information if needed
 - [ ] Review appointment history
 

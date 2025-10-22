@@ -5,7 +5,7 @@
   "source": "@site/docs/developer-guides/deployment.md",
   "sourceDirName": "developer-guides",
   "slug": "/developer-guides/deployment",
-  "permalink": "/es/docs/developer-guides/deployment",
+  "permalink": "/docs/developer-guides/deployment",
   "draft": false,
   "unlisted": false,
   "tags": [],
@@ -14,10 +14,10 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Testing Strategies",
-    "permalink": "/es/docs/developer-guides/testing"
+    "permalink": "/docs/developer-guides/testing"
   },
   "next": {
     "title": "Encryption Setup Tutorial",
-    "permalink": "/es/docs/tutorials/encryption-setup"
+    "permalink": "/docs/tutorials/encryption-setup"
   }
 }

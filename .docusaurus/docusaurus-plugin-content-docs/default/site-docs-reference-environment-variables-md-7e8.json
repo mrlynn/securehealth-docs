@@ -5,7 +5,7 @@
   "source": "@site/docs/reference/environment-variables.md",
   "sourceDirName": "reference",
   "slug": "/reference/environment-variables",
-  "permalink": "/es/docs/reference/environment-variables",
+  "permalink": "/docs/reference/environment-variables",
   "draft": false,
   "unlisted": false,
   "tags": [],
@@ -14,10 +14,10 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Configuration Reference",
-    "permalink": "/es/docs/reference/configuration"
+    "permalink": "/docs/reference/configuration"
   },
   "next": {
     "title": "Troubleshooting Guide",
-    "permalink": "/es/docs/reference/troubleshooting"
+    "permalink": "/docs/reference/troubleshooting"
   }
 }

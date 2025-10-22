@@ -1,188 +1,188 @@
 {
   "docusaurus-plugin-content-docs": {
     "default": {
-      "path": "/es/docs",
+      "path": "/docs",
       "versions": [
         {
           "name": "current",
           "label": "Next",
           "isLast": true,
-          "path": "/es/docs",
+          "path": "/docs",
           "mainDocId": "intro",
           "docs": [
             {
               "id": "community/contributing",
-              "path": "/es/docs/community/contributing",
+              "path": "/docs/community/contributing",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "community/github-integration",
-              "path": "/es/docs/community/github-integration",
+              "path": "/docs/community/github-integration",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "community/roadmap",
-              "path": "/es/docs/community/roadmap",
+              "path": "/docs/community/roadmap",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "community/support",
-              "path": "/es/docs/community/support",
+              "path": "/docs/community/support",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "concepts/audit-logging",
-              "path": "/es/docs/concepts/audit-logging",
+              "path": "/docs/concepts/audit-logging",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "concepts/hipaa-compliance",
-              "path": "/es/docs/concepts/hipaa-compliance",
+              "path": "/docs/concepts/hipaa-compliance",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "concepts/queryable-encryption",
-              "path": "/es/docs/concepts/queryable-encryption",
+              "path": "/docs/concepts/queryable-encryption",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "concepts/role-based-access",
-              "path": "/es/docs/concepts/role-based-access",
+              "path": "/docs/concepts/role-based-access",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "concepts/security-architecture",
-              "path": "/es/docs/concepts/security-architecture",
+              "path": "/docs/concepts/security-architecture",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "developer-guides/api-reference",
-              "path": "/es/docs/developer-guides/api-reference",
+              "path": "/docs/developer-guides/api-reference",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "developer-guides/architecture",
-              "path": "/es/docs/developer-guides/architecture",
+              "path": "/docs/developer-guides/architecture",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "developer-guides/database-schema",
-              "path": "/es/docs/developer-guides/database-schema",
+              "path": "/docs/developer-guides/database-schema",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "developer-guides/deployment",
-              "path": "/es/docs/developer-guides/deployment",
+              "path": "/docs/developer-guides/deployment",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "developer-guides/security-implementation",
-              "path": "/es/docs/developer-guides/security-implementation",
+              "path": "/docs/developer-guides/security-implementation",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "developer-guides/testing",
-              "path": "/es/docs/developer-guides/testing",
+              "path": "/docs/developer-guides/testing",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "getting-started/first-steps",
-              "path": "/es/docs/getting-started/first-steps",
+              "path": "/docs/getting-started/first-steps",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "getting-started/installation",
-              "path": "/es/docs/getting-started/installation",
+              "path": "/docs/getting-started/installation",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "getting-started/introduction",
-              "path": "/es/docs/getting-started/introduction",
+              "path": "/docs/getting-started/introduction",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "getting-started/quick-start",
-              "path": "/es/docs/getting-started/quick-start",
+              "path": "/docs/getting-started/quick-start",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "intro",
-              "path": "/es/docs/intro",
+              "path": "/docs/intro",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "reference/api-endpoints",
-              "path": "/es/docs/reference/api-endpoints",
+              "path": "/docs/reference/api-endpoints",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "reference/configuration",
-              "path": "/es/docs/reference/configuration",
+              "path": "/docs/reference/configuration",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "reference/environment-variables",
-              "path": "/es/docs/reference/environment-variables",
+              "path": "/docs/reference/environment-variables",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "reference/glossary",
-              "path": "/es/docs/reference/glossary",
+              "path": "/docs/reference/glossary",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "reference/troubleshooting",
-              "path": "/es/docs/reference/troubleshooting",
+              "path": "/docs/reference/troubleshooting",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "tutorials/adding-roles",
-              "path": "/es/docs/tutorials/adding-roles",
+              "path": "/docs/tutorials/adding-roles",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "tutorials/audit-customization",
-              "path": "/es/docs/tutorials/audit-customization",
+              "path": "/docs/tutorials/audit-customization",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "tutorials/custom-fields",
-              "path": "/es/docs/tutorials/custom-fields",
+              "path": "/docs/tutorials/custom-fields",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "tutorials/encryption-setup",
-              "path": "/es/docs/tutorials/encryption-setup",
+              "path": "/docs/tutorials/encryption-setup",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "tutorials/integration-examples",
-              "path": "/es/docs/tutorials/integration-examples",
+              "path": "/docs/tutorials/integration-examples",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "user-guides/admin-guide",
-              "path": "/es/docs/user-guides/admin-guide",
+              "path": "/docs/user-guides/admin-guide",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "user-guides/doctor-guide",
-              "path": "/es/docs/user-guides/doctor-guide",
+              "path": "/docs/user-guides/doctor-guide",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "user-guides/nurse-guide",
-              "path": "/es/docs/user-guides/nurse-guide",
+              "path": "/docs/user-guides/nurse-guide",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "user-guides/patient-portal",
-              "path": "/es/docs/user-guides/patient-portal",
+              "path": "/docs/user-guides/patient-portal",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "user-guides/receptionist-guide",
-              "path": "/es/docs/user-guides/receptionist-guide",
+              "path": "/docs/user-guides/receptionist-guide",
               "sidebar": "tutorialSidebar"
             }
           ],
@@ -190,7 +190,7 @@
           "sidebars": {
             "tutorialSidebar": {
               "link": {
-                "path": "/es/docs/intro",
+                "path": "/docs/intro",
                 "label": "intro"
               }
             }
@@ -200,20 +200,11 @@
       "breadcrumbs": true
     }
   },
-  "docusaurus-plugin-google-gtag": {
-    "default": {
-      "trackingID": [
-        "G-ZJ28V71VTQ"
-      ],
-      "anonymizeIP": true,
-      "id": "default"
-    }
-  },
   "docusaurus-lunr-search": {
     "default": {
       "fileNames": {
-        "searchDoc": "search-doc-1761151357615.json",
-        "lunrIndex": "lunr-index-1761151357615.json"
+        "searchDoc": "search-doc-1761152678995.json",
+        "lunrIndex": "lunr-index-1761152678995.json"
       }
     }
   }

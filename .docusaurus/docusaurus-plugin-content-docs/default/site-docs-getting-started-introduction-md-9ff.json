@@ -5,7 +5,7 @@
   "source": "@site/docs/getting-started/introduction.md",
   "sourceDirName": "getting-started",
   "slug": "/getting-started/introduction",
-  "permalink": "/es/docs/getting-started/introduction",
+  "permalink": "/docs/getting-started/introduction",
   "draft": false,
   "unlisted": false,
   "tags": [],
@@ -14,10 +14,10 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Welcome to SecureHealth Documentation",
-    "permalink": "/es/docs/intro"
+    "permalink": "/docs/intro"
   },
   "next": {
     "title": "Quick Start Guide",
-    "permalink": "/es/docs/getting-started/quick-start"
+    "permalink": "/docs/getting-started/quick-start"
   }
 }

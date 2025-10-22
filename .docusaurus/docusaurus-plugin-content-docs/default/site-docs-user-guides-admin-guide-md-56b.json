@@ -5,7 +5,7 @@
   "source": "@site/docs/user-guides/admin-guide.md",
   "sourceDirName": "user-guides",
   "slug": "/user-guides/admin-guide",
-  "permalink": "/es/docs/user-guides/admin-guide",
+  "permalink": "/docs/user-guides/admin-guide",
   "draft": false,
   "unlisted": false,
   "tags": [],
@@ -14,10 +14,10 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Security Architecture",
-    "permalink": "/es/docs/concepts/security-architecture"
+    "permalink": "/docs/concepts/security-architecture"
   },
   "next": {
     "title": "Doctor Guide",
-    "permalink": "/es/docs/user-guides/doctor-guide"
+    "permalink": "/docs/user-guides/doctor-guide"
   }
 }

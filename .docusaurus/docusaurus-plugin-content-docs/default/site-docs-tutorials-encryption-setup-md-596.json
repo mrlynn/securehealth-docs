@@ -5,7 +5,7 @@
   "source": "@site/docs/tutorials/encryption-setup.md",
   "sourceDirName": "tutorials",
   "slug": "/tutorials/encryption-setup",
-  "permalink": "/es/docs/tutorials/encryption-setup",
+  "permalink": "/docs/tutorials/encryption-setup",
   "draft": false,
   "unlisted": false,
   "tags": [],
@@ -14,10 +14,10 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Production Deployment",
-    "permalink": "/es/docs/developer-guides/deployment"
+    "permalink": "/docs/developer-guides/deployment"
   },
   "next": {
     "title": "Adding Roles Tutorial",
-    "permalink": "/es/docs/tutorials/adding-roles"
+    "permalink": "/docs/tutorials/adding-roles"
   }
 }

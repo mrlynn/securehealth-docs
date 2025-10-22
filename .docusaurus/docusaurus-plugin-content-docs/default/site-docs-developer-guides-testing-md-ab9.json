@@ -5,7 +5,7 @@
   "source": "@site/docs/developer-guides/testing.md",
   "sourceDirName": "developer-guides",
   "slug": "/developer-guides/testing",
-  "permalink": "/es/docs/developer-guides/testing",
+  "permalink": "/docs/developer-guides/testing",
   "draft": false,
   "unlisted": false,
   "tags": [],
@@ -14,10 +14,10 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Security Implementation",
-    "permalink": "/es/docs/developer-guides/security-implementation"
+    "permalink": "/docs/developer-guides/security-implementation"
   },
   "next": {
     "title": "Production Deployment",
-    "permalink": "/es/docs/developer-guides/deployment"
+    "permalink": "/docs/developer-guides/deployment"
   }
 }
