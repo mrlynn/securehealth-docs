@@ -97,7 +97,7 @@ const config = {
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
   favicon: `${favicon}`,
-  deploymentBranch: "gh-pages",
+  // deploymentBranch: "gh-pages", // Not needed for GitHub Actions
   staticDirectories: ["static"],
   i18n: {
     defaultLocale: "en",
