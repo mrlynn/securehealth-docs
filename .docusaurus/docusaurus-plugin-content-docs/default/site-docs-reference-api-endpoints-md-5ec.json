@@ -1,0 +1,23 @@
+{
+  "id": "reference/api-endpoints",
+  "title": "API Endpoints Reference",
+  "description": "Complete reference for all SecureHealth API endpoints, including request/response formats, authentication requirements, and error codes.",
+  "source": "@site/docs/reference/api-endpoints.md",
+  "sourceDirName": "reference",
+  "slug": "/reference/api-endpoints",
+  "permalink": "/securehealth-docs/docs/reference/api-endpoints",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Integration Examples Tutorial",
+    "permalink": "/securehealth-docs/docs/tutorials/integration-examples"
+  },
+  "next": {
+    "title": "Configuration Reference",
+    "permalink": "/securehealth-docs/docs/reference/configuration"
+  }
+}

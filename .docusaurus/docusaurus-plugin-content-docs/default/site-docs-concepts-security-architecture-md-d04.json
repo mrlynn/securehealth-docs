@@ -1,0 +1,23 @@
+{
+  "id": "concepts/security-architecture",
+  "title": "Security Architecture",
+  "description": "SecureHealth implements a comprehensive security architecture designed to meet HIPAA compliance requirements while providing a functional healthcare application. This architecture emphasizes defense in depth, with multiple layers of security controls.",
+  "source": "@site/docs/concepts/security-architecture.md",
+  "sourceDirName": "concepts",
+  "slug": "/concepts/security-architecture",
+  "permalink": "/securehealth-docs/docs/concepts/security-architecture",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Audit Logging",
+    "permalink": "/securehealth-docs/docs/concepts/audit-logging"
+  },
+  "next": {
+    "title": "Admin Guide",
+    "permalink": "/securehealth-docs/docs/user-guides/admin-guide"
+  }
+}

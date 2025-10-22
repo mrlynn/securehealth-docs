@@ -1,0 +1,24 @@
+{
+  "id": "content-tips/standard-intro-icons",
+  "title": "🧑‍🎨 Standard Intro Icons",
+  "description": "We have a set of Standard Icons for the pages that we put on all Intro pages:",
+  "source": "@site/docs/50-content-tips/10-standard-intro-icons.mdx",
+  "sourceDirName": "50-content-tips",
+  "slug": "/content-tips/standard-intro-icons",
+  "permalink": "/docusaurus-workshop/docs/content-tips/standard-intro-icons",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 10,
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "🗂️ Tabs",
+    "permalink": "/docusaurus-workshop/docs/content-tips/tabs"
+  },
+  "next": {
+    "title": "🌍 i18n AKA Internacionalization",
+    "permalink": "/docusaurus-workshop/docs/content-tips/i18n"
+  }
+}

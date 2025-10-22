@@ -1,21 +1,123 @@
-[![.github/workflows/deploy.yml](https://github.com/mongodb-developer/docusaurus-workshop/actions/workflows/deploy.yml/badge.svg?branch=main)](https://github.com/mongodb-developer/docusaurus-workshop/actions/workflows/deploy.yml)
+# SecureHealth Documentation
 
-# Docusaurus Template Workshop
+This repository contains the documentation for SecureHealth, a HIPAA-compliant medical records management system built with MongoDB Queryable Encryption.
 
-This is a template to __create new Lab documentation sites__. Contains info on how to use Docusaurus and is a good starting point.
+## 🚀 Live Site
 
-### Installation, use, how to build, etc.
+The documentation is deployed at: **https://docs.securehealth.dev**
 
-Everything is covered in the Lab itself: https://mongodb-developer.github.io/docusaurus-workshop/
+## 🛠️ Development
 
-## Contributing
+### Prerequisites
 
-As `main` is protected, submit a pull request to be reviewed.
+- Node.js 18+ 
+- npm or yarn
 
-## Docusaurus
+### Local Development
 
-This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator. It's available on https://mongodb-developer.github.io/docusaurus-workshop/.
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/mrlynn/securehealth-docs.git
+   cd securehealth-docs
+   ```
 
-### Disclaimer
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
-Use at your own risk; not a supported MongoDB product
+3. **Start development server**
+   ```bash
+   npm start
+   ```
+
+4. **Open your browser**
+   Navigate to `http://localhost:3000`
+
+### Building for Production
+
+```bash
+npm run build
+```
+
+The built files will be in the `build/` directory.
+
+## 📚 Documentation Structure
+
+- **Getting Started**: Introduction, installation, and first steps
+- **Concepts**: HIPAA compliance, encryption, security architecture
+- **User Guides**: Role-based guides for different user types
+- **Developer Guides**: API reference, architecture, deployment
+- **Tutorials**: Step-by-step implementation guides
+- **Reference**: Configuration, troubleshooting, glossary
+- **Community**: Contributing, support, roadmap
+
+## 🎨 Design System
+
+The documentation follows the SecureHealth design system:
+
+- **Primary Color**: `#2ecc71` (vibrant green)
+- **Background**: `#e8f8f5` (light mint green)
+- **Header/Footer**: `#34495e` (dark slate gray/blue)
+- **Typography**: Inter font family
+- **Cards**: Rounded corners with subtle shadows
+
+## 🚀 Deployment
+
+### GitHub Pages
+
+The site is automatically deployed to GitHub Pages using GitHub Actions:
+
+1. **Push to main branch** triggers automatic deployment
+2. **Custom domain**: `docs.securehealth.dev`
+3. **Deployment branch**: `gh-pages` (managed by GitHub Actions)
+
+### Manual Deployment
+
+If you need to deploy manually:
+
+```bash
+npm run build
+# Upload the build/ directory to your web server
+```
+
+## 🔧 Configuration
+
+### Environment Variables
+
+No environment variables are required for the documentation site.
+
+### Custom Domain
+
+The site is configured to use `docs.securehealth.dev` as the custom domain. The CNAME file is located at `static/CNAME`.
+
+## 📝 Contributing
+
+1. Fork the repository
+2. Create a feature branch: `git checkout -b feature/your-feature-name`
+3. Make your changes
+4. Commit your changes: `git commit -m 'Add some feature'`
+5. Push to the branch: `git push origin feature/your-feature-name`
+6. Submit a pull request
+
+### Documentation Guidelines
+
+- Use clear, concise language
+- Include code examples where appropriate
+- Follow the existing structure and formatting
+- Test all links and examples
+- Update the table of contents if adding new sections
+
+## 🐛 Issues
+
+Report issues and bugs at: https://github.com/mrlynn/securehealth-docs/issues
+
+## 📄 License
+
+This documentation is part of the SecureHealth project. See the main repository for license information.
+
+## 🔗 Links
+
+- **Live Demo**: https://securehealth.dev
+- **Main Repository**: https://github.com/mrlynn/securehealth
+- **Documentation**: https://docs.securehealth.dev

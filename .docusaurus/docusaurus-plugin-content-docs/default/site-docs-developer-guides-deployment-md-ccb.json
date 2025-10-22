@@ -1,0 +1,23 @@
+{
+  "id": "developer-guides/deployment",
+  "title": "Production Deployment",
+  "description": "This guide covers the complete process of deploying SecureHealth to production, including infrastructure setup, security configuration, monitoring, and maintenance procedures.",
+  "source": "@site/docs/developer-guides/deployment.md",
+  "sourceDirName": "developer-guides",
+  "slug": "/developer-guides/deployment",
+  "permalink": "/securehealth-docs/docs/developer-guides/deployment",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Testing Strategies",
+    "permalink": "/securehealth-docs/docs/developer-guides/testing"
+  },
+  "next": {
+    "title": "Encryption Setup Tutorial",
+    "permalink": "/securehealth-docs/docs/tutorials/encryption-setup"
+  }
+}

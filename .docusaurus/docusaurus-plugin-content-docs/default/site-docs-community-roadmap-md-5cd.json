@@ -1,0 +1,19 @@
+{
+  "id": "community/roadmap",
+  "title": "Roadmap",
+  "description": "Project roadmap and future plans for SecureHealth, including upcoming features, improvements, and long-term vision.",
+  "source": "@site/docs/community/roadmap.md",
+  "sourceDirName": "community",
+  "slug": "/community/roadmap",
+  "permalink": "/securehealth-docs/docs/community/roadmap",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Support",
+    "permalink": "/securehealth-docs/docs/community/support"
+  }
+}

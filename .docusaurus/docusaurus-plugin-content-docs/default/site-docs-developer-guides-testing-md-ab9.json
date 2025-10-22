@@ -1,0 +1,23 @@
+{
+  "id": "developer-guides/testing",
+  "title": "Testing Strategies",
+  "description": "Comprehensive testing is essential for ensuring the security, reliability, and compliance of SecureHealth. This guide covers testing strategies, test types, and implementation approaches for a HIPAA-compliant healthcare application.",
+  "source": "@site/docs/developer-guides/testing.md",
+  "sourceDirName": "developer-guides",
+  "slug": "/developer-guides/testing",
+  "permalink": "/securehealth-docs/docs/developer-guides/testing",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Security Implementation",
+    "permalink": "/securehealth-docs/docs/developer-guides/security-implementation"
+  },
+  "next": {
+    "title": "Production Deployment",
+    "permalink": "/securehealth-docs/docs/developer-guides/deployment"
+  }
+}

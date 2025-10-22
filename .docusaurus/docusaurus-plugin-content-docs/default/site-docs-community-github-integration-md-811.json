@@ -1,0 +1,23 @@
+{
+  "id": "community/github-integration",
+  "title": "GitHub Integration",
+  "description": "GitHub workflow, automation, and integration features for the SecureHealth project.",
+  "source": "@site/docs/community/github-integration.md",
+  "sourceDirName": "community",
+  "slug": "/community/github-integration",
+  "permalink": "/securehealth-docs/docs/community/github-integration",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Contributing to SecureHealth",
+    "permalink": "/securehealth-docs/docs/community/contributing"
+  },
+  "next": {
+    "title": "Support",
+    "permalink": "/securehealth-docs/docs/community/support"
+  }
+}

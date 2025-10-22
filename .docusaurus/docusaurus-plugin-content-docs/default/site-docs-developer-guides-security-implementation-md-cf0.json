@@ -1,0 +1,23 @@
+{
+  "id": "developer-guides/security-implementation",
+  "title": "Security Implementation",
+  "description": "SecureHealth implements comprehensive security measures to ensure HIPAA compliance and protect patient data. This guide covers the security patterns, implementations, and best practices used throughout the system.",
+  "source": "@site/docs/developer-guides/security-implementation.md",
+  "sourceDirName": "developer-guides",
+  "slug": "/developer-guides/security-implementation",
+  "permalink": "/securehealth-docs/docs/developer-guides/security-implementation",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Database Schema",
+    "permalink": "/securehealth-docs/docs/developer-guides/database-schema"
+  },
+  "next": {
+    "title": "Testing Strategies",
+    "permalink": "/securehealth-docs/docs/developer-guides/testing"
+  }
+}

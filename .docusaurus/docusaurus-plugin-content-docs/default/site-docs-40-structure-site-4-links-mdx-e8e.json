@@ -1,0 +1,24 @@
+{
+  "id": "structure-site/links",
+  "title": "🔗 Links",
+  "description": "You can link to internal or external pages in your markdown.",
+  "source": "@site/docs/40-structure-site/4-links.mdx",
+  "sourceDirName": "40-structure-site",
+  "slug": "/structure-site/links",
+  "permalink": "/docusaurus-workshop/docs/structure-site/links",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "🌅 Static content",
+    "permalink": "/docusaurus-workshop/docs/structure-site/static"
+  },
+  "next": {
+    "title": "📄 Pages",
+    "permalink": "/docusaurus-workshop/docs/structure-site/pages"
+  }
+}

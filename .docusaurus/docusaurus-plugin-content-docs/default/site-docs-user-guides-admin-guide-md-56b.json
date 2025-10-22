@@ -1,0 +1,23 @@
+{
+  "id": "user-guides/admin-guide",
+  "title": "Admin Guide",
+  "description": "As a SecureHealth administrator, you have full system access and are responsible for managing users, configuring security settings, monitoring system activity, and ensuring HIPAA compliance.",
+  "source": "@site/docs/user-guides/admin-guide.md",
+  "sourceDirName": "user-guides",
+  "slug": "/user-guides/admin-guide",
+  "permalink": "/securehealth-docs/docs/user-guides/admin-guide",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Security Architecture",
+    "permalink": "/securehealth-docs/docs/concepts/security-architecture"
+  },
+  "next": {
+    "title": "Doctor Guide",
+    "permalink": "/securehealth-docs/docs/user-guides/doctor-guide"
+  }
+}

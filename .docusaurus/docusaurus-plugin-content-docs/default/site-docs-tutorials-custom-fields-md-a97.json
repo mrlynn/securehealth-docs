@@ -1,0 +1,23 @@
+{
+  "id": "tutorials/custom-fields",
+  "title": "Custom Fields Tutorial",
+  "description": "This tutorial shows how to add custom encrypted fields to SecureHealth, including schema updates, encryption configuration, and testing.",
+  "source": "@site/docs/tutorials/custom-fields.md",
+  "sourceDirName": "tutorials",
+  "slug": "/tutorials/custom-fields",
+  "permalink": "/securehealth-docs/docs/tutorials/custom-fields",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Adding Roles Tutorial",
+    "permalink": "/securehealth-docs/docs/tutorials/adding-roles"
+  },
+  "next": {
+    "title": "Audit Customization Tutorial",
+    "permalink": "/securehealth-docs/docs/tutorials/audit-customization"
+  }
+}

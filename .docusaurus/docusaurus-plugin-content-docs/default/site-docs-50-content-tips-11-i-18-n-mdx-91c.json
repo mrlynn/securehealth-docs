@@ -1,0 +1,24 @@
+{
+  "id": "content-tips/i18n",
+  "title": "🌍 i18n AKA Internacionalization",
+  "description": "Configure your site",
+  "source": "@site/docs/50-content-tips/11-i18n.mdx",
+  "sourceDirName": "50-content-tips",
+  "slug": "/content-tips/i18n",
+  "permalink": "/docusaurus-workshop/docs/content-tips/i18n",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 11,
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "🧑‍🎨 Standard Intro Icons",
+    "permalink": "/docusaurus-workshop/docs/content-tips/standard-intro-icons"
+  },
+  "next": {
+    "title": "🧜‍♀️ Mermaid JS",
+    "permalink": "/docusaurus-workshop/docs/content-tips/mermaid-diagrams"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "id": "reference/troubleshooting",
+  "title": "Troubleshooting Guide",
+  "description": "Common issues and solutions for SecureHealth, including error messages, debugging tips, and performance optimization.",
+  "source": "@site/docs/reference/troubleshooting.md",
+  "sourceDirName": "reference",
+  "slug": "/reference/troubleshooting",
+  "permalink": "/securehealth-docs/docs/reference/troubleshooting",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Environment Variables Reference",
+    "permalink": "/securehealth-docs/docs/reference/environment-variables"
+  },
+  "next": {
+    "title": "Glossary",
+    "permalink": "/securehealth-docs/docs/reference/glossary"
+  }
+}

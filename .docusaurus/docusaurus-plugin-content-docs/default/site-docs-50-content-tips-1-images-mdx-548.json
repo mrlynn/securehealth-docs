@@ -1,0 +1,24 @@
+{
+  "id": "content-tips/images",
+  "title": "🌅 Images",
+  "description": "Showing images using Markdown",
+  "source": "@site/docs/50-content-tips/1-images.mdx",
+  "sourceDirName": "50-content-tips",
+  "slug": "/content-tips/images",
+  "permalink": "/docusaurus-workshop/docs/content-tips/images",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "💡 Content Tips",
+    "permalink": "/docusaurus-workshop/docs/category/-content-tips"
+  },
+  "next": {
+    "title": "🗂️ PDF files",
+    "permalink": "/docusaurus-workshop/docs/content-tips/pdf-files"
+  }
+}

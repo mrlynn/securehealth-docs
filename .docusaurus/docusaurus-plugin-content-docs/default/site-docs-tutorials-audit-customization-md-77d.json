@@ -1,0 +1,23 @@
+{
+  "id": "tutorials/audit-customization",
+  "title": "Audit Customization Tutorial",
+  "description": "This tutorial shows how to customize audit logging in SecureHealth, including custom events, data filtering, and compliance reporting.",
+  "source": "@site/docs/tutorials/audit-customization.md",
+  "sourceDirName": "tutorials",
+  "slug": "/tutorials/audit-customization",
+  "permalink": "/securehealth-docs/docs/tutorials/audit-customization",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Custom Fields Tutorial",
+    "permalink": "/securehealth-docs/docs/tutorials/custom-fields"
+  },
+  "next": {
+    "title": "Integration Examples Tutorial",
+    "permalink": "/securehealth-docs/docs/tutorials/integration-examples"
+  }
+}

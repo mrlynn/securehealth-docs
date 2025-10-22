@@ -1,0 +1,26 @@
+{
+  "id": "docusaurus",
+  "title": "🦖 Docusaurus",
+  "description": "Docusaurus is a tool to generate documentation sites like this very one you're using right now. Created at Facebook, it's open source and well maintained.",
+  "source": "@site/docs/20-docusaurus.mdx",
+  "sourceDirName": ".",
+  "slug": "/docusaurus",
+  "permalink": "/docusaurus-workshop/docs/docusaurus",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 20,
+  "frontMatter": {
+    "sidebar_position": 20
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "📘 Introduction",
+    "permalink": "/docusaurus-workshop/docs/intro"
+  },
+  "next": {
+    "title": "🏁 Quick Start",
+    "permalink": "/docusaurus-workshop/docs/quick-start"
+  }
+}

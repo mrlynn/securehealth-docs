@@ -1,0 +1,23 @@
+{
+  "id": "concepts/hipaa-compliance",
+  "title": "HIPAA Compliance",
+  "description": "The Health Insurance Portability and Accountability Act (HIPAA) sets the standard for protecting sensitive patient data. SecureHealth is designed to meet and exceed HIPAA requirements through comprehensive security measures and MongoDB Queryable Encryption.",
+  "source": "@site/docs/concepts/hipaa-compliance.md",
+  "sourceDirName": "concepts",
+  "slug": "/concepts/hipaa-compliance",
+  "permalink": "/securehealth-docs/docs/concepts/hipaa-compliance",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "First Steps After Installation",
+    "permalink": "/securehealth-docs/docs/getting-started/first-steps"
+  },
+  "next": {
+    "title": "MongoDB Queryable Encryption",
+    "permalink": "/securehealth-docs/docs/concepts/queryable-encryption"
+  }
+}

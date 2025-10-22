@@ -1,0 +1,24 @@
+{
+  "id": "quick-start",
+  "title": "🏁 Quick Start",
+  "description": "For the impatient AKA all of us",
+  "source": "@site/docs/30-quick-start.mdx",
+  "sourceDirName": ".",
+  "slug": "/quick-start",
+  "permalink": "/docusaurus-workshop/docs/quick-start",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 30,
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "🦖 Docusaurus",
+    "permalink": "/docusaurus-workshop/docs/docusaurus"
+  },
+  "next": {
+    "title": "🏗️ Site Structure",
+    "permalink": "/docusaurus-workshop/docs/category/️-site-structure"
+  }
+}

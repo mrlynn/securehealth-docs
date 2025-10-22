@@ -1,0 +1,23 @@
+{
+  "id": "user-guides/receptionist-guide",
+  "title": "Receptionist Guide",
+  "description": "As a receptionist using SecureHealth, you have access to basic patient information and scheduling tools. This guide will help you navigate the system efficiently while maintaining HIPAA compliance and providing excellent patient service.",
+  "source": "@site/docs/user-guides/receptionist-guide.md",
+  "sourceDirName": "user-guides",
+  "slug": "/user-guides/receptionist-guide",
+  "permalink": "/securehealth-docs/docs/user-guides/receptionist-guide",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Nurse Guide",
+    "permalink": "/securehealth-docs/docs/user-guides/nurse-guide"
+  },
+  "next": {
+    "title": "Patient Portal",
+    "permalink": "/securehealth-docs/docs/user-guides/patient-portal"
+  }
+}

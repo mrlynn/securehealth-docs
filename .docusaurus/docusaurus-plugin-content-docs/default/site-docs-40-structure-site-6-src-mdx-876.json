@@ -1,0 +1,24 @@
+{
+  "id": "structure-site/src",
+  "title": "🛑 Src",
+  "description": "Contains source code files (JavaScript, HTML, CSS, etc.). You can do a lot with Docusaurus, but to create a new workshop there's no need to enter this folder, let alone modify anything in there. Most probably you'll want to add some pages.",
+  "source": "@site/docs/40-structure-site/6-src.mdx",
+  "sourceDirName": "40-structure-site",
+  "slug": "/structure-site/src",
+  "permalink": "/docusaurus-workshop/docs/structure-site/src",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 6,
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "📄 Pages",
+    "permalink": "/docusaurus-workshop/docs/structure-site/pages"
+  },
+  "next": {
+    "title": "🌎 Docusaurus docs",
+    "permalink": "/docusaurus-workshop/docs/structure-site/docusaurus"
+  }
+}

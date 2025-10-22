@@ -1,0 +1,24 @@
+{
+  "id": "structure-site/docusaurus",
+  "title": "🌎 Docusaurus docs",
+  "description": "- Theme configuration useful to change options in the theme, open Docusaurus configuration for more info.",
+  "source": "@site/docs/40-structure-site/7-docusaurus.mdx",
+  "sourceDirName": "40-structure-site",
+  "slug": "/structure-site/docusaurus",
+  "permalink": "/docusaurus-workshop/docs/structure-site/docusaurus",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 7,
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "🛑 Src",
+    "permalink": "/docusaurus-workshop/docs/structure-site/src"
+  },
+  "next": {
+    "title": "💡 Content Tips",
+    "permalink": "/docusaurus-workshop/docs/category/-content-tips"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "id": "tutorials/integration-examples",
+  "title": "Integration Examples Tutorial",
+  "description": "This tutorial provides real-world integration examples for SecureHealth, including third-party systems, APIs, and healthcare workflows.",
+  "source": "@site/docs/tutorials/integration-examples.md",
+  "sourceDirName": "tutorials",
+  "slug": "/tutorials/integration-examples",
+  "permalink": "/securehealth-docs/docs/tutorials/integration-examples",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Audit Customization Tutorial",
+    "permalink": "/securehealth-docs/docs/tutorials/audit-customization"
+  },
+  "next": {
+    "title": "API Endpoints Reference",
+    "permalink": "/securehealth-docs/docs/reference/api-endpoints"
+  }
+}

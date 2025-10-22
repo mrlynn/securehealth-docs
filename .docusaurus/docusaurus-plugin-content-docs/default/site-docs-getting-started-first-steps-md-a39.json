@@ -1,0 +1,23 @@
+{
+  "id": "getting-started/first-steps",
+  "title": "First Steps After Installation",
+  "description": "Congratulations! You've successfully installed SecureHealth. This guide will help you configure your instance and get familiar with the system.",
+  "source": "@site/docs/getting-started/first-steps.md",
+  "sourceDirName": "getting-started",
+  "slug": "/getting-started/first-steps",
+  "permalink": "/securehealth-docs/docs/getting-started/first-steps",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Installation Guide",
+    "permalink": "/securehealth-docs/docs/getting-started/installation"
+  },
+  "next": {
+    "title": "HIPAA Compliance",
+    "permalink": "/securehealth-docs/docs/concepts/hipaa-compliance"
+  }
+}

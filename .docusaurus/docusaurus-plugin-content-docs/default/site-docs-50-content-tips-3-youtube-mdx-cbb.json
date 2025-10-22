@@ -1,0 +1,24 @@
+{
+  "id": "content-tips/youtube",
+  "title": "📺 Youtube",
+  "description": "Embed a Youtube Video",
+  "source": "@site/docs/50-content-tips/3-youtube.mdx",
+  "sourceDirName": "50-content-tips",
+  "slug": "/content-tips/youtube",
+  "permalink": "/docusaurus-workshop/docs/content-tips/youtube",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "🗂️ PDF files",
+    "permalink": "/docusaurus-workshop/docs/content-tips/pdf-files"
+  },
+  "next": {
+    "title": "🧪 Markdown Test",
+    "permalink": "/docusaurus-workshop/docs/content-tips/md-support-test"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "id": "content-tips/pdf-files",
+  "title": "🗂️ PDF files",
+  "description": "Embed a PDF file",
+  "source": "@site/docs/50-content-tips/2-pdf-files.mdx",
+  "sourceDirName": "50-content-tips",
+  "slug": "/content-tips/pdf-files",
+  "permalink": "/docusaurus-workshop/docs/content-tips/pdf-files",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "🌅 Images",
+    "permalink": "/docusaurus-workshop/docs/content-tips/images"
+  },
+  "next": {
+    "title": "📺 Youtube",
+    "permalink": "/docusaurus-workshop/docs/content-tips/youtube"
+  }
+}

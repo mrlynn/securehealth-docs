@@ -1,0 +1,23 @@
+{
+  "id": "getting-started/introduction",
+  "title": "Introduction to SecureHealth",
+  "description": "SecureHealth is a comprehensive demonstration of how to build HIPAA-compliant healthcare applications using MongoDB Queryable Encryption technology. This platform showcases best practices for protecting Protected Health Information (PHI) while maintaining the functionality needed for modern healthcare workflows.",
+  "source": "@site/docs/getting-started/introduction.md",
+  "sourceDirName": "getting-started",
+  "slug": "/getting-started/introduction",
+  "permalink": "/securehealth-docs/docs/getting-started/introduction",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Welcome to SecureHealth Documentation",
+    "permalink": "/securehealth-docs/docs/intro"
+  },
+  "next": {
+    "title": "Quick Start Guide",
+    "permalink": "/securehealth-docs/docs/getting-started/quick-start"
+  }
+}

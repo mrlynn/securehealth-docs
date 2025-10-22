@@ -1,0 +1,24 @@
+{
+  "id": "content-tips/tabs",
+  "title": "🗂️ Tabs",
+  "description": "To add tabs you need to:",
+  "source": "@site/docs/50-content-tips/9-tabs.mdx",
+  "sourceDirName": "50-content-tips",
+  "slug": "/content-tips/tabs",
+  "permalink": "/docusaurus-workshop/docs/content-tips/tabs",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 9,
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "📣 Announcements",
+    "permalink": "/docusaurus-workshop/docs/content-tips/announcements"
+  },
+  "next": {
+    "title": "🧑‍🎨 Standard Intro Icons",
+    "permalink": "/docusaurus-workshop/docs/content-tips/standard-intro-icons"
+  }
+}

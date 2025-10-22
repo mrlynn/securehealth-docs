@@ -1,0 +1,23 @@
+{
+  "id": "getting-started/quick-start",
+  "title": "Quick Start Guide",
+  "description": "Get up and running with SecureHealth in just 5 minutes! This guide will help you set up a local instance of SecureHealth for development and testing purposes.",
+  "source": "@site/docs/getting-started/quick-start.md",
+  "sourceDirName": "getting-started",
+  "slug": "/getting-started/quick-start",
+  "permalink": "/securehealth-docs/docs/getting-started/quick-start",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Introduction to SecureHealth",
+    "permalink": "/securehealth-docs/docs/getting-started/introduction"
+  },
+  "next": {
+    "title": "Installation Guide",
+    "permalink": "/securehealth-docs/docs/getting-started/installation"
+  }
+}

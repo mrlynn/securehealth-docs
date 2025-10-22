@@ -1,0 +1,24 @@
+{
+  "id": "content-tips/favicon",
+  "title": "🦖 Favicon",
+  "description": "We can change the favicon in docusaurus config",
+  "source": "@site/docs/50-content-tips/7-favicon.mdx",
+  "sourceDirName": "50-content-tips",
+  "slug": "/content-tips/favicon",
+  "permalink": "/docusaurus-workshop/docs/content-tips/favicon",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 7,
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "🧪 Markdown Test",
+    "permalink": "/docusaurus-workshop/docs/content-tips/md-support-test"
+  },
+  "next": {
+    "title": "🙋🏾‍♀️ Questions and Answers",
+    "permalink": "/docusaurus-workshop/docs/content-tips/questions-answers"
+  }
+}

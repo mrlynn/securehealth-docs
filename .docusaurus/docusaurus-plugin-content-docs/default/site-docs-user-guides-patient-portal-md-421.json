@@ -1,0 +1,23 @@
+{
+  "id": "user-guides/patient-portal",
+  "title": "Patient Portal",
+  "description": "The SecureHealth Patient Portal provides patients with secure access to their health information and healthcare services. This guide explains the patient portal features and how patients can use them effectively.",
+  "source": "@site/docs/user-guides/patient-portal.md",
+  "sourceDirName": "user-guides",
+  "slug": "/user-guides/patient-portal",
+  "permalink": "/securehealth-docs/docs/user-guides/patient-portal",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Receptionist Guide",
+    "permalink": "/securehealth-docs/docs/user-guides/receptionist-guide"
+  },
+  "next": {
+    "title": "System Architecture",
+    "permalink": "/securehealth-docs/docs/developer-guides/architecture"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "id": "user-guides/nurse-guide",
+  "title": "Nurse Guide",
+  "description": "As a nurse using SecureHealth, you have access to patient medical data and care coordination tools. This guide will help you navigate the system efficiently while maintaining HIPAA compliance and providing optimal patient care.",
+  "source": "@site/docs/user-guides/nurse-guide.md",
+  "sourceDirName": "user-guides",
+  "slug": "/user-guides/nurse-guide",
+  "permalink": "/securehealth-docs/docs/user-guides/nurse-guide",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Doctor Guide",
+    "permalink": "/securehealth-docs/docs/user-guides/doctor-guide"
+  },
+  "next": {
+    "title": "Receptionist Guide",
+    "permalink": "/securehealth-docs/docs/user-guides/receptionist-guide"
+  }
+}

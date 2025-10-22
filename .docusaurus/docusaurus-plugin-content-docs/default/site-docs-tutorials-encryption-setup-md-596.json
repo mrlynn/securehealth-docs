@@ -1,0 +1,23 @@
+{
+  "id": "tutorials/encryption-setup",
+  "title": "Encryption Setup Tutorial",
+  "description": "This tutorial walks you through setting up MongoDB Queryable Encryption for SecureHealth, including key management, schema configuration, and testing.",
+  "source": "@site/docs/tutorials/encryption-setup.md",
+  "sourceDirName": "tutorials",
+  "slug": "/tutorials/encryption-setup",
+  "permalink": "/securehealth-docs/docs/tutorials/encryption-setup",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Production Deployment",
+    "permalink": "/securehealth-docs/docs/developer-guides/deployment"
+  },
+  "next": {
+    "title": "Adding Roles Tutorial",
+    "permalink": "/securehealth-docs/docs/tutorials/adding-roles"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "id": "summary",
+  "title": "🎯 Summary",
+  "description": "Congratulations! Following this tutorial, you have successfully:",
+  "source": "@site/docs/summary.mdx",
+  "sourceDirName": ".",
+  "slug": "/summary",
+  "permalink": "/docusaurus-workshop/docs/summary",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 100,
+  "frontMatter": {
+    "sidebar_position": 100
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "👩‍💻 Running Docusaurus Locally",
+    "permalink": "/docusaurus-workshop/docs/running-docusaurus"
+  }
+}

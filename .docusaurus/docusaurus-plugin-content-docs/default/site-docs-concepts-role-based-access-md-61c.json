@@ -1,0 +1,23 @@
+{
+  "id": "concepts/role-based-access",
+  "title": "Role-Based Access Control",
+  "description": "Role-Based Access Control (RBAC) is a fundamental security principle in healthcare applications. SecureHealth implements a comprehensive RBAC system that ensures users can only access the data necessary for their job functions, maintaining HIPAA compliance and patient privacy.",
+  "source": "@site/docs/concepts/role-based-access.md",
+  "sourceDirName": "concepts",
+  "slug": "/concepts/role-based-access",
+  "permalink": "/securehealth-docs/docs/concepts/role-based-access",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "MongoDB Queryable Encryption",
+    "permalink": "/securehealth-docs/docs/concepts/queryable-encryption"
+  },
+  "next": {
+    "title": "Audit Logging",
+    "permalink": "/securehealth-docs/docs/concepts/audit-logging"
+  }
+}

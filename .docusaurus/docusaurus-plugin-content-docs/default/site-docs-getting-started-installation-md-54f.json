@@ -1,0 +1,23 @@
+{
+  "id": "getting-started/installation",
+  "title": "Installation Guide",
+  "description": "This comprehensive installation guide will help you set up SecureHealth for development, testing, or production environments.",
+  "source": "@site/docs/getting-started/installation.md",
+  "sourceDirName": "getting-started",
+  "slug": "/getting-started/installation",
+  "permalink": "/securehealth-docs/docs/getting-started/installation",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Quick Start Guide",
+    "permalink": "/securehealth-docs/docs/getting-started/quick-start"
+  },
+  "next": {
+    "title": "First Steps After Installation",
+    "permalink": "/securehealth-docs/docs/getting-started/first-steps"
+  }
+}

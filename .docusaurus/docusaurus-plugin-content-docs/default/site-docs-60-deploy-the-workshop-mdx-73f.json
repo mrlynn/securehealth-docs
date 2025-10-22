@@ -1,0 +1,24 @@
+{
+  "id": "deploy-the-workshop",
+  "title": "📦 Deploying the workshop",
+  "description": "Building/testing it",
+  "source": "@site/docs/60-deploy-the-workshop.mdx",
+  "sourceDirName": ".",
+  "slug": "/deploy-the-workshop",
+  "permalink": "/docusaurus-workshop/docs/deploy-the-workshop",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 60,
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "🧜‍♀️ Mermaid JS",
+    "permalink": "/docusaurus-workshop/docs/content-tips/mermaid-diagrams"
+  },
+  "next": {
+    "title": "👩‍💻 Running Docusaurus Locally",
+    "permalink": "/docusaurus-workshop/docs/running-docusaurus"
+  }
+}

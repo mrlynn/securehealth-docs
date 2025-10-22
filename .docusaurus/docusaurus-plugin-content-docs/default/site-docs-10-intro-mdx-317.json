@@ -1,0 +1,22 @@
+{
+  "id": "intro",
+  "title": "📘 Introduction",
+  "description": "|Workshop goals|Write a new Workshop documentation site using Docusaurus|",
+  "source": "@site/docs/10-intro.mdx",
+  "sourceDirName": ".",
+  "slug": "/intro",
+  "permalink": "/docusaurus-workshop/docs/intro",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 10,
+  "frontMatter": {
+    "sidebar_position": 10
+  },
+  "sidebar": "tutorialSidebar",
+  "next": {
+    "title": "🦖 Docusaurus",
+    "permalink": "/docusaurus-workshop/docs/docusaurus"
+  }
+}

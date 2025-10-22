@@ -1,0 +1,24 @@
+{
+  "id": "structure-site/pages",
+  "title": "📄 Pages",
+  "description": "In src/pages we can add pages that won't show as documents (full screen pages, no menu, etc.). Adding things there is the only exception to the rule don't mess with the src folder",
+  "source": "@site/docs/40-structure-site/5-pages.mdx",
+  "sourceDirName": "40-structure-site",
+  "slug": "/structure-site/pages",
+  "permalink": "/docusaurus-workshop/docs/structure-site/pages",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 5,
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "🔗 Links",
+    "permalink": "/docusaurus-workshop/docs/structure-site/links"
+  },
+  "next": {
+    "title": "🛑 Src",
+    "permalink": "/docusaurus-workshop/docs/structure-site/src"
+  }
+}

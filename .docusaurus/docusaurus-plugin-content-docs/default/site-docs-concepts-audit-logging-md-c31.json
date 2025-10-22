@@ -1,0 +1,23 @@
+{
+  "id": "concepts/audit-logging",
+  "title": "Audit Logging",
+  "description": "Audit logging is a critical component of HIPAA compliance and healthcare data security. SecureHealth implements comprehensive audit logging that tracks every access to Protected Health Information (PHI) and system activities.",
+  "source": "@site/docs/concepts/audit-logging.md",
+  "sourceDirName": "concepts",
+  "slug": "/concepts/audit-logging",
+  "permalink": "/securehealth-docs/docs/concepts/audit-logging",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Role-Based Access Control",
+    "permalink": "/securehealth-docs/docs/concepts/role-based-access"
+  },
+  "next": {
+    "title": "Security Architecture",
+    "permalink": "/securehealth-docs/docs/concepts/security-architecture"
+  }
+}

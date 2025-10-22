@@ -1,0 +1,23 @@
+{
+  "id": "reference/configuration",
+  "title": "Configuration Reference",
+  "description": "Complete reference for all SecureHealth configuration options, including environment variables, database settings, and security configurations.",
+  "source": "@site/docs/reference/configuration.md",
+  "sourceDirName": "reference",
+  "slug": "/reference/configuration",
+  "permalink": "/securehealth-docs/docs/reference/configuration",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "API Endpoints Reference",
+    "permalink": "/securehealth-docs/docs/reference/api-endpoints"
+  },
+  "next": {
+    "title": "Environment Variables Reference",
+    "permalink": "/securehealth-docs/docs/reference/environment-variables"
+  }
+}

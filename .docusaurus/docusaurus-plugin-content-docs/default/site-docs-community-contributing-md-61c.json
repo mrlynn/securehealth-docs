@@ -1,0 +1,23 @@
+{
+  "id": "community/contributing",
+  "title": "Contributing to SecureHealth",
+  "description": "Guidelines for contributing to the SecureHealth project, including code standards, pull request process, and community guidelines.",
+  "source": "@site/docs/community/contributing.md",
+  "sourceDirName": "community",
+  "slug": "/community/contributing",
+  "permalink": "/securehealth-docs/docs/community/contributing",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Glossary",
+    "permalink": "/securehealth-docs/docs/reference/glossary"
+  },
+  "next": {
+    "title": "GitHub Integration",
+    "permalink": "/securehealth-docs/docs/community/github-integration"
+  }
+}

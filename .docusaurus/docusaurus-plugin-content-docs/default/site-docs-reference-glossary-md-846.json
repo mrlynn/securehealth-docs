@@ -1,0 +1,23 @@
+{
+  "id": "reference/glossary",
+  "title": "Glossary",
+  "description": "Technical terms and definitions used throughout the SecureHealth documentation.",
+  "source": "@site/docs/reference/glossary.md",
+  "sourceDirName": "reference",
+  "slug": "/reference/glossary",
+  "permalink": "/securehealth-docs/docs/reference/glossary",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Troubleshooting Guide",
+    "permalink": "/securehealth-docs/docs/reference/troubleshooting"
+  },
+  "next": {
+    "title": "Contributing to SecureHealth",
+    "permalink": "/securehealth-docs/docs/community/contributing"
+  }
+}
