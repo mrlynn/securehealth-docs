@@ -35,6 +35,8 @@ const sidebars = {
         'concepts/role-based-access',
         'concepts/audit-logging',
         'concepts/security-architecture',
+        'concepts/ai-documentation-assistant',
+        'concepts/command-line-tool',
       ],
     },
     {

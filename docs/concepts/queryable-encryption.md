@@ -1,6 +1,8 @@
-# MongoDB Queryable Encryption
+# MongoDB 8.2 Queryable Encryption
 
-MongoDB Queryable Encryption is a powerful feature that allows you to perform queries on encrypted data without decrypting it first. This technology is crucial for building HIPAA-compliant healthcare applications where data privacy and security are paramount.
+MongoDB 8.2 Queryable Encryption is a powerful feature that allows you to perform queries on encrypted data without decrypting it first. This technology is crucial for building HIPAA-compliant healthcare applications where data privacy and security are paramount.
+
+**MongoDB 8.2 Features:** This implementation leverages the latest MongoDB 8.2 Queryable Encryption capabilities including enhanced performance, improved key management, and expanded search functionality.
 
 ## What is Queryable Encryption?
 
@@ -9,6 +11,63 @@ Queryable Encryption enables you to:
 - **Perform range queries** on encrypted numeric and date fields
 - **Maintain data privacy** while preserving functionality
 - **Meet compliance requirements** for data protection
+- **Client-side encryption** with key management
+- **Search on encrypted data** without decryption
+
+## Encryption Service Architecture
+
+The core of our encryption implementation is the `MongoDBEncryptionService` class, which manages all encryption operations and integrates seamlessly with Symfony's dependency injection system. This service provides a comprehensive solution for field-level encryption with different algorithms based on data sensitivity and query requirements.
+
+```php
+class MongoDBEncryptionService
+{
+    // MongoDB 8.2 Queryable Encryption algorithms
+    const ALGORITHM_DETERMINISTIC = 'AEAD_AES_256_CBC_HMAC_SHA_512-Deterministic';
+    const ALGORITHM_RANDOM = 'AEAD_AES_256_CBC_HMAC_SHA_512-Random';
+    const ALGORITHM_RANGE = 'range'; // MongoDB 8.2 range encryption
+    const ALGORITHM_EQUALITY = 'AEAD_AES_256_CBC_HMAC_SHA_512-Deterministic';
+    
+    public function __construct(
+        ParameterBagInterface $params,
+        LoggerInterface $logger
+    ) {
+        // Initialize MongoDB 8.2 client with Queryable Encryption
+        $this->client = new Client($mongoUrl, $this->getEncryptionOptions());
+        $this->clientEncryption = $this->createClientEncryption();
+        $this->configureEncryptedFieldsDefinitions();
+    }
+}
+```
+
+## Field-Level Encryption Configuration
+
+SecureHealth implements a sophisticated field-level encryption strategy that balances security with functionality. Each field is encrypted using the most appropriate algorithm based on its sensitivity and query requirements:
+
+### Deterministic Searchable Fields
+- **lastName**: Patient last names for search
+- **firstName**: Patient first names for search  
+- **email**: Email addresses for authentication
+- **phoneNumber**: Phone numbers for contact
+- **birthDate**: Date of birth for age calculations
+
+*Enables exact match searches on encrypted data*
+
+### Range Numeric/Date Fields
+- **birthDate**: Range queries for age groups
+- **age ranges**: Numeric age comparisons
+- **appointment dates**: Date range queries
+- **lab values**: Numeric range searches
+
+*Enables range queries on encrypted data*
+
+### Standard Highly Sensitive
+- **ssn**: Social Security Numbers
+- **diagnosis**: Medical diagnoses
+- **medications**: Prescription information
+- **insuranceDetails**: Insurance information
+- **notes**: Clinical notes and observations
+
+*Maximum security, no query capability*
 
 ## Encryption Types
 

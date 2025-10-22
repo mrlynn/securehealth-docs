@@ -1,35 +1,47 @@
 # Welcome to SecureHealth Documentation
 
-SecureHealth is a HIPAA-compliant medical records management system that demonstrates MongoDB Queryable Encryption technology for protecting Protected Health Information (PHI) in healthcare applications.
+SecureHealth is a production-ready, HIPAA-compliant medical records management system that demonstrates advanced data protection using **MongoDB 8.2 Queryable Encryption** with PHP/Symfony. This project serves as both a functional healthcare application and a comprehensive educational resource for developers learning secure data handling practices in healthcare environments.
 
 ## What is SecureHealth?
 
-SecureHealth is a demonstration platform that showcases how to build HIPAA-compliant healthcare applications using MongoDB's Queryable Encryption technology. It serves as both a functional medical records system and an educational resource, emphasizing "Security by Design" principles for healthcare IT professionals, developers, and compliance officers.
+SecureHealth is a comprehensive medical records management system built with **MongoDB 8.2 Queryable Encryption** and **Symfony Security Voters** for HIPAA-compliant healthcare data protection. The system demonstrates real-world implementation of field-level encryption, role-based access control, and comprehensive audit logging required for healthcare compliance.
+
+**Open Source Project:** View the complete source code, documentation, and contribute at [github.com/mrlynn/securehealth](https://github.com/mrlynn/securehealth)
 
 ## Key Features
 
-### 🔒 Security by Design
-- **AES-256 Encryption**: All sensitive data encrypted at rest
-- **100% Encrypted Storage**: Ensures maximum data protection
-- **HIPAA Compliance**: Built-in compliance measures and audit logging
+### 🔒 MongoDB 8.2 Queryable Encryption
+- **Field-Level Encryption**: All PHI encrypted at the field level
+- **Deterministic Encryption**: Searchable fields (name, email, phone)
+- **Range Encryption**: Date and numeric range queries on encrypted data
+- **Standard Encryption**: Maximum security for highly sensitive data (SSN, diagnosis)
+- **Client-Side Encryption**: Data encrypted before reaching the database
 
-### 🔍 Queryable Encryption
-- **Search Encrypted Data**: Perform queries without decryption
-- **Deterministic Encryption**: For searchable fields
-- **Range Queries**: Date and numeric range searches on encrypted data
-- **Standard Encryption**: Maximum security for highly sensitive data
+### 🛡️ HIPAA-Compliant Security & RBAC
+- **Symfony Security Voters**: Fine-grained permission system
+- **Role-Based Access Control**: Doctor, Nurse, Receptionist, Admin roles
+- **Comprehensive Audit Logging**: Complete access trail for compliance
+- **Data Integrity Protection**: Ensures data hasn't been tampered with
+- **Transmission Security**: HTTPS and secure API endpoints
 
-### 👥 Role-Based Access Control
-- **Doctor**: Full access to all patient data
-- **Nurse**: Access to medical data only
-- **Receptionist**: Access to basic information only
-- **Granular Permissions**: Data filtering by role
+### 🤖 AI Documentation Assistant
+- **SOAP Note Generation**: AI-powered clinical documentation
+- **OpenAI Integration**: GPT-4 powered medical note generation
+- **Confidence Scoring**: AI confidence levels for generated content
+- **HIPAA-Compliant**: Secure handling of patient data in AI prompts
+
+### 🛠️ Command-Line Management Tool
+- **Patient Management**: Create, update, and manage patient records
+- **Encryption Operations**: Manage encryption keys and operations
+- **Audit Logging**: View and manage audit logs
+- **System Administration**: Complete system management capabilities
 
 ### 📊 Interactive Demo
 Experience the power of encrypted medical records management:
 - **Live Demo**: Try the system at [securehealth.dev](https://securehealth.dev)
-- **X-Ray View**: Examine raw encrypted data
+- **X-Ray View**: Examine raw encrypted data in MongoDB
 - **Audit Trails**: Complete access logging and monitoring
+- **Role-Based Access**: Experience different user perspectives
 
 ## Target Audience
 
@@ -63,11 +75,17 @@ Our documentation aims to:
 
 ## Technology Stack
 
-- **Backend**: Symfony (PHP) framework
-- **Database**: MongoDB with Queryable Encryption
-- **Frontend**: Modern web interface
-- **Security**: AES-256 encryption, role-based access control
-- **Compliance**: HIPAA-compliant audit logging
+- **Backend Framework**: Symfony 7.0
+- **Language**: PHP 8.2+
+- **Database**: MongoDB 8.2 Enterprise (with Queryable Encryption)
+- **ODM**: Doctrine MongoDB ODM Bundle 5.0+
+- **Authentication**: JWT with Symfony Security
+- **Encryption**: MongoDB Client-Side Field Level Encryption
+- **Development**: Docker + Docker Compose
+- **Testing**: PHPUnit + MongoDB Test Framework
+- **Security**: Symfony Security Voters + RBAC
+- **Audit**: Comprehensive HIPAA-compliant logging
+- **AI Integration**: OpenAI GPT-4 API
 
 ## Support and Community
 
