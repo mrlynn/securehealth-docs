@@ -1,5 +1,17 @@
 # Welcome to SecureHealth Documentation
 
+<div style={{textAlign: 'center', marginBottom: '2rem'}}>
+  <img 
+    src="/img/secure-health-logo-square-trans.png" 
+    alt="SecureHealth Logo" 
+    style={{
+      maxWidth: '200px', 
+      height: 'auto',
+      marginBottom: '1rem'
+    }} 
+  />
+</div>
+
 SecureHealth is a production-ready, HIPAA-compliant medical records management system that demonstrates advanced data protection using **MongoDB 8.2 Queryable Encryption** with PHP/Symfony. This project serves as both a functional healthcare application and a comprehensive educational resource for developers learning secure data handling practices in healthcare environments.
 
 ## What is SecureHealth?
