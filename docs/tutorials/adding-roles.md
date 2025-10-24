@@ -6,6 +6,12 @@ This guide explains the step-by-step process for adding a new role to the Secure
 
 The role system in SecureHealth controls access to patient data and system features. Roles are defined in multiple places throughout the application and must be updated consistently.
 
+:::info Prerequisites
+- SecureHealth installation
+- Admin access to the system
+- Understanding of Symfony security components
+:::
+
 ## Step 1: Update Security Configuration
 
 **File:** `config/packages/security.yaml`
@@ -14,7 +20,7 @@ The role system in SecureHealth controls access to patient data and system featu
 
 Add access control rules for your new role in the `access_control` section:
 
-```yaml
+```yaml title="config/packages/security.yaml"
 access_control:
     # Example: Allow new role to access specific endpoints
     - { path: ^/api/patients, methods: [GET], roles: [ROLE_DOCTOR, ROLE_NURSE, ROLE_RECEPTIONIST, ROLE_NEW_ROLE] }
@@ -24,7 +30,7 @@ access_control:
 
 If your role should inherit permissions from another role, add it to the `role_hierarchy` section:
 
-```yaml
+```yaml title="config/packages/security.yaml"
 role_hierarchy:
     ROLE_DOCTOR: [ROLE_NURSE, ROLE_RECEPTIONIST, ROLE_ADMIN]
     ROLE_NURSE: [ROLE_RECEPTIONIST]
@@ -40,7 +46,7 @@ role_hierarchy:
 
 In the `toArray()` method (around line 230-250), add a new conditional block for your role:
 
-```php
+```php title="src/Document/Patient.php"
 // After existing role checks...
 elseif (in_array('ROLE_NEW_ROLE', $roles)) {
     // Define what data this role can access
@@ -50,10 +56,11 @@ elseif (in_array('ROLE_NEW_ROLE', $roles)) {
 }
 ```
 
-**Data Access Examples:**
-- Basic info: `firstName`, `lastName`, `email`, `phoneNumber`, `birthDate`, `createdAt`
-- Medical data: `ssn`, `diagnosis`, `medications`, `notes`, `notesHistory`
-- Administrative: `insuranceDetails`, `primaryDoctorId`
+:::tip Data Access Examples
+- **Basic info**: `firstName`, `lastName`, `email`, `phoneNumber`, `birthDate`, `createdAt`
+- **Medical data**: `ssn`, `diagnosis`, `medications`, `notes`, `notesHistory`
+- **Administrative**: `insuranceDetails`, `primaryDoctorId`
+:::
 
 ## Step 3: Update Security Voter
 
@@ -63,7 +70,7 @@ elseif (in_array('ROLE_NEW_ROLE', $roles)) {
 
 Update the `checkPermission()` method to include your new role in permission checks:
 
-```php
+```php title="src/Security/Voter/PatientVoter.php"
 case self::VIEW:
     // Add your role to appropriate permission checks
     return in_array('ROLE_DOCTOR', $roles) || 
@@ -79,7 +86,7 @@ case self::VIEW_MEDICATIONS:
            in_array('ROLE_NEW_ROLE', $roles);
 ```
 
-**Available Permission Constants:**
+:::note Available Permission Constants
 - `PATIENT_VIEW` - View basic patient info
 - `PATIENT_CREATE` - Create new patients
 - `PATIENT_EDIT` - Edit patient records
@@ -96,6 +103,7 @@ case self::VIEW_MEDICATIONS:
 - `PATIENT_ADD_NOTE` - Add new notes
 - `PATIENT_UPDATE_NOTE` - Update notes
 - `PATIENT_DELETE_NOTE` - Delete notes
+:::
 
 ## Step 4: Update PatientController Serialization
 
@@ -103,7 +111,7 @@ case self::VIEW_MEDICATIONS:
 
 Add your new role to the role detection logic (around line 75-88):
 
-```php
+```php title="src/Controller/Api/PatientController.php"
 if ($user) {
     $userRoles = $user->getRoles();
     if (in_array('ROLE_DOCTOR', $userRoles)) {
@@ -120,7 +128,9 @@ if ($user) {
 }
 ```
 
+:::warning Important
 Repeat this pattern in all methods that serialize patient data: `index()`, `show()`, `create()`, `update()`.
+:::
 
 ## Step 5: Create Default User (Optional)
 
@@ -128,7 +138,7 @@ Repeat this pattern in all methods that serialize patient data: `index()`, `show
 
 Add a default user for the new role in the `$users` array (around line 46-72):
 
-```php
+```php title="src/Command/CreateUsersCommand.php"
 $users = [
     // ... existing users ...
     [
@@ -141,6 +151,7 @@ $users = [
 ```
 
 Run the command to create the user:
+
 ```bash
 php bin/console app:create-users --force
 ```
@@ -163,35 +174,39 @@ Add documentation for the new role's capabilities and responsibilities.
 
 ## Key Principles
 
+:::success Security Principles
 1. **Least Privilege**: Only grant access to data that the role needs to perform its duties
 2. **Data Segregation**: Medical data (diagnosis, medications, notes) should be separate from administrative data (insurance, demographics)
 3. **Consistency**: Update all relevant files to maintain system integrity
 4. **Testing**: Test the new role with sample users to ensure proper access control
+:::
 
 ## Example: Adding ROLE_PHARMACIST
 
 A pharmacist role that can view medications and allergies but not full diagnosis:
 
-1. **security.yaml**: Add to access control for medication endpoints
-2. **Patient.php**: 
-   ```php
-   elseif (in_array('ROLE_PHARMACIST', $roles)) {
-       $data['medications'] = $this->getMedications();
-       $data['diagnosis'] = $this->getDiagnosis(); // Limited view
-   }
-   ```
-3. **PatientVoter.php**: Add to `VIEW_MEDICATIONS` permission
-4. **PatientController.php**: Add to role detection chain
-5. **CreateUsersCommand.php**: Add default pharmacist user
+```php title="Example Implementation"
+// 1. security.yaml: Add to access control for medication endpoints
+// 2. Patient.php: 
+elseif (in_array('ROLE_PHARMACIST', $roles)) {
+    $data['medications'] = $this->getMedications();
+    $data['diagnosis'] = $this->getDiagnosis(); // Limited view
+}
+// 3. PatientVoter.php: Add to VIEW_MEDICATIONS permission
+// 4. PatientController.php: Add to role detection chain
+// 5. CreateUsersCommand.php: Add default pharmacist user
+```
 
 ## Testing Checklist
 
+:::checklist Testing Requirements
 - [ ] User can log in with new role
 - [ ] User can access permitted endpoints
 - [ ] User is denied access to restricted data
 - [ ] Role hierarchy works correctly (if applicable)
 - [ ] Audit logs record the role's actions
 - [ ] Frontend displays appropriate UI for the role
+:::
 
 ## Additional Files to Consider
 
@@ -218,17 +233,21 @@ When adding a new role, you may also need to update:
 
 ## Security Considerations
 
+:::danger Security Requirements
 1. **Always follow the principle of least privilege**
 2. **Test thoroughly with sample users**
 3. **Ensure audit logging captures all role-based actions**
 4. **Consider HIPAA compliance implications for each role**
 5. **Document the role's purpose and data access requirements**
 6. **Review and update access controls regularly**
+:::
 
 ## Common Pitfalls
 
+:::caution Common Mistakes
 1. **Forgetting to update all relevant files** - The role system spans multiple files
 2. **Inconsistent permission logic** - Ensure voter and controller logic match
 3. **Missing frontend updates** - UI should reflect role capabilities
 4. **Inadequate testing** - Test both positive and negative access scenarios
 5. **Poor documentation** - Document what each role can and cannot do
+:::

@@ -2,18 +2,18 @@
 
 This tutorial provides real-world integration examples for SecureHealth, demonstrating how to integrate third-party systems, APIs, and healthcare workflows while maintaining MongoDB Queryable Encryption security.
 
-## Prerequisites
-
+:::info Prerequisites
 - SecureHealth installation with MongoDB Queryable Encryption
 - Understanding of API integration
 - Access to third-party systems
 - Knowledge of encryption field types (Deterministic, Range, Standard)
+:::
 
 ## Encryption Service Overview
 
 Before diving into integrations, understand the encryption service patterns:
 
-```php
+```php title="EncryptionService.php"
 <?php
 
 namespace App\Service;
@@ -58,6 +58,12 @@ class EncryptionService
     }
 }
 ```
+
+:::tip Encryption Types
+- **Deterministic**: Allows equality search (names, dates, IDs)
+- **Range**: Allows range queries (future feature)
+- **Standard**: Highest security, no search capability (addresses, dosages)
+:::
 
 ## Example 1: EHR Integration with Encryption
 
@@ -924,13 +930,15 @@ class IntegrationTest extends WebTestCase
 
 ## Security Best Practices
 
-### 1. **Data Minimization**
-- Only decrypt data needed for external APIs
-- Use field-level encryption to protect sensitive information
-- Implement proper access controls
+:::success Best Practices
+1. **Data Minimization**: Only decrypt data needed for external APIs
+2. **Use field-level encryption** to protect sensitive information
+3. **Implement proper access controls**
+:::
 
 ### 2. **Audit Logging**
-```php
+
+```php title="AuditLogger.php"
 public function logIntegrationActivity(string $action, array $data, string $externalSystem): void
 {
     $this->auditLogger->log([
@@ -944,7 +952,8 @@ public function logIntegrationActivity(string $action, array $data, string $exte
 ```
 
 ### 3. **Error Handling with Encryption**
-```php
+
+```php title="ErrorHandler.php"
 public function handleIntegrationError(\Exception $e, array $encryptedData): void
 {
     // Log error without exposing encrypted data
@@ -964,7 +973,8 @@ public function handleIntegrationError(\Exception $e, array $encryptedData): voi
 ```
 
 ### 4. **Encryption Field Mapping**
-```php
+
+```php title="EncryptionFieldMapping.php"
 private function getEncryptionType(string $fieldName, string $dataType): string
 {
     $encryptionMap = [
@@ -995,7 +1005,7 @@ private function getEncryptionType(string $fieldName, string $dataType): string
 
 ## Troubleshooting
 
-### Common Issues
+:::warning Common Issues
 
 **Encryption/Decryption Errors**
 - Verify encryption keys are properly configured
@@ -1016,6 +1026,7 @@ private function getEncryptionType(string $fieldName, string $dataType): string
 - Implement proper error handling
 - Log integration errors
 - Provide meaningful error messages
+:::
 
 ## Next Steps
 
