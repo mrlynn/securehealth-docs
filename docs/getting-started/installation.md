@@ -4,31 +4,35 @@ This comprehensive installation guide will help you set up SecureHealth for deve
 
 ## System Requirements
 
-### Minimum Requirements
+:::info Minimum Requirements
 - **CPU**: 2 cores
 - **RAM**: 4GB
 - **Storage**: 10GB free space
 - **OS**: Linux, macOS, or Windows with WSL2
+:::
 
-### Recommended Requirements
+:::success Recommended Requirements
 - **CPU**: 4+ cores
 - **RAM**: 8GB+
 - **Storage**: 50GB+ SSD
 - **OS**: Ubuntu 20.04+, macOS 12+, Windows 11 with WSL2
+:::
 
 ## Prerequisites
 
-### Required Software
+:::tip Required Software
 - **Docker**: Version 20.10+
 - **Docker Compose**: Version 2.0+
 - **Git**: Latest version
 - **PHP**: Version 8.1+ (for local development)
 - **Composer**: Latest version (for PHP dependencies)
+:::
 
-### MongoDB Atlas Account
+:::warning MongoDB Atlas Account
 - MongoDB Atlas cluster with Queryable Encryption enabled
 - Encryption key configured
 - Database user with appropriate permissions
+:::
 
 ## Installation Methods
 
@@ -38,7 +42,7 @@ This is the easiest way to get started with SecureHealth.
 
 #### Step 1: Clone the Repository
 
-```bash
+```bash title="Clone Repository"
 git clone https://github.com/mrlynn/securehealth.git
 cd securehealth
 ```

@@ -6,14 +6,14 @@ The SecureHealth AI Documentation Assistant leverages OpenAI's GPT-4 to generate
 
 The AI Documentation Assistant is designed to help healthcare providers generate accurate, comprehensive clinical documentation quickly and efficiently. It uses advanced natural language processing to understand patient data, clinical context, and generate appropriate medical documentation.
 
-### Key Features
-
+:::success Key Features
 - **SOAP Note Generation**: Automated creation of structured clinical notes
 - **Progress Note Creation**: Generate detailed progress documentation
 - **Clinical Decision Support**: AI-powered insights and recommendations
 - **HIPAA-Compliant Processing**: Secure handling of patient data
 - **Confidence Scoring**: AI confidence levels for generated content
 - **Customizable Templates**: Flexible documentation formats
+:::
 
 ## Architecture
 
@@ -21,7 +21,7 @@ The AI Documentation Assistant is designed to help healthcare providers generate
 
 The AI Documentation Assistant is built around the `AIDocumentationService` class, which handles all AI-related operations:
 
-```php
+```php title="AIDocumentationService.php"
 class AIDocumentationService
 {
     private const OPENAI_API_URL = 'https://api.openai.com/v1/chat/completions';
@@ -43,11 +43,12 @@ class AIDocumentationService
 
 The AI service implements comprehensive security measures to ensure HIPAA compliance:
 
-#### Data Protection
+:::warning Data Protection Requirements
 - **Patient Data Anonymization**: Sensitive data is anonymized before sending to OpenAI
 - **Secure API Communication**: All API calls use HTTPS encryption
 - **Audit Logging**: Complete logging of all AI operations
 - **Access Control**: Role-based access to AI features
+:::
 
 #### HIPAA Compliance
 - **Minimum Necessary Standard**: Only required data is sent to AI services

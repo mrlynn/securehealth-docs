@@ -6,27 +6,27 @@ The SecureHealth Command-Line Management Tool provides comprehensive system admi
 
 The CLI tool is built using Symfony Console and provides a comprehensive interface for managing all aspects of the SecureHealth system. It includes commands for patient management, encryption operations, audit logging, and system administration.
 
-### Key Features
-
+:::success Key Features
 - **Patient Management**: Create, update, and manage patient records
 - **Encryption Operations**: Manage encryption keys and operations
 - **Audit Logging**: View and manage audit logs
 - **System Administration**: Complete system management capabilities
 - **Database Operations**: Direct database management and maintenance
 - **Security Management**: User and role management
+:::
 
 ## Installation and Setup
 
-### Prerequisites
-
+:::info Prerequisites
 - PHP 8.2 or higher
 - Symfony Console
 - MongoDB 8.2 with Queryable Encryption
 - SecureHealth application installed
+:::
 
 ### Installation
 
-```bash
+```bash title="Installation Commands"
 # Navigate to SecureHealth directory
 cd /path/to/securehealth
 
@@ -41,7 +41,7 @@ chmod +x bin/console
 
 The CLI tool uses the same configuration as the main application:
 
-```bash
+```bash title="Environment Configuration"
 # Environment variables
 MONGODB_URI=mongodb://localhost:27017/securehealth
 MONGODB_DB=securehealth
