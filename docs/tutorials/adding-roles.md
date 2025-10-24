@@ -1,204 +1,234 @@
-# Adding Roles Tutorial
+# Adding a New Role to SecureHealth
 
-This tutorial shows how to extend the SecureHealth role system by adding new roles and configuring their permissions.
+This guide explains the step-by-step process for adding a new role to the SecureHealth application.
 
-## Prerequisites
+## Overview
 
-- SecureHealth installation
-- Admin access to the system
-- Understanding of Symfony security components
+The role system in SecureHealth controls access to patient data and system features. Roles are defined in multiple places throughout the application and must be updated consistently.
 
-## Step 1: Define New Role
+## Step 1: Update Security Configuration
 
-Add the new role constant to the User entity:
+**File:** `config/packages/security.yaml`
+
+### 1.1 Add Role to Access Control
+
+Add access control rules for your new role in the `access_control` section:
+
+```yaml
+access_control:
+    # Example: Allow new role to access specific endpoints
+    - { path: ^/api/patients, methods: [GET], roles: [ROLE_DOCTOR, ROLE_NURSE, ROLE_RECEPTIONIST, ROLE_NEW_ROLE] }
+```
+
+### 1.2 Update Role Hierarchy (Optional)
+
+If your role should inherit permissions from another role, add it to the `role_hierarchy` section:
+
+```yaml
+role_hierarchy:
+    ROLE_DOCTOR: [ROLE_NURSE, ROLE_RECEPTIONIST, ROLE_ADMIN]
+    ROLE_NURSE: [ROLE_RECEPTIONIST]
+    # Add your new role here if it should inherit permissions
+    ROLE_NEW_ROLE: [ROLE_RECEPTIONIST]
+```
+
+## Step 2: Update Patient Document
+
+**File:** `src/Document/Patient.php`
+
+### 2.1 Add Role-Based Data Access
+
+In the `toArray()` method (around line 230-250), add a new conditional block for your role:
 
 ```php
-<?php
-
-namespace App\Entity;
-
-class User
-{
-    const ROLE_PHARMACIST = 'ROLE_PHARMACIST';
-    const ROLE_LAB_TECH = 'ROLE_LAB_TECH';
-    
-    // ... existing code
+// After existing role checks...
+elseif (in_array('ROLE_NEW_ROLE', $roles)) {
+    // Define what data this role can access
+    $data['diagnosis'] = $this->getDiagnosis();
+    $data['medications'] = $this->getMedications();
+    // Add or remove fields based on role requirements
 }
 ```
 
-## Step 2: Update Permission Matrix
+**Data Access Examples:**
+- Basic info: `firstName`, `lastName`, `email`, `phoneNumber`, `birthDate`, `createdAt`
+- Medical data: `ssn`, `diagnosis`, `medications`, `notes`, `notesHistory`
+- Administrative: `insuranceDetails`, `primaryDoctorId`
 
-Modify the PatientVoter to include new role permissions:
+## Step 3: Update Security Voter
+
+**File:** `src/Security/Voter/PatientVoter.php`
+
+### 3.1 Add Role to Permission Checks
+
+Update the `checkPermission()` method to include your new role in permission checks:
 
 ```php
-<?php
+case self::VIEW:
+    // Add your role to appropriate permission checks
+    return in_array('ROLE_DOCTOR', $roles) || 
+           in_array('ROLE_NURSE', $roles) || 
+           in_array('ROLE_RECEPTIONIST', $roles) ||
+           in_array('ROLE_NEW_ROLE', $roles);
 
-namespace App\Security\Voter;
-
-class PatientVoter extends Voter
-{
-    // ... existing code
-
-    private function canViewLabResults(User $user, Patient $patient): bool
-    {
-        return in_array('ROLE_DOCTOR', $user->getRoles()) || 
-               in_array('ROLE_NURSE', $user->getRoles()) ||
-               in_array('ROLE_LAB_TECH', $user->getRoles()) ||
-               in_array('ROLE_ADMIN', $user->getRoles());
-    }
-
-    private function canViewPrescriptions(User $user, Patient $patient): bool
-    {
-        return in_array('ROLE_DOCTOR', $user->getRoles()) || 
-               in_array('ROLE_PHARMACIST', $user->getRoles()) ||
-               in_array('ROLE_ADMIN', $user->getRoles());
-    }
-}
+case self::VIEW_DIAGNOSIS:
+case self::VIEW_MEDICATIONS:
+    // Control medical data access
+    return in_array('ROLE_DOCTOR', $roles) || 
+           in_array('ROLE_NURSE', $roles) ||
+           in_array('ROLE_NEW_ROLE', $roles);
 ```
 
-## Step 3: Update Data Filtering
+**Available Permission Constants:**
+- `PATIENT_VIEW` - View basic patient info
+- `PATIENT_CREATE` - Create new patients
+- `PATIENT_EDIT` - Edit patient records
+- `PATIENT_DELETE` - Delete patients
+- `PATIENT_VIEW_DIAGNOSIS` - View diagnosis
+- `PATIENT_EDIT_DIAGNOSIS` - Edit diagnosis
+- `PATIENT_VIEW_MEDICATIONS` - View medications
+- `PATIENT_EDIT_MEDICATIONS` - Edit medications
+- `PATIENT_VIEW_SSN` - View SSN
+- `PATIENT_VIEW_INSURANCE` - View insurance
+- `PATIENT_EDIT_INSURANCE` - Edit insurance
+- `PATIENT_VIEW_NOTES` - View notes
+- `PATIENT_EDIT_NOTES` - Edit notes
+- `PATIENT_ADD_NOTE` - Add new notes
+- `PATIENT_UPDATE_NOTE` - Update notes
+- `PATIENT_DELETE_NOTE` - Delete notes
 
-Modify the PatientDataFilter service:
+## Step 4: Update PatientController Serialization
+
+**File:** `src/Controller/Api/PatientController.php`
+
+Add your new role to the role detection logic (around line 75-88):
 
 ```php
-<?php
-
-namespace App\Service;
-
-class PatientDataFilter
-{
-    // ... existing code
-
-    private function getLabTechData(Patient $patient, array $baseData): array
-    {
-        return array_merge($baseData, [
-            'labResults' => $patient->getLabResults(),
-            'prescriptions' => $patient->getPrescriptions()
-        ]);
-    }
-
-    private function getPharmacistData(Patient $patient, array $baseData): array
-    {
-        return array_merge($baseData, [
-            'prescriptions' => $patient->getPrescriptions(),
-            'allergies' => $patient->getAllergies()
-        ]);
+if ($user) {
+    $userRoles = $user->getRoles();
+    if (in_array('ROLE_DOCTOR', $userRoles)) {
+        $userRole = 'ROLE_DOCTOR';
+    } elseif (in_array('ROLE_NURSE', $userRoles)) {
+        $userRole = 'ROLE_NURSE';
+    } elseif (in_array('ROLE_ADMIN', $userRoles)) {
+        $userRole = 'ROLE_ADMIN';
+    } elseif (in_array('ROLE_RECEPTIONIST', $userRoles)) {
+        $userRole = 'ROLE_RECEPTIONIST';
+    } elseif (in_array('ROLE_NEW_ROLE', $userRoles)) {
+        $userRole = 'ROLE_NEW_ROLE';
     }
 }
 ```
 
-## Step 4: Update UI Components
+Repeat this pattern in all methods that serialize patient data: `index()`, `show()`, `create()`, `update()`.
 
-Modify the frontend role-based UI:
+## Step 5: Create Default User (Optional)
 
-```javascript
-class SecureHealthUI {
-    getRoleSpecificFeatures() {
-        const features = [];
-        
-        switch (this.userRole) {
-            case 'ROLE_LAB_TECH':
-                features.push(
-                    document.getElementById('lab-results'),
-                    document.getElementById('lab-orders')
-                );
-                break;
-            case 'ROLE_PHARMACIST':
-                features.push(
-                    document.getElementById('prescriptions'),
-                    document.getElementById('drug-interactions')
-                );
-                break;
-        }
-        
-        return features.filter(feature => feature !== null);
-    }
-}
+**File:** `src/Command/CreateUsersCommand.php`
+
+Add a default user for the new role in the `$users` array (around line 46-72):
+
+```php
+$users = [
+    // ... existing users ...
+    [
+        'email' => 'newrole@example.com',
+        'username' => 'New Role User',
+        'password' => 'password',
+        'roles' => ['ROLE_NEW_ROLE']
+    ]
+];
 ```
 
-## Step 5: Create Users
-
-Use the console command to create users with new roles:
-
+Run the command to create the user:
 ```bash
-php bin/console app:user:create labtech@securehealth.dev --role=ROLE_LAB_TECH --password=labtech123
-php bin/console app:user:create pharmacist@securehealth.dev --role=ROLE_PHARMACIST --password=pharmacist123
+php bin/console app:create-users --force
 ```
 
-## Step 6: Test New Roles
+## Step 6: Update Frontend (Optional)
 
-Create test cases for the new roles:
+If your new role needs specific UI features:
 
-```php
-<?php
+### 6.1 Update Navigation
 
-namespace App\Tests\Security\Voter;
+**File:** `public/assets/js/navbar.js`
 
-class PatientVoterTest extends TestCase
-{
-    public function testLabTechCanViewLabResults(): void
-    {
-        $user = new User();
-        $user->setRoles(['ROLE_LAB_TECH']);
-        $token = $this->createToken($user);
+Add role-specific navigation items based on the user's role.
 
-        $result = $this->voter->vote($token, $this->patient, [PatientVoter::VIEW_LAB_RESULTS]);
+### 6.2 Update Role Documentation
 
-        $this->assertEquals(1, $result);
-    }
+**File:** `public/role-documentation.html`
 
-    public function testPharmacistCanViewPrescriptions(): void
-    {
-        $user = new User();
-        $user->setRoles(['ROLE_PHARMACIST']);
-        $token = $this->createToken($user);
+Add documentation for the new role's capabilities and responsibilities.
 
-        $result = $this->voter->vote($token, $this->patient, [PatientVoter::VIEW_PRESCRIPTIONS]);
+## Key Principles
 
-        $this->assertEquals(1, $result);
-    }
-}
-```
+1. **Least Privilege**: Only grant access to data that the role needs to perform its duties
+2. **Data Segregation**: Medical data (diagnosis, medications, notes) should be separate from administrative data (insurance, demographics)
+3. **Consistency**: Update all relevant files to maintain system integrity
+4. **Testing**: Test the new role with sample users to ensure proper access control
 
-## Step 7: Update Documentation
+## Example: Adding ROLE_PHARMACIST
 
-Update the role documentation:
+A pharmacist role that can view medications and allergies but not full diagnosis:
 
-```markdown
-## Role Definitions
+1. **security.yaml**: Add to access control for medication endpoints
+2. **Patient.php**: 
+   ```php
+   elseif (in_array('ROLE_PHARMACIST', $roles)) {
+       $data['medications'] = $this->getMedications();
+       $data['diagnosis'] = $this->getDiagnosis(); // Limited view
+   }
+   ```
+3. **PatientVoter.php**: Add to `VIEW_MEDICATIONS` permission
+4. **PatientController.php**: Add to role detection chain
+5. **CreateUsersCommand.php**: Add default pharmacist user
 
-### Lab Technician Role
-- **Lab Results Access**: View and manage lab results
-- **Prescription Access**: View prescriptions for drug interactions
-- **Limited Patient Data**: Access to necessary patient information
+## Testing Checklist
 
-### Pharmacist Role
-- **Prescription Access**: Full access to prescription information
-- **Drug Interaction Checking**: Check for drug interactions
-- **Allergy Information**: Access to patient allergy information
-```
+- [ ] User can log in with new role
+- [ ] User can access permitted endpoints
+- [ ] User is denied access to restricted data
+- [ ] Role hierarchy works correctly (if applicable)
+- [ ] Audit logs record the role's actions
+- [ ] Frontend displays appropriate UI for the role
 
-## Troubleshooting
+## Additional Files to Consider
 
-### Common Issues
+When adding a new role, you may also need to update:
 
-**Permission Errors**
-- Check role hierarchy configuration
-- Verify voter logic
-- Test with different user roles
+### Controllers
+- `src/Controller/Api/DashboardController.php` - Add role-specific dashboard data
+- `src/Controller/Api/AuditLogController.php` - Control audit log access
+- `src/Controller/Api/AppointmentController.php` - Appointment management permissions
 
-**UI Issues**
-- Ensure frontend role detection works
-- Check feature visibility logic
-- Test with different browsers
+### Services
+- `src/Service/PatientVerificationService.php` - Role-based verification requirements
+- `src/Service/RAGChatbotService.php` - AI chatbot access control
 
-**Database Issues**
-- Verify user role storage
-- Check role assignment
-- Test role-based queries
+### Tests
+- `tests/Security/Voter/PatientVoterTest.php` - Add tests for new role permissions
+- `tests/Integration/` - Integration tests for role-specific workflows
 
-## Next Steps
+### Frontend
+- `public/assets/js/dashboard.js` - Dashboard functionality for the role
+- `public/assets/js/navbar.js` - Navigation menu items
+- `public/patients.html` - Patient management interface
+- `public/role-documentation.html` - Role-specific documentation
 
-- **[Custom Fields Tutorial](/docs/tutorials/custom-fields)** - Adding encrypted fields
-- **[Audit Customization Tutorial](/docs/tutorials/audit-customization)** - Custom audit logging
-- **[Integration Examples Tutorial](/docs/tutorials/integration-examples)** - Real-world integrations
+## Security Considerations
+
+1. **Always follow the principle of least privilege**
+2. **Test thoroughly with sample users**
+3. **Ensure audit logging captures all role-based actions**
+4. **Consider HIPAA compliance implications for each role**
+5. **Document the role's purpose and data access requirements**
+6. **Review and update access controls regularly**
+
+## Common Pitfalls
+
+1. **Forgetting to update all relevant files** - The role system spans multiple files
+2. **Inconsistent permission logic** - Ensure voter and controller logic match
+3. **Missing frontend updates** - UI should reflect role capabilities
+4. **Inadequate testing** - Test both positive and negative access scenarios
+5. **Poor documentation** - Document what each role can and cannot do
