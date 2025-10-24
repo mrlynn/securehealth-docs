@@ -53,10 +53,10 @@ graph TB
 - **Backup**: Automated backups with point-in-time recovery
 
 **Authentication & Authorization**
-- **JWT**: JSON Web Tokens for API authentication
+- **Session-Based Authentication**: Secure PHP sessions for user authentication
 - **RBAC**: Role-based access control
 - **Security Voters**: Fine-grained permission system
-- **Session Management**: Secure session handling
+- **Session Management**: Secure session handling with encryption
 
 ### Frontend Technologies
 
@@ -278,21 +278,24 @@ const encryptionSchema = {
 
 ### Authentication Flow
 
-```mermaid
+```mermaid title="Session-Based Authentication Flow"
 sequenceDiagram
     participant C as Client
     participant A as Application
     participant D as Database
     participant K as Key Vault
+    participant S as Session Store
     
     C->>A: Login Request
     A->>D: Verify Credentials
     D-->>A: User Data
-    A->>A: Generate JWT Token
-    A-->>C: JWT Token
+    A->>S: Create Session
+    A->>A: Generate Session ID
+    A-->>C: Session Cookie
     
-    C->>A: API Request + JWT
-    A->>A: Validate JWT
+    C->>A: API Request + Session Cookie
+    A->>S: Validate Session
+    S-->>A: Session Data
     A->>D: Query Encrypted Data
     D->>K: Decrypt Data
     K-->>D: Decrypted Data
@@ -419,8 +422,12 @@ class PatientVoter extends Voter
 
 ### RESTful API Design
 
+:::info Session-Based API Authentication
+SecureHealth uses PHP sessions for API authentication instead of JWT tokens. This provides better security for healthcare applications and integrates seamlessly with Symfony's security system.
+:::
+
 **API Endpoints**
-```php
+```php title="PatientController.php"
 <?php
 
 namespace App\Controller;
@@ -437,6 +444,7 @@ class PatientController extends AbstractController
     #[IsGranted('ROLE_USER')]
     public function listPatients(): JsonResponse
     {
+        // Session-based authentication - user is automatically available
         $user = $this->getUser();
         $patients = $this->patientRepository->findAll();
         
@@ -563,7 +571,7 @@ class PatientDataFilter
 - **Load Balancer**: Nginx with SSL termination
 - **Application Servers**: Multiple Symfony instances
 - **Database**: MongoDB Atlas cluster
-- **Cache**: Redis for session storage
+- **Session Storage**: Redis for secure session management
 - **Monitoring**: Application and infrastructure monitoring
 
 **Security Measures**
@@ -577,8 +585,8 @@ class PatientDataFilter
 **Horizontal Scaling**
 - **Application Layer**: Multiple Symfony instances
 - **Database Layer**: MongoDB replica sets
-- **Cache Layer**: Redis cluster
-- **Load Balancing**: Round-robin with health checks
+- **Session Layer**: Redis cluster for session storage
+- **Load Balancing**: Sticky sessions with health checks
 
 **Performance Optimization**
 - **Caching**: Application and database caching
