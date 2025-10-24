@@ -27,27 +27,22 @@ export default {
     "localeConfigs": {}
   },
   "customFields": {
-    "startButtonTitle": "Start Demo",
+    "startButtonTitle": "Documentation",
     "featureList": [
       {
         "title": "Security by Design",
-        "illustration": "img/coding.png",
+        "illustration": "img/1.png",
         "description": "\n        Built with HIPAA compliance and MongoDB Queryable Encryption from the ground up.\n    "
       },
       {
         "title": "Interactive Demo",
-        "illustration": "img/highfive.png",
+        "illustration": "img/2.png",
         "description": "\n        Experience encrypted medical records management with our live demo.\n    "
       },
       {
         "title": "Role-Based Access",
-        "illustration": "img/writing.png",
+        "illustration": "img/3.png",
         "description": "\n        Granular permissions for doctors, nurses, and receptionists.\n    "
-      },
-      {
-        "title": "Patient Portal",
-        "illustration": "img/rocket.png",
-        "description": "\n        Secure patient access to medical records and communication tools.\n    "
       }
     ],
     "utmParams": "utm_campaign=devrel&utm_source=workshop&utm_medium=cta&utm_content=securehealth_docs&utm_term=mrlynn"

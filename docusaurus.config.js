@@ -11,39 +11,32 @@ const organizationName = "mrlynn";
 // Main page config
 const title = "SecureHealth Documentation";
 const tagLine = "Secure, HIPAA-compliant healthcare information management with MongoDB Queryable Encryption";
-const startButtonTitle = "Start Demo";
+const startButtonTitle = "Documentation";
 const favicon = "img/favicon.svg"
 
 // Main Page Features
 const featureList = [
   {
     title: 'Security by Design',
-    illustration: 'img/coding.png',
+    illustration: 'img/1.png',
     description: `
         Built with HIPAA compliance and MongoDB Queryable Encryption from the ground up.
     `,
   },
   {
     title: 'Interactive Demo',
-    illustration: 'img/highfive.png',
+    illustration: 'img/2.png',
     description: `
         Experience encrypted medical records management with our live demo.
     `,
   },
   {
     title: 'Role-Based Access',
-    illustration: 'img/writing.png',
+    illustration: 'img/3.png',
     description: `
         Granular permissions for doctors, nurses, and receptionists.
     `,
-  },
-  {
-    title: 'Patient Portal',
-    illustration: 'img/rocket.png',
-    description: `
-        Secure patient access to medical records and communication tools.
-    `,
-  },
+  }
 ];
 
 // UTM stuff

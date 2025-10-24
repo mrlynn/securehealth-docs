@@ -1,7 +1,7 @@
 {
   "id": "intro",
   "title": "Welcome to SecureHealth Documentation",
-  "description": "SecureHealth is a HIPAA-compliant medical records management system that demonstrates MongoDB Queryable Encryption technology for protecting Protected Health Information (PHI) in healthcare applications.",
+  "description": "<img",
   "source": "@site/docs/intro.md",
   "sourceDirName": ".",
   "slug": "/intro",

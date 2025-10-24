@@ -13,8 +13,8 @@
   "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
-    "title": "Security Architecture",
-    "permalink": "/docs/concepts/security-architecture"
+    "title": "Command-Line Management Tool",
+    "permalink": "/docs/concepts/command-line-tool"
   },
   "next": {
     "title": "Doctor Guide",

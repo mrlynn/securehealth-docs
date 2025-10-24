@@ -13,7 +13,7 @@
   "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
-    "title": "MongoDB Queryable Encryption",
+    "title": "MongoDB 8.2 Queryable Encryption",
     "permalink": "/docs/concepts/queryable-encryption"
   },
   "next": {

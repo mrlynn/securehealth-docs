@@ -49,17 +49,17 @@
     },
     "config": "config---hello-world-5-e-9-c42"
   },
-  "/docs-999": {
+  "/docs-d9a": {
     "__comp": "__comp---theme-docs-root-5-e-9-0b6",
     "__context": {
       "plugin": "plugin---docsaba-d7c"
     }
   },
-  "/docs-d00": {
+  "/docs-d17": {
     "__comp": "__comp---theme-doc-version-roota-7-b-5de",
     "__props": "__props---docs-005-788"
   },
-  "/docs-913": {
+  "/docs-eab": {
     "__comp": "__comp---theme-doc-roota-94-67a"
   },
   "/docs/community/contributing-5c8": {
@@ -78,9 +78,17 @@
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---docs-community-support-58-d-32e"
   },
+  "/docs/concepts/ai-documentation-assistant-3b9": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-concepts-ai-documentation-assistantc-94-db2"
+  },
   "/docs/concepts/audit-logging-d74": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---docs-concepts-audit-loggingc-31-8f7"
+  },
+  "/docs/concepts/command-line-tool-be7": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-concepts-command-line-toolf-61-68d"
   },
   "/docs/concepts/hipaa-compliance-6c7": {
     "__comp": "__comp---theme-doc-item-178-a40",

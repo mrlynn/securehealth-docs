@@ -17,7 +17,7 @@
     "permalink": "/docs/getting-started/first-steps"
   },
   "next": {
-    "title": "MongoDB Queryable Encryption",
+    "title": "MongoDB 8.2 Queryable Encryption",
     "permalink": "/docs/concepts/queryable-encryption"
   }
 }

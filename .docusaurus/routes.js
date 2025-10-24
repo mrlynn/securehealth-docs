@@ -44,15 +44,15 @@ export default [
   },
   {
     path: '/docs',
-    component: ComponentCreator('/docs', '999'),
+    component: ComponentCreator('/docs', 'd9a'),
     routes: [
       {
         path: '/docs',
-        component: ComponentCreator('/docs', 'd00'),
+        component: ComponentCreator('/docs', 'd17'),
         routes: [
           {
             path: '/docs',
-            component: ComponentCreator('/docs', '913'),
+            component: ComponentCreator('/docs', 'eab'),
             routes: [
               {
                 path: '/docs/community/contributing',
@@ -79,8 +79,20 @@ export default [
                 sidebar: "tutorialSidebar"
               },
               {
+                path: '/docs/concepts/ai-documentation-assistant',
+                component: ComponentCreator('/docs/concepts/ai-documentation-assistant', '3b9'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
                 path: '/docs/concepts/audit-logging',
                 component: ComponentCreator('/docs/concepts/audit-logging', 'd74'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/docs/concepts/command-line-tool',
+                component: ComponentCreator('/docs/concepts/command-line-tool', 'be7'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },

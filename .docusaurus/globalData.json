@@ -31,8 +31,18 @@
               "sidebar": "tutorialSidebar"
             },
             {
+              "id": "concepts/ai-documentation-assistant",
+              "path": "/docs/concepts/ai-documentation-assistant",
+              "sidebar": "tutorialSidebar"
+            },
+            {
               "id": "concepts/audit-logging",
               "path": "/docs/concepts/audit-logging",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "concepts/command-line-tool",
+              "path": "/docs/concepts/command-line-tool",
               "sidebar": "tutorialSidebar"
             },
             {
@@ -203,8 +213,8 @@
   "docusaurus-lunr-search": {
     "default": {
       "fileNames": {
-        "searchDoc": "search-doc-1761152678995.json",
-        "lunrIndex": "lunr-index-1761152678995.json"
+        "searchDoc": "search-doc-1761291395093.json",
+        "lunrIndex": "lunr-index-1761291395093.json"
       }
     }
   }
