@@ -50,7 +50,7 @@ graph TB
 - **Web Servers**: 2+ Nginx instances
 - **Application Servers**: 3+ Symfony instances
 - **Database**: MongoDB Atlas cluster with replica sets
-- **Cache**: Redis cluster for session storage
+- **Session Storage**: Redis cluster for secure session management
 - **CDN**: CloudFront or similar for static assets
 
 ## Environment Configuration
@@ -74,8 +74,10 @@ ENCRYPTION_KEY_VAULT_NAMESPACE=encryption.__keyVault
 ENCRYPTION_MASTER_KEY=your-master-key-base64-encoded
 
 # Security Configuration
-JWT_SECRET=your-jwt-secret-key
-JWT_LIFETIME=3600
+SESSION_SECRET=your-session-secret-key
+SESSION_LIFETIME=1800
+SESSION_HANDLER=redis
+REDIS_URL=redis://localhost:6379/0
 ENCRYPTION_ALGORITHM=AES-256-GCM
 
 # Logging Configuration
@@ -362,7 +364,42 @@ php bin/console app:fixtures:load-demo-data --env=prod
 }
 ```
 
-### 2. Access Control
+### 2. Session Configuration
+
+**Redis Session Handler**
+```yaml title="config/packages/framework.yaml"
+framework:
+    session:
+        handler_id: session.handler.redis
+        cookie_secure: true
+        cookie_httponly: true
+        cookie_samesite: strict
+        gc_maxlifetime: 1800
+        gc_probability: 1
+        gc_divisor: 1000
+```
+
+**Redis Configuration**
+```bash title="Redis Session Setup"
+# Install Redis
+sudo apt install redis-server
+
+# Configure Redis for sessions
+sudo systemctl enable redis-server
+sudo systemctl start redis-server
+
+# Redis configuration for sessions
+echo "maxmemory 256mb" >> /etc/redis/redis.conf
+echo "maxmemory-policy allkeys-lru" >> /etc/redis/redis.conf
+echo "save 900 1" >> /etc/redis/redis.conf
+echo "save 300 10" >> /etc/redis/redis.conf
+echo "save 60 10000" >> /etc/redis/redis.conf
+
+# Restart Redis
+sudo systemctl restart redis-server
+```
+
+### 3. Access Control
 
 **User Management**
 ```bash
@@ -376,44 +413,51 @@ php bin/console app:user:create receptionist@securehealth.dev --role=ROLE_RECEPT
 ```
 
 **Permission Configuration**
-```php
+```php title="config/packages/security.yaml"
 <?php
-// config/packages/security.php
-return [
-    'security' => [
-        'password_hashers' => [
-            App\Entity\User::class => [
-                'algorithm' => 'auto',
-                'cost' => 12,
-            ],
-        ],
-        'providers' => [
-            'app_user_provider' => [
-                'entity' => [
-                    'class' => App\Entity\User::class,
-                    'property' => 'email',
-                ],
-            ],
-        ],
-        'firewalls' => [
-            'api' => [
-                'pattern' => '^/api',
-                'stateless' => true,
-                'jwt' => [
-                    'secret_key' => '%env(JWT_SECRET)%',
-                    'public_key' => '%env(JWT_PUBLIC_KEY)%',
-                    'algorithm' => 'HS256',
-                ],
-            ],
-        ],
-        'access_control' => [
-            ['path' => '^/api/patients', 'roles' => 'ROLE_USER'],
-            ['path' => '^/api/patients/.*/medical', 'roles' => 'ROLE_DOCTOR'],
-            ['path' => '^/api/users', 'roles' => 'ROLE_ADMIN'],
-            ['path' => '^/api/audit-logs', 'roles' => 'ROLE_ADMIN'],
-        ],
-    ],
-];
+// config/packages/security.yaml
+security:
+    password_hashers:
+        App\Entity\User:
+            algorithm: auto
+            cost: 12
+
+    providers:
+        app_user_provider:
+            entity:
+                class: App\Entity\User
+                property: email
+
+    firewalls:
+        main:
+            pattern: ^/
+            form_login:
+                login_path: /login
+                check_path: /login_check
+                default_target_path: /dashboard
+            logout:
+                path: /logout
+                target: /login
+            session:
+                handler_id: session.handler.redis
+                cookie_secure: true
+                cookie_httponly: true
+                cookie_samesite: strict
+                gc_maxlifetime: 1800
+
+        api:
+            pattern: ^/api
+            stateless: false
+            session: true
+            form_login:
+                login_path: /api/login
+                check_path: /api/login_check
+
+    access_control:
+        - { path: ^/api/patients, roles: ROLE_USER }
+        - { path: ^/api/patients/.*/medical, roles: ROLE_DOCTOR }
+        - { path: ^/api/users, roles: ROLE_ADMIN }
+        - { path: ^/api/audit-logs, roles: ROLE_ADMIN }
 ```
 
 ## Monitoring and Alerting
@@ -478,8 +522,7 @@ scrape_configs:
 ### 2. Security Monitoring
 
 **Security Alerts Configuration**
-```yaml
-# security-alerts.yml
+```yaml title="security-alerts.yml"
 groups:
   - name: security
     rules:
@@ -491,6 +534,24 @@ groups:
         annotations:
           summary: "High failed login rate detected"
           description: "Failed login rate is {{ $value }} per second"
+
+      - alert: SessionHijackingAttempt
+        expr: increase(session_hijacking_attempts_total[1h]) > 0
+        for: 0m
+        labels:
+          severity: critical
+        annotations:
+          summary: "Session hijacking attempt detected"
+          description: "{{ $value }} session hijacking attempts in the last hour"
+
+      - alert: ExcessiveSessionCreation
+        expr: rate(session_creation_total[5m]) > 5
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: "Excessive session creation detected"
+          description: "Session creation rate is {{ $value }} per second"
 
       - alert: PrivilegeEscalation
         expr: increase(privilege_escalation_total[1h]) > 0
@@ -514,7 +575,7 @@ groups:
 ### 3. Compliance Monitoring
 
 **HIPAA Compliance Checks**
-```bash
+```bash title="compliance-check.sh"
 #!/bin/bash
 # compliance-check.sh
 
@@ -524,6 +585,10 @@ echo "Running HIPAA compliance checks..."
 echo "Checking encryption status..."
 php bin/console app:encryption:status --env=prod
 
+# Check session security
+echo "Checking session security..."
+php bin/console app:session:security-check --env=prod
+
 # Check audit logging
 echo "Checking audit logging..."
 php bin/console app:audit:status --env=prod
@@ -531,6 +596,10 @@ php bin/console app:audit:status --env=prod
 # Check access controls
 echo "Checking access controls..."
 php bin/console app:security:check --env=prod
+
+# Check session configuration
+echo "Checking session configuration..."
+php bin/console app:session:config-check --env=prod
 
 # Generate compliance report
 echo "Generating compliance report..."
