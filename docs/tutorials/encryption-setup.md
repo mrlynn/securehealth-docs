@@ -2,12 +2,12 @@
 
 This tutorial walks you through setting up MongoDB Queryable Encryption for SecureHealth, including key management, schema configuration, and testing.
 
-## Prerequisites
-
+:::info Prerequisites
 - MongoDB Atlas cluster (M10 or higher)
 - Node.js 18+ and npm
 - PHP 8.1+ with MongoDB extension
 - Composer
+:::
 
 ## Step 1: MongoDB Atlas Setup
 
@@ -27,7 +27,7 @@ This tutorial walks you through setting up MongoDB Queryable Encryption for Secu
 
 Create a `.env` file:
 
-```env
+```env title="Environment Configuration"
 MONGODB_URI=mongodb+srv://username:password@cluster.mongodb.net/securehealth
 ENCRYPTION_KEY_ID=your-key-id
 ENCRYPTION_KEY_VAULT_NAMESPACE=encryption.__keyVault
@@ -38,7 +38,7 @@ ENCRYPTION_MASTER_KEY=your-master-key-base64
 
 Create `config/encryption-schema.json`:
 
-```json
+```json title="Encryption Schema Configuration"
 {
   "securehealth.patients": {
     "bsonType": "object",

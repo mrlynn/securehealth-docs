@@ -4,7 +4,7 @@ SecureHealth is built with a modern, secure architecture designed to meet HIPAA 
 
 ## Architecture Overview
 
-```mermaid
+```mermaid title="SecureHealth System Architecture"
 graph TB
     subgraph "Client Layer"
         A[Web Browser] --> B[HTTPS/TLS]
@@ -39,13 +39,14 @@ graph TB
 
 ### Backend Technologies
 
-**Symfony Framework**
+:::success Symfony Framework
 - **Version**: Symfony 6.x
 - **PHP Version**: PHP 8.1+
 - **Architecture**: MVC pattern with service-oriented design
 - **Security**: Built-in security components and voters
+:::
 
-**MongoDB Atlas**
+:::info MongoDB Atlas
 - **Database**: MongoDB 6.0+
 - **Encryption**: Queryable Encryption (CSFLE)
 - **Hosting**: MongoDB Atlas cloud service
