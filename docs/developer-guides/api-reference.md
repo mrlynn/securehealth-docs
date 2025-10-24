@@ -1,6 +1,6 @@
 # API Reference
 
-The SecureHealth API provides comprehensive access to patient data, appointments, and system functionality. All API endpoints are secured with JWT authentication and implement role-based access control.
+The SecureHealth API provides comprehensive access to patient data, appointments, and system functionality. All API endpoints are secured with session-based authentication and implement role-based access control.
 
 ## Base URL
 
@@ -10,15 +10,15 @@ https://api.securehealth.dev/v1
 
 ## Authentication
 
-### JWT Token Authentication
+:::info Session-Based Authentication
+SecureHealth uses PHP sessions for API authentication instead of JWT tokens. This provides better security for healthcare applications and integrates seamlessly with Symfony's security system.
+:::
 
-All API requests require a valid JWT token in the Authorization header:
+### Session-Based Authentication
 
-```http
-Authorization: Bearer <jwt_token>
-```
+All API requests require an active user session. Sessions are managed automatically through cookies and provide secure authentication for healthcare applications.
 
-### Obtaining a Token
+### Login Process
 
 **Login Endpoint**
 ```http
@@ -34,25 +34,48 @@ Content-Type: application/json
 **Response**
 ```json
 {
-  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
-  "expires_in": 3600,
+  "success": true,
   "user": {
     "id": "user_123",
     "email": "doctor@securehealth.dev",
     "roles": ["ROLE_DOCTOR"],
     "firstName": "Dr. Jane",
     "lastName": "Smith"
-  }
+  },
+  "sessionId": "session_abc123"
 }
 ```
 
-### Token Refresh
+### Session Management
 
-**Refresh Token**
+**Logout Endpoint**
 ```http
-POST /auth/refresh
-Authorization: Bearer <jwt_token>
+POST /auth/logout
 ```
+
+**Response**
+```json
+{
+  "success": true,
+  "message": "Logged out successfully"
+}
+```
+
+### Session Security
+
+:::tip Session Security Features
+- **Secure Cookies**: Sessions use secure, HTTP-only cookies
+- **CSRF Protection**: Cross-site request forgery protection
+- **Session Timeout**: Automatic session expiration for security
+- **Session Regeneration**: Session ID regeneration on login
+- **Redis Storage**: Sessions stored in Redis for scalability
+:::
+
+**Session Configuration**
+- **Timeout**: 30 minutes of inactivity
+- **Regeneration**: On each login
+- **Storage**: Redis cluster for high availability
+- **Encryption**: Session data encrypted at rest
 
 ## Error Handling
 
@@ -93,7 +116,7 @@ GET /patients
 
 **Headers**
 ```http
-Authorization: Bearer <jwt_token>
+Cookie: PHPSESSID=<session_id>
 ```
 
 **Query Parameters**
@@ -134,7 +157,7 @@ GET /patients/{id}
 
 **Headers**
 ```http
-Authorization: Bearer <jwt_token>
+Cookie: PHPSESSID=<session_id>
 ```
 
 **Response**
@@ -191,7 +214,7 @@ POST /patients
 
 **Headers**
 ```http
-Authorization: Bearer <jwt_token>
+Cookie: PHPSESSID=<session_id>
 Content-Type: application/json
 ```
 
@@ -241,7 +264,7 @@ PUT /patients/{id}
 
 **Headers**
 ```http
-Authorization: Bearer <jwt_token>
+Cookie: PHPSESSID=<session_id>
 Content-Type: application/json
 ```
 
@@ -289,7 +312,7 @@ DELETE /patients/{id}
 
 **Headers**
 ```http
-Authorization: Bearer <jwt_token>
+Cookie: PHPSESSID=<session_id>
 ```
 
 **Response**
@@ -310,7 +333,7 @@ GET /patients/{id}/medical-history
 
 **Headers**
 ```http
-Authorization: Bearer <jwt_token>
+Cookie: PHPSESSID=<session_id>
 ```
 
 **Response**
@@ -344,7 +367,7 @@ PUT /patients/{id}/medical-history
 
 **Headers**
 ```http
-Authorization: Bearer <jwt_token>
+Cookie: PHPSESSID=<session_id>
 Content-Type: application/json
 ```
 
@@ -380,7 +403,7 @@ GET /patients/{id}/lab-results
 
 **Headers**
 ```http
-Authorization: Bearer <jwt_token>
+Cookie: PHPSESSID=<session_id>
 ```
 
 **Query Parameters**
@@ -423,7 +446,7 @@ POST /patients/{id}/lab-results
 
 **Headers**
 ```http
-Authorization: Bearer <jwt_token>
+Cookie: PHPSESSID=<session_id>
 Content-Type: application/json
 ```
 
@@ -464,7 +487,7 @@ GET /patients/{id}/prescriptions
 
 **Headers**
 ```http
-Authorization: Bearer <jwt_token>
+Cookie: PHPSESSID=<session_id>
 ```
 
 **Query Parameters**
@@ -498,7 +521,7 @@ POST /patients/{id}/prescriptions
 
 **Headers**
 ```http
-Authorization: Bearer <jwt_token>
+Cookie: PHPSESSID=<session_id>
 Content-Type: application/json
 ```
 
@@ -541,7 +564,7 @@ PUT /prescriptions/{id}
 
 **Headers**
 ```http
-Authorization: Bearer <jwt_token>
+Cookie: PHPSESSID=<session_id>
 Content-Type: application/json
 ```
 
@@ -582,7 +605,7 @@ GET /appointments
 
 **Headers**
 ```http
-Authorization: Bearer <jwt_token>
+Cookie: PHPSESSID=<session_id>
 ```
 
 **Query Parameters**
@@ -621,7 +644,7 @@ POST /appointments
 
 **Headers**
 ```http
-Authorization: Bearer <jwt_token>
+Cookie: PHPSESSID=<session_id>
 Content-Type: application/json
 ```
 
@@ -663,7 +686,7 @@ PUT /appointments/{id}
 
 **Headers**
 ```http
-Authorization: Bearer <jwt_token>
+Cookie: PHPSESSID=<session_id>
 Content-Type: application/json
 ```
 
@@ -702,7 +725,7 @@ DELETE /appointments/{id}
 
 **Headers**
 ```http
-Authorization: Bearer <jwt_token>
+Cookie: PHPSESSID=<session_id>
 ```
 
 **Response**
@@ -723,7 +746,7 @@ GET /users
 
 **Headers**
 ```http
-Authorization: Bearer <jwt_token>
+Cookie: PHPSESSID=<session_id>
 ```
 
 **Query Parameters**
@@ -757,7 +780,7 @@ POST /users
 
 **Headers**
 ```http
-Authorization: Bearer <jwt_token>
+Cookie: PHPSESSID=<session_id>
 Content-Type: application/json
 ```
 
@@ -798,7 +821,7 @@ GET /audit-logs
 
 **Headers**
 ```http
-Authorization: Bearer <jwt_token>
+Cookie: PHPSESSID=<session_id>
 ```
 
 **Query Parameters**
@@ -854,12 +877,19 @@ X-RateLimit-Reset: 1642248000
 
 ### JavaScript SDK
 
-```javascript
+```javascript title="JavaScript SDK Example"
 import { SecureHealthClient } from '@securehealth/js-sdk';
 
 const client = new SecureHealthClient({
   baseUrl: 'https://api.securehealth.dev/v1',
-  token: 'your-jwt-token'
+  // Session-based authentication - cookies handled automatically
+  withCredentials: true
+});
+
+// Login first to establish session
+await client.auth.login({
+  email: 'doctor@securehealth.dev',
+  password: 'password123'
 });
 
 // Get patients
@@ -879,14 +909,21 @@ const newPatient = await client.patients.create({
 
 ### PHP SDK
 
-```php
+```php title="PHP SDK Example"
 <?php
 
 use SecureHealth\Client;
 
 $client = new Client([
     'base_url' => 'https://api.securehealth.dev/v1',
-    'token' => 'your-jwt-token'
+    // Session-based authentication - cookies handled automatically
+    'use_sessions' => true
+]);
+
+// Login first to establish session
+$client->auth()->login([
+    'email' => 'doctor@securehealth.dev',
+    'password' => 'password123'
 ]);
 
 // Get patients
