@@ -38,87 +38,118 @@ graph TB
 
 ## Authentication Implementation
 
-### JWT Token Authentication
+:::info Session-Based Authentication
+SecureHealth uses PHP sessions for authentication instead of JWT tokens. This provides better security for healthcare applications and integrates seamlessly with Symfony's security system.
+:::
 
-**Token Generation**
-```php
+### Session-Based Authentication
+
+**Session Manager Service**
+```php title="SessionManager.php"
 <?php
 
 namespace App\Security;
 
-use Firebase\JWT\JWT;
-use Firebase\JWT\Key;
+use Symfony\Component\HttpFoundation\Session\SessionInterface;
+use App\Entity\User;
 
-class JWTTokenManager
+class SessionManager
 {
-    private string $secretKey;
-    private int $tokenLifetime;
+    private SessionInterface $session;
+    private int $sessionLifetime;
 
-    public function __construct(string $secretKey, int $tokenLifetime = 3600)
+    public function __construct(SessionInterface $session, int $sessionLifetime = 1800)
     {
-        $this->secretKey = $secretKey;
-        $this->tokenLifetime = $tokenLifetime;
+        $this->session = $session;
+        $this->sessionLifetime = $sessionLifetime;
     }
 
-    public function generateToken(User $user): string
+    public function createSession(User $user): void
     {
-        $payload = [
-            'iss' => 'securehealth.dev',
-            'aud' => 'securehealth.dev',
-            'iat' => time(),
-            'exp' => time() + $this->tokenLifetime,
-            'sub' => $user->getId(),
-            'email' => $user->getEmail(),
-            'roles' => $user->getRoles(),
-            'department' => $user->getDepartment()
-        ];
-
-        return JWT::encode($payload, $this->secretKey, 'HS256');
+        // Regenerate session ID for security
+        $this->session->migrate(true);
+        
+        // Store user information in session
+        $this->session->set('user_id', $user->getId());
+        $this->session->set('user_email', $user->getEmail());
+        $this->session->set('user_roles', $user->getRoles());
+        $this->session->set('user_department', $user->getDepartment());
+        $this->session->set('login_time', time());
+        $this->session->set('last_activity', time());
+        
+        // Set session lifetime
+        $this->session->set('session_lifetime', $this->sessionLifetime);
     }
 
-    public function validateToken(string $token): array
+    public function validateSession(): ?User
     {
-        try {
-            $decoded = JWT::decode($token, new Key($this->secretKey, 'HS256'));
-            return (array) $decoded;
-        } catch (\Exception $e) {
-            throw new InvalidTokenException('Invalid token: ' . $e->getMessage());
+        if (!$this->session->has('user_id')) {
+            return null;
         }
+
+        // Check session lifetime
+        $lastActivity = $this->session->get('last_activity', 0);
+        if (time() - $lastActivity > $this->sessionLifetime) {
+            $this->destroySession();
+            return null;
+        }
+
+        // Update last activity
+        $this->session->set('last_activity', time());
+
+        // Return user data from session
+        return $this->getUserFromSession();
     }
 
-    public function refreshToken(string $token): string
+    public function destroySession(): void
     {
-        $payload = $this->validateToken($token);
-        
-        // Create new token with extended expiration
-        $newPayload = $payload;
-        $newPayload['iat'] = time();
-        $newPayload['exp'] = time() + $this->tokenLifetime;
-        
-        return JWT::encode($newPayload, $this->secretKey, 'HS256');
+        $this->session->invalidate();
+    }
+
+    public function refreshSession(): void
+    {
+        $this->session->migrate(true);
+        $this->session->set('last_activity', time());
+    }
+
+    private function getUserFromSession(): ?User
+    {
+        if (!$this->session->has('user_id')) {
+            return null;
+        }
+
+        // In a real implementation, you would fetch the user from the database
+        // For this example, we'll create a basic user object from session data
+        $user = new User();
+        $user->setId($this->session->get('user_id'));
+        $user->setEmail($this->session->get('user_email'));
+        $user->setRoles($this->session->get('user_roles', []));
+        $user->setDepartment($this->session->get('user_department'));
+
+        return $user;
     }
 }
 ```
 
 **Authentication Listener**
-```php
+```php title="SessionAuthenticationListener.php"
 <?php
 
 namespace App\EventListener;
 
-use App\Security\JWTTokenManager;
+use App\Security\SessionManager;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpKernel\Event\RequestEvent;
 use Symfony\Component\Security\Core\Exception\AuthenticationException;
 
-class JWTAuthenticationListener
+class SessionAuthenticationListener
 {
-    private JWTTokenManager $tokenManager;
+    private SessionManager $sessionManager;
     private array $publicRoutes;
 
-    public function __construct(JWTTokenManager $tokenManager, array $publicRoutes = [])
+    public function __construct(SessionManager $sessionManager, array $publicRoutes = [])
     {
-        $this->tokenManager = $tokenManager;
+        $this->sessionManager = $sessionManager;
         $this->publicRoutes = $publicRoutes;
     }
 
@@ -136,21 +167,16 @@ class JWTAuthenticationListener
             return;
         }
 
-        $authHeader = $request->headers->get('Authorization');
+        // Validate session
+        $user = $this->sessionManager->validateSession();
         
-        if (!$authHeader || !str_starts_with($authHeader, 'Bearer ')) {
-            $this->handleAuthenticationError($event, 'Missing or invalid authorization header');
+        if (!$user) {
+            $this->handleAuthenticationError($event, 'Session expired or invalid');
             return;
         }
 
-        $token = substr($authHeader, 7);
-        
-        try {
-            $payload = $this->tokenManager->validateToken($token);
-            $request->attributes->set('jwt_payload', $payload);
-        } catch (InvalidTokenException $e) {
-            $this->handleAuthenticationError($event, $e->getMessage());
-        }
+        // Set user in request attributes
+        $request->attributes->set('user', $user);
     }
 
     private function handleAuthenticationError(RequestEvent $event, string $message): void
@@ -163,6 +189,92 @@ class JWTAuthenticationListener
         ], 401);
 
         $event->setResponse($response);
+    }
+}
+```
+
+### Session Security Features
+
+:::tip Session Security Implementation
+- **Session Regeneration**: Session ID regenerated on login for security
+- **Session Timeout**: Automatic session expiration after inactivity
+- **Secure Cookies**: HTTP-only, secure, SameSite strict cookies
+- **Activity Tracking**: Last activity timestamp for session validation
+- **Redis Storage**: Sessions stored in Redis for scalability and security
+:::
+
+**Session Security Configuration**
+```yaml title="config/packages/framework.yaml"
+framework:
+    session:
+        handler_id: session.handler.redis
+        cookie_secure: true
+        cookie_httponly: true
+        cookie_samesite: strict
+        gc_maxlifetime: 1800
+        gc_probability: 1
+        gc_divisor: 1000
+        name: SECUREHEALTH_SESSION
+```
+
+**Session Security Service**
+```php title="SessionSecurityService.php"
+<?php
+
+namespace App\Security;
+
+use Symfony\Component\HttpFoundation\Session\SessionInterface;
+
+class SessionSecurityService
+{
+    private SessionInterface $session;
+
+    public function __construct(SessionInterface $session)
+    {
+        $this->session = $session;
+    }
+
+    public function validateSessionSecurity(): bool
+    {
+        // Check session age
+        $loginTime = $this->session->get('login_time', 0);
+        if (time() - $loginTime > 28800) { // 8 hours max
+            return false;
+        }
+
+        // Check last activity
+        $lastActivity = $this->session->get('last_activity', 0);
+        if (time() - $lastActivity > 1800) { // 30 minutes
+            return false;
+        }
+
+        // Check for session fixation
+        if (!$this->session->has('session_regenerated')) {
+            return false;
+        }
+
+        return true;
+    }
+
+    public function regenerateSessionId(): void
+    {
+        $this->session->migrate(true);
+        $this->session->set('session_regenerated', true);
+        $this->session->set('last_activity', time());
+    }
+
+    public function logSessionActivity(string $action): void
+    {
+        $activities = $this->session->get('session_activities', []);
+        $activities[] = [
+            'action' => $action,
+            'timestamp' => time(),
+            'ip' => $_SERVER['REMOTE_ADDR'] ?? 'unknown'
+        ];
+        
+        // Keep only last 10 activities
+        $activities = array_slice($activities, -10);
+        $this->session->set('session_activities', $activities);
     }
 }
 ```
@@ -664,7 +776,7 @@ class AuditEventListener
 ### Real-time Security Monitoring
 
 **Security Monitor Service**
-```php
+```php title="SecurityMonitoringService.php"
 <?php
 
 namespace App\Service;
@@ -674,6 +786,7 @@ class SecurityMonitoringService
     public function monitorSecurityEvents(): void
     {
         $this->monitorFailedLogins();
+        $this->monitorSessionSecurity();
         $this->monitorPrivilegeEscalation();
         $this->monitorDataAccessPatterns();
         $this->monitorSuspiciousActivity();
@@ -694,6 +807,54 @@ class SecurityMonitoringService
                 ]);
             }
         }
+    }
+
+    private function monitorSessionSecurity(): void
+    {
+        $suspiciousSessions = $this->auditRepository->findSuspiciousSessions(3600);
+        
+        foreach ($suspiciousSessions as $session) {
+            // Check for session hijacking attempts
+            if ($this->detectSessionHijacking($session)) {
+                $this->triggerSecurityAlert('SESSION_HIJACKING_ATTEMPT', [
+                    'sessionId' => $session->getSessionId(),
+                    'user' => $session->getUser(),
+                    'ipAddress' => $session->getIpAddress(),
+                    'timestamp' => $session->getTimestamp()
+                ]);
+            }
+
+            // Check for excessive session creation
+            $sessionCount = $this->auditRepository->countSessionsByUser($session->getUser(), 3600);
+            if ($sessionCount > 10) {
+                $this->triggerSecurityAlert('EXCESSIVE_SESSION_CREATION', [
+                    'user' => $session->getUser(),
+                    'sessionCount' => $sessionCount,
+                    'timeframe' => '1_hour'
+                ]);
+            }
+        }
+    }
+
+    private function detectSessionHijacking($session): bool
+    {
+        // Check for IP address changes
+        $activities = $session->getSessionActivities();
+        if (count($activities) > 1) {
+            $ips = array_unique(array_column($activities, 'ip'));
+            if (count($ips) > 1) {
+                return true;
+            }
+        }
+
+        // Check for unusual activity patterns
+        $lastActivity = $session->getLastActivity();
+        $currentTime = time();
+        if ($currentTime - $lastActivity > 3600) { // 1 hour gap
+            return true;
+        }
+
+        return false;
     }
 
     private function monitorPrivilegeEscalation(): void
@@ -728,6 +889,21 @@ class SecurityMonitoringService
                     'timeframe' => '1_hour'
                 ]);
             }
+        }
+    }
+
+    private function monitorSuspiciousActivity(): void
+    {
+        // Monitor for unusual access patterns
+        $unusualAccess = $this->auditRepository->findUnusualAccessPatterns(3600);
+        
+        foreach ($unusualAccess as $access) {
+            $this->triggerSecurityAlert('SUSPICIOUS_ACTIVITY', [
+                'user' => $access->getUser(),
+                'activity' => $access->getAction(),
+                'resource' => $access->getResourceType(),
+                'timestamp' => $access->getTimestamp()
+            ]);
         }
     }
 
@@ -832,8 +1008,10 @@ class InputValidationService
 
 - **Strong Passwords**: Enforce password complexity requirements
 - **Multi-Factor Authentication**: Implement MFA for sensitive accounts
-- **Session Management**: Implement secure session handling
+- **Session Management**: Implement secure session handling with Redis storage
+- **Session Security**: Regenerate session IDs, implement timeouts, secure cookies
 - **Account Lockout**: Lock accounts after failed login attempts
+- **Session Monitoring**: Monitor for session hijacking and suspicious activity
 
 ### 2. Authorization Security
 
