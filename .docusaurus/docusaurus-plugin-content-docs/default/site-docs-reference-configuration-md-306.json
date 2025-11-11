@@ -13,8 +13,8 @@
   "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
-    "title": "API Endpoints Reference",
-    "permalink": "/docs/reference/api-endpoints"
+    "title": "SecureHealth CLI (securehealth)",
+    "permalink": "/docs/reference/cli"
   },
   "next": {
     "title": "Environment Variables Reference",

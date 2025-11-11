@@ -17,6 +17,7 @@ const sidebars = {
   tutorialSidebar: [
     'intro',
     'faq',
+    'faq-interactive',
     {
       type: 'category',
       label: 'Getting Started',
@@ -61,6 +62,21 @@ const sidebars = {
         'developer-guides/security-implementation',
         'developer-guides/testing',
         'developer-guides/deployment',
+        {
+          type: 'category',
+          label: 'Queryable Encryption Tutorials',
+          items: [
+            'developer-guides/qe-tutorials/index',
+            'developer-guides/qe-tutorials/csharp/README',
+            'developer-guides/qe-tutorials/go/README',
+            'developer-guides/qe-tutorials/java/README',
+            'developer-guides/qe-tutorials/node/README',
+            'developer-guides/qe-tutorials/php/README',
+            'developer-guides/qe-tutorials/python/README',
+            'developer-guides/qe-tutorials/rust/README',
+            'developer-guides/qe-tutorials/mongosh/README',
+          ],
+        },
       ],
     },
     {
@@ -79,6 +95,7 @@ const sidebars = {
       label: 'Reference',
       items: [
         'reference/api-endpoints',
+        'reference/cli',
         'reference/configuration',
         'reference/environment-variables',
         'reference/troubleshooting',

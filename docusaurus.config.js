@@ -88,7 +88,6 @@ const config = {
   organizationName: `${organizationName}`,
   trailingSlash: false,
   onBrokenLinks: "throw",
-  onBrokenMarkdownLinks: "warn",
   favicon: `${favicon}`,
   // deploymentBranch: "gh-pages", // Not needed for GitHub Actions
   staticDirectories: ["static"],
@@ -218,6 +217,9 @@ const config = {
   },
   markdown: {
     mermaid: true,
+    hooks: {
+      onBrokenMarkdownLinks: "warn",
+    },
   },
   themes: ["@docusaurus/theme-mermaid"],
 };

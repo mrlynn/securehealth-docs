@@ -2,15 +2,19 @@
 
 Find answers to common questions about SecureHealth, organized by your role and interests. Whether you're a developer, healthcare provider, IT administrator, or decision maker, we've got you covered.
 
+:::tip Interactive FAQ Available
+For a better experience with search, filtering, and accordion-style navigation, check out our [Interactive FAQ](/docs/faq-interactive) page.
+:::
+
 ## For Developers
 
 ### Technical Implementation
 
 **Q: What version of MongoDB do I need for Queryable Encryption?**
-A: SecureHealth requires MongoDB 8.2 Enterprise Edition with Queryable Encryption support. This includes the latest performance improvements and enhanced key management capabilities.
+A: Queryable Encryption requires MongoDB 7.0+ with client-side encryption configured. We recommend MongoDB Atlas, which supports QE and simplifies key management and deployment.
 
 **Q: Can I use MongoDB Community Edition?**
-A: No, Queryable Encryption is only available in MongoDB Enterprise Edition. However, you can use MongoDB Atlas (which includes Enterprise features) for development and production.
+A: QE requires Enterprise features. Use MongoDB Atlas (includes Enterprise features) for both development and production.
 
 **Q: What PHP version is required?**
 A: SecureHealth requires PHP 8.2 or higher. We recommend PHP 8.3 for the best performance and latest features.
@@ -44,16 +48,16 @@ A: Yes! The system uses Symfony Security Voters, making it easy to add custom ro
 ### Development & Testing
 
 **Q: How do I run the test suite?**
-A: Use `docker-compose exec php bin/phpunit` to run all tests, including HIPAA compliance tests and MongoDB Queryable Encryption tests.
+A: Use `docker-compose exec php bin/phpunit` to run all tests, including HIPAA compliance tests and Queryable Encryption tests.
 
 **Q: Can I develop without Docker?**
-A: While Docker is recommended for consistency, you can develop locally. Ensure you have MongoDB 8.2 Enterprise and all required PHP extensions installed.
+A: While Docker is recommended for consistency, you can develop locally. Ensure you have MongoDB 7.0+ (with QE support) and all required PHP extensions installed.
 
 **Q: How do I debug encryption issues?**
 A: Use the CLI tool: `php bin/console app:test-encryption` and check the application logs. The system provides detailed error messages for common encryption problems.
 
 **Q: What's the performance impact of Queryable Encryption?**
-A: There's a 10-15% performance overhead for encrypted queries, but this is offset by the security benefits. We provide optimization tips in our [Performance Guide](/docs/developer-guides/deployment).
+A: Expect some overhead for encrypted queries; measure with your workload. See our [Deployment Guide](/docs/developer-guides/deployment) for optimization tips.
 
 ## For Healthcare Providers
 
@@ -115,7 +119,7 @@ A: Follow our [Installation Guide](/docs/getting-started/installation). The syst
 **Q: What are the system requirements?**
 A: Minimum requirements:
 - PHP 8.2+
-- MongoDB 8.2 Enterprise
+- MongoDB Atlas (MongoDB 7.0+ for QE; 6.0.11+ for Vector Search)
 - 4GB RAM
 - 20GB storage
 - HTTPS certificate for production
@@ -171,7 +175,7 @@ A: Key benefits include:
 - Comprehensive audit trails
 
 **Q: How does this compare to other healthcare systems?**
-A: SecureHealth is unique in its use of MongoDB Queryable Encryption, providing field-level encryption while maintaining search capabilities. Most systems either encrypt everything (making searches difficult) or leave data unencrypted.
+A: SecureHealth leverages MongoDB Queryable Encryption for field-level security while maintaining searchability, plus Atlas Search (full-text) and Vector Search (semantic) for modern retrieval.
 
 **Q: What's the ROI of implementing SecureHealth?**
 A: ROI comes from reduced compliance costs, improved efficiency through AI documentation, and reduced risk of costly data breaches. Most organizations see ROI within 12-18 months.

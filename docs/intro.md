@@ -12,17 +12,17 @@
   />
 </div>
 
-SecureHealth is a production-ready, HIPAA-compliant medical records management system that demonstrates advanced data protection using **MongoDB 8.2 Queryable Encryption** with PHP/Symfony. This project serves as both a functional healthcare application and a comprehensive educational resource for developers learning secure data handling practices in healthcare environments.
+SecureHealth is a production-ready, HIPAA-compliant medical records management system that demonstrates advanced data protection using **MongoDB Queryable Encryption** with PHP/Symfony. This project serves as both a functional healthcare application and a comprehensive educational resource for developers learning secure data handling practices in healthcare environments.
 
 ## What is SecureHealth?
 
-SecureHealth is a comprehensive medical records management system built with **MongoDB 8.2 Queryable Encryption** and **Symfony Security Voters** for HIPAA-compliant healthcare data protection. The system demonstrates real-world implementation of field-level encryption, role-based access control, and comprehensive audit logging required for healthcare compliance.
+SecureHealth is a comprehensive medical records management system built with **MongoDB Queryable Encryption** and **Symfony Security Voters** for HIPAA-compliant healthcare data protection. The system demonstrates real-world implementation of field-level encryption, role-based access control, and comprehensive audit logging required for healthcare compliance.
 
 **Open Source Project:** View the complete source code, documentation, and contribute at [github.com/mrlynn/securehealth](https://github.com/mrlynn/securehealth)
 
 ## Key Features
 
-### 🔒 MongoDB 8.2 Queryable Encryption
+### 🔒 MongoDB Queryable Encryption
 - **Field-Level Encryption**: All PHI encrypted at the field level
 - **Deterministic Encryption**: Searchable fields (name, email, phone)
 - **Range Encryption**: Date and numeric range queries on encrypted data
@@ -89,10 +89,11 @@ Our documentation aims to:
 
 - **Backend Framework**: Symfony 7.0
 - **Language**: PHP 8.2+
-- **Database**: MongoDB 8.2 Enterprise (with Queryable Encryption)
-- **ODM**: Doctrine MongoDB ODM Bundle 5.0+
-- **Authentication**: JWT with Symfony Security
-- **Encryption**: MongoDB Client-Side Field Level Encryption
+- **Database**: MongoDB Atlas (MongoDB 7.0+ for QE; 6.0.11+ for Vector Search)
+- **ODM**: Doctrine MongoDB ODM 2.12+ (DoctrineMongoDBBundle 5.x)
+- **Authentication**: Session-based with Symfony Security
+- **Encryption**: MongoDB Client-Side Field Level Encryption (Queryable Encryption)
+- **Search**: Atlas Search (full-text) and Vector Search (semantic)
 - **Development**: Docker + Docker Compose
 - **Testing**: PHPUnit + MongoDB Test Framework
 - **Security**: Symfony Security Voters + RBAC

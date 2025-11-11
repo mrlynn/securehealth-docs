@@ -13,11 +13,11 @@
   "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
-    "title": "Production Deployment",
-    "permalink": "/docs/developer-guides/deployment"
+    "title": "mongosh Queryable Encryption Tutorial",
+    "permalink": "/docs/developer-guides/qe-tutorials/mongosh/"
   },
   "next": {
-    "title": "Adding Roles Tutorial",
+    "title": "Adding a New Role to SecureHealth",
     "permalink": "/docs/tutorials/adding-roles"
   }
 }

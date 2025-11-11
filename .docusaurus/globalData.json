@@ -86,6 +86,59 @@
               "sidebar": "tutorialSidebar"
             },
             {
+              "id": "developer-guides/mongodb-doctrine-integration",
+              "path": "/docs/developer-guides/mongodb-doctrine-integration"
+            },
+            {
+              "id": "developer-guides/qe-tutorials/csharp/README",
+              "path": "/docs/developer-guides/qe-tutorials/csharp/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "developer-guides/qe-tutorials/go/README",
+              "path": "/docs/developer-guides/qe-tutorials/go/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "developer-guides/qe-tutorials/index",
+              "path": "/docs/developer-guides/qe-tutorials/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "developer-guides/qe-tutorials/java/README",
+              "path": "/docs/developer-guides/qe-tutorials/java/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "developer-guides/qe-tutorials/mongosh/README",
+              "path": "/docs/developer-guides/qe-tutorials/mongosh/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "developer-guides/qe-tutorials/node/README",
+              "path": "/docs/developer-guides/qe-tutorials/node/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "developer-guides/qe-tutorials/php/doctrine-odm",
+              "path": "/docs/developer-guides/qe-tutorials/php/doctrine-odm"
+            },
+            {
+              "id": "developer-guides/qe-tutorials/php/README",
+              "path": "/docs/developer-guides/qe-tutorials/php/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "developer-guides/qe-tutorials/python/README",
+              "path": "/docs/developer-guides/qe-tutorials/python/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "developer-guides/qe-tutorials/rust/README",
+              "path": "/docs/developer-guides/qe-tutorials/rust/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
               "id": "developer-guides/security-implementation",
               "path": "/docs/developer-guides/security-implementation",
               "sidebar": "tutorialSidebar"
@@ -93,6 +146,16 @@
             {
               "id": "developer-guides/testing",
               "path": "/docs/developer-guides/testing",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "faq",
+              "path": "/docs/faq",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "faq-interactive",
+              "path": "/docs/faq-interactive",
               "sidebar": "tutorialSidebar"
             },
             {
@@ -123,6 +186,11 @@
             {
               "id": "reference/api-endpoints",
               "path": "/docs/reference/api-endpoints",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "reference/cli",
+              "path": "/docs/reference/cli",
               "sidebar": "tutorialSidebar"
             },
             {
@@ -164,6 +232,10 @@
               "id": "tutorials/encryption-setup",
               "path": "/docs/tutorials/encryption-setup",
               "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "tutorials/encryption-setup-updated",
+              "path": "/docs/tutorials/encryption-setup-updated"
             },
             {
               "id": "tutorials/integration-examples",
@@ -213,8 +285,8 @@
   "docusaurus-lunr-search": {
     "default": {
       "fileNames": {
-        "searchDoc": "search-doc-1761291395093.json",
-        "lunrIndex": "lunr-index-1761291395093.json"
+        "searchDoc": "search-doc-1762890568307.json",
+        "lunrIndex": "lunr-index-1762890568307.json"
       }
     }
   }

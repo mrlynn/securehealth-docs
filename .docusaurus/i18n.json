@@ -12,14 +12,20 @@
       "direction": "ltr",
       "htmlLang": "en",
       "calendar": "gregory",
-      "path": "en"
+      "path": "en",
+      "translate": false,
+      "url": "https://docs.securehealth.dev",
+      "baseUrl": "/"
     },
     "es": {
       "label": "Español",
       "direction": "ltr",
       "htmlLang": "es",
       "calendar": "gregory",
-      "path": "es"
+      "path": "es",
+      "translate": true,
+      "url": "https://docs.securehealth.dev",
+      "baseUrl": "/es/"
     }
   }
 }

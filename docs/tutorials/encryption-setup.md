@@ -197,3 +197,4 @@ Patient found: John Doe
 - **[Adding Roles Tutorial](/docs/tutorials/adding-roles)** - Extending the role system
 - **[Custom Fields Tutorial](/docs/tutorials/custom-fields)** - Adding encrypted fields
 - **[Audit Customization Tutorial](/docs/tutorials/audit-customization)** - Custom audit logging
+- **[Queryable Encryption Tutorials](/docs/developer-guides/qe-tutorials)** - Multi-language implementation examples

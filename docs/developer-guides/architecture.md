@@ -25,6 +25,8 @@ graph TB
         G --> K[MongoDB Atlas]
         K --> L[Queryable Encryption]
         K --> M[Key Vault]
+        K --> R[Atlas Search]
+        K --> S[Vector Search]
         L --> N[Encrypted Data]
     end
     
@@ -40,17 +42,23 @@ graph TB
 ### Backend Technologies
 
 :::success Symfony Framework
-- **Version**: Symfony 6.x
+- **Version**: Symfony 7.0
 - **PHP Version**: PHP 8.1+
 - **Architecture**: MVC pattern with service-oriented design
 - **Security**: Built-in security components and voters
 :::
 
 :::info MongoDB Atlas
-- **Database**: MongoDB 6.0+
-- **Encryption**: Queryable Encryption (CSFLE)
+- **Database**: MongoDB 7.0+ (Queryable Encryption), 6.0.11+ (Vector Search)
+- **Encryption**: Queryable Encryption (CSFLE/QE)
 - **Hosting**: MongoDB Atlas cloud service
 - **Backup**: Automated backups with point-in-time recovery
+
+::::tip Doctrine MongoDB ODM
+- **ODM**: Doctrine MongoDB ODM 2.12+
+- **Bundle**: DoctrineMongoDBBundle 5.x
+- **Capabilities**: Native Queryable Encryption mappings, Aggregation Builder with `$vectorSearch`, robust repositories
+::::
 
 **Authentication & Authorization**
 - **Session-Based Authentication**: Secure PHP sessions for user authentication
@@ -80,7 +88,7 @@ graph TB
 graph TD
     A[Symfony Application] --> B[Controllers]
     A --> C[Services]
-    A --> D[Entities]
+    A --> D[Documents]
     A --> E[Security]
     
     B --> F[PatientController]
@@ -91,9 +99,9 @@ graph TD
     C --> J[EncryptionService]
     C --> K[AuditService]
     
-    D --> L[Patient Entity]
-    D --> M[User Entity]
-    D --> N[AuditLog Entity]
+    D --> L[Patient Document]
+    D --> M[User Document]
+    D --> N[AuditLog Document]
     
     E --> O[Authentication]
     E --> P[Authorization]
@@ -106,6 +114,8 @@ graph TD
 - **PatientService**: Patient data management
 - **UserService**: User management and authentication
 - **EncryptionService**: MongoDB Queryable Encryption
+- **SearchService**: Atlas Search full-text queries
+- **SimilarityService**: Vector Search semantic retrieval
 - **AuditService**: Comprehensive audit logging
 - **NotificationService**: Email and SMS notifications
 

@@ -38,21 +38,26 @@ export default [
     exact: true
   },
   {
+    path: '/faq-demo',
+    component: ComponentCreator('/faq-demo', 'a33'),
+    exact: true
+  },
+  {
     path: '/helloWorld',
     component: ComponentCreator('/helloWorld', '3a9'),
     exact: true
   },
   {
     path: '/docs',
-    component: ComponentCreator('/docs', 'd9a'),
+    component: ComponentCreator('/docs', '528'),
     routes: [
       {
         path: '/docs',
-        component: ComponentCreator('/docs', 'd17'),
+        component: ComponentCreator('/docs', '57b'),
         routes: [
           {
             path: '/docs',
-            component: ComponentCreator('/docs', 'eab'),
+            component: ComponentCreator('/docs', 'a0b'),
             routes: [
               {
                 path: '/docs/community/contributing',
@@ -145,6 +150,70 @@ export default [
                 sidebar: "tutorialSidebar"
               },
               {
+                path: '/docs/developer-guides/mongodb-doctrine-integration',
+                component: ComponentCreator('/docs/developer-guides/mongodb-doctrine-integration', 'acc'),
+                exact: true
+              },
+              {
+                path: '/docs/developer-guides/qe-tutorials',
+                component: ComponentCreator('/docs/developer-guides/qe-tutorials', 'e07'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/docs/developer-guides/qe-tutorials/csharp',
+                component: ComponentCreator('/docs/developer-guides/qe-tutorials/csharp', '033'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/docs/developer-guides/qe-tutorials/go',
+                component: ComponentCreator('/docs/developer-guides/qe-tutorials/go', '1b1'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/docs/developer-guides/qe-tutorials/java',
+                component: ComponentCreator('/docs/developer-guides/qe-tutorials/java', '355'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/docs/developer-guides/qe-tutorials/mongosh',
+                component: ComponentCreator('/docs/developer-guides/qe-tutorials/mongosh', 'a30'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/docs/developer-guides/qe-tutorials/node',
+                component: ComponentCreator('/docs/developer-guides/qe-tutorials/node', 'c60'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/docs/developer-guides/qe-tutorials/php',
+                component: ComponentCreator('/docs/developer-guides/qe-tutorials/php', '92e'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/docs/developer-guides/qe-tutorials/php/doctrine-odm',
+                component: ComponentCreator('/docs/developer-guides/qe-tutorials/php/doctrine-odm', '99c'),
+                exact: true
+              },
+              {
+                path: '/docs/developer-guides/qe-tutorials/python',
+                component: ComponentCreator('/docs/developer-guides/qe-tutorials/python', 'ed5'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/docs/developer-guides/qe-tutorials/rust',
+                component: ComponentCreator('/docs/developer-guides/qe-tutorials/rust', 'e2f'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
                 path: '/docs/developer-guides/security-implementation',
                 component: ComponentCreator('/docs/developer-guides/security-implementation', '4fc'),
                 exact: true,
@@ -153,6 +222,18 @@ export default [
               {
                 path: '/docs/developer-guides/testing',
                 component: ComponentCreator('/docs/developer-guides/testing', 'cb2'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/docs/faq',
+                component: ComponentCreator('/docs/faq', '947'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/docs/faq-interactive',
+                component: ComponentCreator('/docs/faq-interactive', 'c78'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
@@ -189,6 +270,12 @@ export default [
               {
                 path: '/docs/reference/api-endpoints',
                 component: ComponentCreator('/docs/reference/api-endpoints', '915'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/docs/reference/cli',
+                component: ComponentCreator('/docs/reference/cli', '203'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
@@ -239,6 +326,11 @@ export default [
                 component: ComponentCreator('/docs/tutorials/encryption-setup', 'f5d'),
                 exact: true,
                 sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/docs/tutorials/encryption-setup-updated',
+                component: ComponentCreator('/docs/tutorials/encryption-setup-updated', 'de6'),
+                exact: true
               },
               {
                 path: '/docs/tutorials/integration-examples',

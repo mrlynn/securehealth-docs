@@ -1,7 +1,7 @@
 {
   "id": "tutorials/integration-examples",
   "title": "Integration Examples Tutorial",
-  "description": "This tutorial provides real-world integration examples for SecureHealth, including third-party systems, APIs, and healthcare workflows.",
+  "description": "This tutorial provides real-world integration examples for SecureHealth, demonstrating how to integrate third-party systems, APIs, and healthcare workflows while maintaining MongoDB Queryable Encryption security.",
   "source": "@site/docs/tutorials/integration-examples.md",
   "sourceDirName": "tutorials",
   "slug": "/tutorials/integration-examples",

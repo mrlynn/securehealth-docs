@@ -1,7 +1,7 @@
 {
   "id": "tutorials/adding-roles",
-  "title": "Adding Roles Tutorial",
-  "description": "This tutorial shows how to extend the SecureHealth role system by adding new roles and configuring their permissions.",
+  "title": "Adding a New Role to SecureHealth",
+  "description": "This guide explains the step-by-step process for adding a new role to the SecureHealth application.",
   "source": "@site/docs/tutorials/adding-roles.md",
   "sourceDirName": "tutorials",
   "slug": "/tutorials/adding-roles",

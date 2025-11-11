@@ -444,3 +444,4 @@ const medicalHistory = decrypt(patient.medicalHistory);
 - **[Audit Logging](/docs/concepts/audit-logging)** - Learn about compliance logging
 - **[Security Architecture](/docs/concepts/security-architecture)** - Overall security design
 - **[Tutorials](/docs/tutorials/encryption-setup)** - Step-by-step implementation guides
+- **[Queryable Encryption Tutorials](/docs/developer-guides/qe-tutorials)** - Multi-language implementation examples

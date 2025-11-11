@@ -12,7 +12,6 @@ export default {
   "organizationName": "mrlynn",
   "trailingSlash": false,
   "onBrokenLinks": "throw",
-  "onBrokenMarkdownLinks": "warn",
   "favicon": "img/favicon.svg",
   "staticDirectories": [
     "static"
@@ -406,7 +405,12 @@ export default {
   },
   "markdown": {
     "mermaid": true,
+    "hooks": {
+      "onBrokenMarkdownLinks": "warn",
+      "onBrokenMarkdownImages": "throw"
+    },
     "format": "mdx",
+    "emoji": true,
     "mdx1Compat": {
       "comments": true,
       "admonitions": true,

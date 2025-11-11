@@ -1,7 +1,7 @@
 {
   "id": "developer-guides/api-reference",
   "title": "API Reference",
-  "description": "The SecureHealth API provides comprehensive access to patient data, appointments, and system functionality. All API endpoints are secured with JWT authentication and implement role-based access control.",
+  "description": "The SecureHealth API provides comprehensive access to patient data, appointments, and system functionality. All API endpoints are secured with session-based authentication and implement role-based access control.",
   "source": "@site/docs/developer-guides/api-reference.md",
   "sourceDirName": "developer-guides",
   "slug": "/developer-guides/api-reference",
